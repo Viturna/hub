@@ -6,8 +6,6 @@
   function handleItemClick(path: string) {
       goto(path);
   }
-
-
 </script>
 <header>
   <img src="/images/logo-header.svg" alt="Logo BDE MMI" />
@@ -34,7 +32,7 @@
   header{
     background-color: #FFFFFF;
     position: fixed;
-    width: 90vw;
+    width: 85vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,6 +42,7 @@
     border-radius: 20px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 999;
   }
   header ul{
     list-style: none;
