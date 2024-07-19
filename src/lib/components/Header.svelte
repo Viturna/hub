@@ -23,6 +23,9 @@
       <button class="nav-item {currentPath === '/guide' ? 'active' : ''}" on:click={() => handleItemClick('/guide')}>Guide</button>
     </li>
     <li>
+      <button class="nav-item {currentPath === '/contact' ? 'active' : ''}" on:click={() => handleItemClick('/contact')}>Contact</button>
+    </li>
+    <li>
       <button class="nav-item bold {currentPath === '/avantages' ? 'active' : ''}" on:click={() => handleItemClick('/avantages')}>Vos avantages</button>
     </li>
   </ul>

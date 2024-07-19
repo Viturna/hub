@@ -6,12 +6,15 @@ p{
   color: var(--black);
   line-height: 160%;
 }
-button,p,h1,h2,h3,h4,h5,a{
+body{
   font-family: 'Poppins', sans-serif;
 }
 
 .bold{
   font-weight: 700;
+}
+.semibold{
+  font-weight: 600;
 }
 .violet{
   color: var(--violet);
@@ -20,10 +23,21 @@ h1{
   font-size: 64px;
   font-weight: 900;
   text-transform: uppercase;
+  color: var(--white);
 }
 h2{
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
+  color: var(--black);
+}
+h3{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+}
+h4{
+  font-size: 18px;
+  font-weight: 600;
   color: var(--black);
 }

@@ -26,6 +26,7 @@
   }
   .bg-button{
     margin-left: 12px;
+    margin-top: 12px;
     position: relative;
     width: 300px;
     height: 70px;

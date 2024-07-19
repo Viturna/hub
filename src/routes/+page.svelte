@@ -1,8 +1,44 @@
-<script>
+<script lang="ts">
+  import { onMount } from "svelte";
   import MainButton from "$lib/components/MainButton.svelte";
   import Button from "$lib/components/Button.svelte";
   import CardEvent from "$lib/components/CardEvent.svelte";
 
+  let lightbulb: HTMLImageElement | null = null;
+  let lightbulbSrc = "/images/michel-idee-off.png"; // Initial image
+  let isLightOn = false; // State to track if light is on
+
+  onMount(() => {
+    const handleScroll = () => {
+      if (lightbulb) {
+        const bounding = lightbulb.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        const threshold = 0.5; // 30% visibility
+
+        // Calculate the percentage of visibility
+        const elementHeight = bounding.height;
+        const visibleHeight = Math.min(bounding.bottom, viewportHeight) - Math.max(bounding.top, 0);
+        const visibilityPercentage = visibleHeight / elementHeight;
+
+        // Check if the lightbulb is 30% visible
+        if (visibilityPercentage >= threshold && !isLightOn) {
+          isLightOn = true;
+          lightbulbSrc = "/images/michel-idee-on.png"; // Turn on the light
+        } else if (visibilityPercentage < threshold && isLightOn) {
+          isLightOn = false;
+          lightbulbSrc = "/images/michel-idee-off.png"; // Turn off the light
+        }
+      }
+    };
+
+    document.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check the initial scroll position
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  });
 </script>
 
 <section class="top-main">
@@ -16,17 +52,19 @@
       accumsan, risus sem sollicitudin lacus.
     </p>
   </div>
+  <img src="/images/michel.gif" alt="Michel" class="michel-gif" />
 </section>
 <div class="flex-main-button">
   <MainButton path="" buttonType="main">
     <span slot="text-1">Voir la</span>
     <span slot="text-2">Programmation</span>
   </MainButton>
-  <MainButton path="" buttonType="secondary">
+  <MainButton path="/avantages" buttonType="secondary">
     <span slot="text-1">Devenir</span>
     <span slot="text-2">Adhérent</span>
   </MainButton>
 </div>
+
 <section class="about-us">
   <div class="text-about">
     <h2>Qui sommes-nous ?</h2>
@@ -46,6 +84,7 @@
   </div>
   <img src="/images/photo-bde.jpg" alt="Équipe BDE 26" />
 </section>
+
 <section class="adherents">
   <div class="box-img">
     <img src="/images/rond-carte.png" alt="" />
@@ -60,13 +99,14 @@
       offres auprès de nos partenaires et obtiens des tarifs réduits sur
       <span class="violet bold">tous nos <br /> évènements !</span>
     </p>
-    <Button path="">
+    <Button path="/avantages">
       <span slot="text"
         >Voir <span class="bold violet">tous</span> les avantages
       </span>
     </Button>
   </div>
 </section>
+
 <section class="evenements">
   <h2>ça arrive bientôt ...</h2>
   <div class="flex-evenements">
@@ -90,26 +130,51 @@
     </div>
   </div>
 </section>
+
 <section class="partner">
   <h2>Nos partenaires</h2>
 </section>
+
+<section class="boite">
+  <div>
+    <h2>Boîtes à idées</h2>
+    <form>
+      <label for="name">Votre nom</label>
+      <input type="text" id="name" name="name" placeholder="Michel Hub" required />
+
+      <label for="object">Titre</label>
+      <input type="text" id="object" name="object" placeholder="Une soirée ciné" required />
+
+      <label for="message">Contenu</label>
+      <textarea id="message" name="message" rows="4" placeholder="Ecrivez votre contenu ici ..." required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+  <img src={lightbulbSrc} alt="Michel idée" bind:this={lightbulb} class={isLightOn ? 'on' : 'off'}>
+</section>
+
 <style>
   .top-main {
     display: flex;
-    padding: 350px 7vw 100px 7vw;
+    align-items: center;
+    padding: 200px 7vw 80px 7vw;
     background-color: #ae86c1;
-    height: 400px;
+    height: 550px;
     background-image: url("/images/lignes-fond.png");
   }
   .main-title {
-    width: 50%;
+    width: 80%;
     color: #fff;
   }
   .main-text {
-    width: 60%;
+    width: 80%;
     color: #fff;
     line-height: 160%;
     margin-top: 16px;
+  }
+  .michel-gif {
+    height: 500px;
   }
   .flex-main-button {
     display: flex;
@@ -187,15 +252,77 @@
     margin-top: 120px;
   }
 
-  .partner{
+  .partner {
     margin-top: 128px;
-    width: 100vw;
     height: 400px;
     padding: 80px 7vw;
-    background:
-    linear-gradient(rgba(174, 134, 193, 0.6), rgba(174, 134, 193, 0.6)),
-    url('/images/bg-partner.png');
+    background: linear-gradient(
+        rgba(174, 134, 193, 0.6),
+        rgba(174, 134, 193, 0.6)
+      ),
+      url("/images/bg-partner.png");
     background-size: cover;
     background-position: center;
+  }
+
+  .boite {
+    display: flex;
+    justify-content: space-between;
+    margin: 128px auto 96px auto;
+    width: 85vw;
+  }
+  form {
+    margin-top: 64px;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: var(--black);
+  }
+  input {
+    height: 35px;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 14px;
+    font-family: "Poppins";
+    color: #797979;
+  }
+  textarea {
+    resize: none;
+    height: 150px;
+  }
+  input,textarea {
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 20px;
+    border-radius: 10px;
+  }
+
+  button[type="submit"] {
+    padding: 20px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: var(--violet-secondary);
+    color: var(--black);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #e4d2f9;
+  }
+
+  /* Add CSS for the lightbulb images */
+  .on {
+    /* Add styles for the 'on' state if needed */
+  }
+  .off {
+    /* Add styles for the 'off' state if needed */
   }
 </style>
