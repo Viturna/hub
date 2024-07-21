@@ -1,92 +1,110 @@
 <script lang="ts">
   import CardPartner from "$lib/components/CardPartner.svelte";
   import Button from "$lib/components/Button.svelte";
-
-  // Définition des partenaires
-  let partners = [
-    {
-      path: "",
-      type: "main",
-      name: "🍻 Le Grizzly",
-      discount: "-20%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
-    {
-      path: "",
-      type: "secondary",
-      name: "🍻 Leizzly",
-      discount: "-20%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
-    {
-      path: "",
-      type: "main",
-      name: "Grizzly",
-      discount: "-20%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
-    {
-      path: "",
-      type: "secondary",
-      name: "Le FIn",
-      discount: "-10%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
-  ];
-  let partnersponctuels = [
-    {
-      path: "",
-      type: "main",
-      name: "🍻 Le Grizzly",
-      discount: "-20%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
-    {
-      path: "",
-      type: "secondary",
-      name: "🍻 Leizzly",
-      discount: "-20%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
-    {
-      path: "",
-      type: "main",
-      name: "Grizzly",
-      discount: "-20%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
-    {
-      path: "",
-      type: "secondary",
-      name: "Le FIn",
-      discount: "-10%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
-  ];
   import { onMount } from "svelte";
 
-  onMount(() => {
-    const items = document.querySelector(".partner-items") as HTMLElement | null;
+  // Define partners with unique IDs
+  let partners = [
+    {
+      id: 1,
+      path: "",
+      type: "main",
+      name: "Test1",
+      discount: "-20%",
+      address: "54 Pl. des Capucins, 33000 Bordeaux",
+      hours: "Tous les jours : 14h00 - 02h00",
+    },
+    {
+      id: 2,
+      path: "",
+      type: "Encore",
+      name: "Grizzlbbby",
+      discount: "-20%",
+      address: "54 Pl. des Capucins, 33000 Bordeaux",
+      hours: "Tous les jours : 14h00 - 02h00",
+    },
+    {
+      id: 3,
+      path: "",
+      type: "secondary",
+      name: "ajtre FIn",
+      discount: "-10%",
+      address: "54 Pl. des Capucins, 33000 Bordeaux",
+      hours: "Tous les jours : 14h00 - 02h00",
+    },
+    {
+      id: 4,
+      path: "",
+      type: "secondary",
+      name: "ajtre FIn",
+      discount: "-10%",
+      address: "54 Pl. des Capucins, 33000 Bordeaux",
+      hours: "Tous les jours : 14h00 - 02h00",
+    },
+    {
+      id: 5,
+      path: "",
+      type: "secondary",
+      name: "ajtre FIn",
+      discount: "-10%",
+      address: "54 Pl. des Capucins, 33000 Bordeaux",
+      hours: "Tous les jours : 14h00 - 02h00",
+    },
+  ];
 
-    // Ajuste la largeur totale des éléments
+  let partnersponctuels = [
+    {
+      id: 4,
+      path: "",
+      type: "main",
+      name: "hh Grizzly",
+      discount: "-20%",
+      address: "54 Pl. des Capucins, 33000 Bordeaux",
+      hours: "Tous les jours : 14h00 - 02h00",
+    },
+    {
+      id: 5,
+      path: "",
+      type: "secondary",
+      name: "🍻 Leizzly",
+      discount: "-20%",
+      address: "54 Pl. des Capucins, 33000 Bordeaux",
+      hours: "Tous les jours : 14h00 - 02h00",
+    },
+    {
+      id: 6,
+      path: "",
+      type: "main",
+      name: "Grzly",
+      discount: "-20%",
+      address: "54 Pl. des Capucins, 33000 Bordeaux",
+      hours: "Tous les jours : 14h00 - 02h00",
+    },
+    {
+      id: 7,
+      path: "",
+      type: "secondary",
+      name: "Le FInvjj",
+      discount: "-10%",
+      address: "54 Pl. des Capucins, 33000 Bordeaux",
+      hours: "Tous les jours : 14h00 - 02h00",
+    },
+  ];
+
+  let partnerItems: HTMLDivElement;
+
+  onMount(() => {
+    const items = partnerItems;
+
     const adjustWidth = () => {
       if (items) {
         const totalWidth = Array.from(
-          document.querySelectorAll(".card-partner") as NodeListOf<HTMLElement>
+          items.querySelectorAll<HTMLDivElement>(".card-partner")
         ).reduce((width, item) => width + item.offsetWidth, 0);
         items.style.width = `${totalWidth}px`;
       }
     };
 
-    // Démarre l'animation
     const startAnimation = () => {
       if (items) {
         items.style.animation = "scroll 23s linear infinite";
@@ -96,8 +114,11 @@
     adjustWidth();
     startAnimation();
 
-    // Réajuste la largeur lors du redimensionnement de la fenêtre
     window.addEventListener("resize", adjustWidth);
+
+    return () => {
+      window.removeEventListener("resize", adjustWidth);
+    };
   });
 </script>
 
@@ -132,26 +153,18 @@
   <div class="container-text-partner">
     <h2>Nos partenaires</h2>
     <p class="partner-subtitle">
-      Grâce à la carte adhérente bénéficiez toute l’année de réduction chez nos
-      partenaires. Découvre des lieux que tu ne connais peut-être pas encore !<br />
-      Parmi nos partenaires on peut compter 5 bars, 3 restaurants et 5 activités
-      à faire seul ou à plusieurs ! Mais ce n’est pas tout, on a aussi des partenaires
-      ponctuels. Dans cette catégorie, tu y retrouveras des réductions pour des festivals,
-      concerts ou autres événements temporaires. <br />
-      Pour les utiliser il te suffit de présenter ta carte au commerçant lors de
-      ton achat.
+      Grâce à la carte adhérente bénéficie toute l’année de réduction chez nos partenaires.  Découvre des lieux que tu ne connais peut être pas encore !
+      Parmi nos partenaires on peut compter 5 bars, 3 restaurants et 5 activités à faire seul ou à plusieurs ! Mais c’est pas tout, on a aussi des partenaires ponctuels. Dans cette catégorie t’y retrouveras des réductions pour des festivals, concert ou autre évènement temporaire.
+      Pour les utiliser il te suffis de présenter ta carte au commerçant lors de ton achat.
     </p>
     <h3>Partenaires à l’année</h3>
     <p class="asterix">*sous présentation de votre carte adhérent</p>
   </div>
 
   <div class="partner-container">
-    <div class="partner-items">
-      {#each [...partners, ...partners] as partner (partner.name)}
-        <CardPartner
-          path="{partner.path}"
-          cardType={partner.type}
-        >
+    <div class="partner-items" bind:this={partnerItems}>
+      {#each partners as partner (partner.id)}
+        <CardPartner path="{partner.path}" cardType={partner.type}>
           <span slot="name">{partner.name}</span>
           <span slot="reduc">{partner.discount}</span>
           <span slot="adress">{partner.address}</span>
@@ -160,17 +173,15 @@
       {/each}
     </div>
   </div>
+
   <div class="container-text-partner">
     <h3>Partenaires Ponctuels</h3>
     <p class="asterix">*sous présentation de votre carte adhérent</p>
   </div>
   <div class="partner-container">
-    <div class="partner-items">
-      {#each [...partnersponctuels, ...partnersponctuels] as partner (partner.name)}
-        <CardPartner
-          path="{partner.path}"
-          cardType={partner.type}
-        >
+    <div class="partner-items" bind:this={partnerItems}>
+      {#each partnersponctuels as partner (partner.id)}
+        <CardPartner path="{partner.path}" cardType={partner.type}>
           <span slot="name">{partner.name}</span>
           <span slot="reduc">{partner.discount}</span>
           <span slot="adress">{partner.address}</span>
@@ -194,8 +205,8 @@
     <div class="avantage-number">15€ / 10€</div>
     <h2>d’aide pour le bde</h2>
     <p>
-      En prenant la carte adhérente tu aides ton BDE à mettre en place différents
-      évènements et activités.
+      En prenant la carte adhérente tu aides ton BDE à mettre en place
+      différents évènements et activités.
     </p>
   </div>
   <div class="avantage-container">
@@ -248,7 +259,9 @@
     width: 40%;
   }
   .mockup-main {
-    position: absolute;
+    position:
+
+ absolute;
     height: 780px;
     top: 0;
     right: 0;
@@ -280,10 +293,6 @@
     flex-wrap: nowrap;
     width: max-content;
     animation: scroll 22s linear infinite;
-  }
-
-  .partner-items .reverse{
-    animation: reverse scroll 22s linear infinite;
   }
 
   /* Animation du défilement */

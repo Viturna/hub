@@ -7,3 +7,6 @@
   width: 45vw;
   color: var(--white);
 }
+html{
+  scroll-behavior: smooth;
+}

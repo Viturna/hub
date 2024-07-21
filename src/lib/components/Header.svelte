@@ -2,7 +2,9 @@
   import { goto } from '$app/navigation';
   import { page } from '$app/stores';
 
-  let currentPath = $page.url.pathname;
+  // Utiliser un store réactif pour obtenir le chemin courant
+  $: currentPath = $page.url.pathname;
+
   function handleItemClick(path: string) {
       goto(path);
   }
@@ -30,40 +32,43 @@
     </li>
   </ul>
 </header>
-
 <style>
-  header{
-    background-color: #FFFFFF;
-    position: fixed;
-    width: 85vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 60px;
-    height: 100px;
-    padding: 0px 30px;
-    border-radius: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
-  }
-  header ul{
-    list-style: none;
-    display: flex;
-    gap: 32px;
-  }
-  .nav-item{
-    background: none;
-    border: none;
-    font-size: 16px;
-    text-transform: uppercase;
-  }
-  .nav-item:hover{
-    opacity: 0.6;
-    transition: .2s;
-    cursor: pointer;
-  }
-  .active{
-    color: var(--violet);
-  }
+header {
+  background-color: #FFFFFF;
+  position: fixed;
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 60px;
+  height: 100px;
+  padding: 0px 30px;
+  border-radius: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.nav-item:hover {
+  opacity: 0.6;
+}
+
+.active {
+  color: var(--violet);
+}
 </style>

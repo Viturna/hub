@@ -3,38 +3,58 @@
   import MainButton from "$lib/components/MainButton.svelte";
   import Button from "$lib/components/Button.svelte";
   import CardEvent from "$lib/components/CardEvent.svelte";
+  import type { Event } from '$lib/data/events';
+  import { events } from '$lib/data/events';
 
   let lightbulb: HTMLImageElement | null = null;
-  let lightbulbSrc = "/images/michel-idee-off.png"; // Initial image
-  let isLightOn = false; // State to track if light is on
+  let lightbulbSrc = "/images/michel-idee-off.png";
+  let isLightOn = false;
+
+  // Calculer la date actuelle
+  const today = new Date().toISOString().split('T')[0]; // Format 'YYYY-MM-DD'
+
+  // Trier les événements par date et sélectionner les trois plus proches
+  let upcomingEvents: Event[] = [];
+
+  $: {
+    upcomingEvents = events
+      .filter(event => event.date >= today) // Garder uniquement les événements à venir
+      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()) // Trier par date
+      .slice(0, 3); // Sélectionner les trois premiers
+  }
+
+  // Déterminer le type de carte pour chaque événement
+  const getCardType = (index: number) => {
+    if (index === 1) {
+      return 'main'; // Le deuxième événement (index 1) est une carte principale
+    }
+    return 'secondary'; // Les autres sont des cartes secondaires
+  };
 
   onMount(() => {
     const handleScroll = () => {
       if (lightbulb) {
         const bounding = lightbulb.getBoundingClientRect();
         const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-        const threshold = 0.5; // 30% visibility
+        const threshold = 0.7;
 
-        // Calculate the percentage of visibility
         const elementHeight = bounding.height;
         const visibleHeight = Math.min(bounding.bottom, viewportHeight) - Math.max(bounding.top, 0);
         const visibilityPercentage = visibleHeight / elementHeight;
 
-        // Check if the lightbulb is 30% visible
         if (visibilityPercentage >= threshold && !isLightOn) {
           isLightOn = true;
-          lightbulbSrc = "/images/michel-idee-on.png"; // Turn on the light
+          lightbulbSrc = "/images/michel-idee-on.png";
         } else if (visibilityPercentage < threshold && isLightOn) {
           isLightOn = false;
-          lightbulbSrc = "/images/michel-idee-off.png"; // Turn off the light
+          lightbulbSrc = "/images/michel-idee-off.png";
         }
       }
     };
 
     document.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check the initial scroll position
+    handleScroll();
 
-    // Cleanup event listener on component unmount
     return () => {
       document.removeEventListener('scroll', handleScroll);
     };
@@ -54,8 +74,9 @@
   </div>
   <img src="/images/michel.gif" alt="Michel" class="michel-gif" />
 </section>
+
 <div class="flex-main-button">
-  <MainButton path="" buttonType="main">
+  <MainButton path="/programmation" buttonType="main">
     <span slot="text-1">Voir la</span>
     <span slot="text-2">Programmation</span>
   </MainButton>
@@ -91,43 +112,66 @@
     <img class="adherents-img" src="/images/cartes-adherents.png" alt="" />
   </div>
   <div class="text-adherents">
-    <h2>La carte adhérentes</h2>
+    <h2>La carte adhérent</h2>
     <p>
-      Découvre la <span class="violet bold">carte adhérente</span> du HUB !<br
-      />
+      Découvre la <span class="violet bold">carte adhérente</span> du HUB !<br />
       Avec cette carte tu aides à financer l’association, tu accèdes à de nombreuses
       offres auprès de nos partenaires et obtiens des tarifs réduits sur
       <span class="violet bold">tous nos <br /> évènements !</span>
     </p>
     <Button path="/avantages">
-      <span slot="text"
-        >Voir <span class="bold violet">tous</span> les avantages
-      </span>
+      <span slot="text">Voir <span class="bold violet">tous</span> les avantages</span>
     </Button>
   </div>
 </section>
 
 <section class="evenements">
-  <h2>ça arrive bientôt ...</h2>
+  <h2>Ça arrive bientôt ...</h2>
   <div class="flex-evenements">
-    <div class="card-wrapper card-wrapper-1">
-      <CardEvent path="" cardType="secondary" imageUrl="card-event.png">
-        <span slot="date">22/08/2024</span>
-        <span slot="title">Week-end d’Intégration</span>
+    {#if upcomingEvents.length === 1}
+    <CardEvent path="#boite" cardType="secondary" imageUrl="/images/default-event.png">
+      <span slot="date">Bientôt</span>
+      <span slot="title">D'autres événements bientôt</span>
+    </CardEvent>
+      <CardEvent path={upcomingEvents[0].path} cardType="main" imageUrl={upcomingEvents[0].srcphoto}>
+        <span slot="date">{new Date(upcomingEvents[0].date).toLocaleDateString('fr-FR')}</span>
+        <span slot="title">{upcomingEvents[0].title}</span>
       </CardEvent>
-    </div>
-    <div class="card-wrapper card-wrapper-2">
-      <CardEvent path="" cardType="main" imageUrl="card-event.png">
-        <span slot="date">22/08/2024</span>
-        <span slot="title">Bal de noël</span>
+      <CardEvent path="#boite" cardType="secondary" imageUrl="/images/default-event.png">
+        <span slot="date">Bientôt</span>
+        <span slot="title">D'autres événements bientôt</span>
       </CardEvent>
-    </div>
-    <div class="card-wrapper card-wrapper-3">
-      <CardEvent path="" cardType="secondary" imageUrl="card-event.png">
-        <span slot="date">22/08/2024</span>
-        <span slot="title">Événement 2</span>
-      </CardEvent>
-    </div>
+    {:else if upcomingEvents.length === 2}
+      <div class="event-container">
+        <CardEvent path={upcomingEvents[0].path} cardType="secondary" imageUrl={upcomingEvents[0].srcphoto}>
+          <span slot="date">{new Date(upcomingEvents[0].date).toLocaleDateString('fr-FR')}</span>
+          <span slot="title">{upcomingEvents[0].title}</span>
+        </CardEvent>
+        <CardEvent path={upcomingEvents[1].path} cardType="main" imageUrl={upcomingEvents[1].srcphoto}>
+          <span slot="date">{new Date(upcomingEvents[1].date).toLocaleDateString('fr-FR')}</span>
+          <span slot="title">{upcomingEvents[1].title}</span>
+        </CardEvent>
+        <CardEvent path="#boite" cardType="secondary" imageUrl="/images/default-event.png">
+          <span slot="date">Bientôt</span>
+          <span slot="title">D'autres événements bientôt</span>
+        </CardEvent>
+      </div>
+    {:else}
+      <div class="event-container">
+        <CardEvent path={upcomingEvents[0].path} cardType="secondary" imageUrl={upcomingEvents[0].srcphoto}>
+          <span slot="date">{new Date(upcomingEvents[0].date).toLocaleDateString('fr-FR')}</span>
+          <span slot="title">{upcomingEvents[0].title}</span>
+        </CardEvent>
+        <CardEvent path={upcomingEvents[1].path} cardType="main" imageUrl={upcomingEvents[1].srcphoto}>
+          <span slot="date">{new Date(upcomingEvents[1].date).toLocaleDateString('fr-FR')}</span>
+          <span slot="title">{upcomingEvents[1].title}</span>
+        </CardEvent>
+        <CardEvent path={upcomingEvents[2].path} cardType="secondary" imageUrl={upcomingEvents[2].srcphoto}>
+          <span slot="date">{new Date(upcomingEvents[2].date).toLocaleDateString('fr-FR')}</span>
+          <span slot="title">{upcomingEvents[2].title}</span>
+        </CardEvent>
+      </div>
+    {/if}
   </div>
 </section>
 
@@ -135,7 +179,7 @@
   <h2>Nos partenaires</h2>
 </section>
 
-<section class="boite">
+<section class="boite" id="boite">
   <div>
     <h2>Boîtes à idées</h2>
     <form>
@@ -234,22 +278,13 @@
     margin-top: 82px;
     width: 85vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
   }
-
-  .card-wrapper {
+  .event-container {
     display: flex;
-    align-items: flex-start;
-  }
-
-  .card-wrapper-1 {
-    margin-top: 95px;
-  }
-  .card-wrapper-2 {
-    margin-top: 0px;
-  }
-  .card-wrapper-3 {
-    margin-top: 120px;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   .partner {
@@ -316,13 +351,5 @@
 
   button[type="submit"]:hover {
     background-color: #e4d2f9;
-  }
-
-  /* Add CSS for the lightbulb images */
-  .on {
-    /* Add styles for the 'on' state if needed */
-  }
-  .off {
-    /* Add styles for the 'off' state if needed */
   }
 </style>
