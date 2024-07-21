@@ -143,13 +143,14 @@
 
 <section class="why">
   <h2>Pourquoi adhérer au BDE ?</h2>
-  <p>
+  <p class="why-subtitle">
     Tu veux adhérer au BDE et ainsi nous aider grâce à ton achat ? On te propose
     2 cartes : la carte adhérente et la carte SUPER adhérent.
   </p>
+  <img src="/images/tableau-avantage.png" alt="">
 </section>
 
-<section class="partner">
+<section class="partner" id="partner">
   <div class="container-text-partner">
     <h2>Nos partenaires</h2>
     <p class="partner-subtitle">
@@ -258,10 +259,19 @@
     margin-bottom: 56px;
     width: 40%;
   }
+  .why{
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    margin: 128px auto;
+  }
+  .why img{
+    margin: 0 auto;
+    margin-top: 64px;
+    width: 60%;
+  }
   .mockup-main {
-    position:
-
- absolute;
+    position:absolute;
     height: 780px;
     top: 0;
     right: 0;
@@ -317,7 +327,7 @@
     animation-play-state: paused; /* Pause l'animation au survol */
   }
 
-  .partner-subtitle {
+  .partner-subtitle, .why-subtitle {
     margin-top: 16px;
     width: 75%;
   }

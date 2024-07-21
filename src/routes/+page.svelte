@@ -174,10 +174,35 @@
     {/if}
   </div>
 </section>
-
 <section class="partner">
   <h2>Nos partenaires</h2>
+  <div class="flex-partner">
+    <div class="scrolling">
+      <a href=""><img src="/images/partenaire/logo1.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <!-- Duplicate items for seamless scroll -->
+      <a href=""><img src="/images/partenaire/logo1.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+      <a href=""><img src="/images/partenaire/logo2.jpg" alt=""></a>
+    </div>
+  </div>
+  <a href="/avantages#partner" class="button-secondary">Voir toutes les offres</a>
 </section>
+
+
 
 <section class="boite" id="boite">
   <div>
@@ -288,17 +313,67 @@
   }
 
   .partner {
-    margin-top: 128px;
-    height: 400px;
-    padding: 80px 7vw;
-    background: linear-gradient(
-        rgba(174, 134, 193, 0.6),
-        rgba(174, 134, 193, 0.6)
-      ),
-      url("/images/bg-partner.png");
-    background-size: cover;
-    background-position: center;
-  }
+  margin-top: 128px;
+  height: 500px;
+  padding: 0;
+  margin: 80px 0;
+  background: linear-gradient(
+      rgba(174, 134, 193, 0.6),
+      rgba(174, 134, 193, 0.6)
+    ),
+    url("/images/bg-partner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+.partner h2{
+  margin-left: 7.5vw;
+  margin-top: 82px;
+}
+.flex-partner {
+  margin-top: 60px;
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+}
+
+.flex-partner .scrolling {
+  display: flex;
+  gap: 100px;
+  width: calc(200% + 20px);
+  animation: scroll 20s linear infinite;
+}
+
+.flex-partner .scrolling a {
+  flex: none;
+  margin: 0 10px;
+}
+
+.button-secondary{
+  margin: 0 auto;
+  margin-top: 64px;
+  text-decoration: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 55px;
+  background-color: var(--violet-secondary);
+  color: var(--black);
+  border: 2px solid var(--black);
+}
+.button-secondary:hover{
+  background-color: #e4d2f9;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
 
   .boite {
     display: flex;
