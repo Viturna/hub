@@ -217,7 +217,7 @@
       <label for="message">Contenu</label>
       <textarea id="message" name="message" rows="4" placeholder="Ecrivez votre contenu ici ..." required></textarea>
 
-      <button type="submit">Envoyer</button>
+      <button type="submit" class="submit-button">Envoyer</button>
     </form>
   </div>
   <img src={lightbulbSrc} alt="Michel idée" bind:this={lightbulb} class={isLightOn ? 'on' : 'off'}>
@@ -363,7 +363,6 @@
   height: 55px;
   background-color: var(--violet-secondary);
   color: var(--black);
-  border: 2px solid var(--black);
 }
 .button-secondary:hover{
   background-color: #e4d2f9;
@@ -382,49 +381,57 @@
     width: 85vw;
   }
   form {
-    margin-top: 64px;
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-  }
+  margin-top: 64px;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
-  label {
-    margin-bottom: 12px;
-    font-weight: bold;
-    color: var(--black);
-  }
-  input {
-    height: 35px;
-  }
-  input::placeholder,
-  textarea::placeholder {
-    font-size: 14px;
-    font-family: "Poppins";
-    color: #797979;
-  }
-  textarea {
-    resize: none;
-    height: 150px;
-  }
-  input,textarea {
-    border: none;
-    margin-bottom: 20px;
-    padding: 10px 10px 10px 20px;
-    border-radius: 10px;
-  }
+label {
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: var(--black);
+}
 
-  button[type="submit"] {
-    padding: 20px 15px;
-    font-size: 17px;
-    font-weight: 500;
-    background-color: var(--violet-secondary);
-    color: var(--black);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+input {
+  height: 35px;
+}
 
-  button[type="submit"]:hover {
-    background-color: #e4d2f9;
-  }
+input::placeholder,
+textarea::placeholder {
+  font-size: 14px;
+  font-family: "Poppins";
+  color: #797979;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+input,textarea {
+  border: none;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 20px;
+  border-radius: 10px;
+}
+
+.submit-button {
+  align-self: flex-end; /* Aligner le bouton à droite */
+  width: 200px;
+  padding: 20px 15px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: var(--violet-2);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #a274b7;
+}
+
 </style>
