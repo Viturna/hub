@@ -1,17 +1,18 @@
 <script lang="ts">
-  import '$lib/styles/styles.css'
+  import "$lib/styles/styles.css";
   export let path: string;
-  export let buttonType: 'main' | 'secondary' = 'main'
+  export let buttonType: "main" | "secondary" = "main";
 </script>
 
 <div class="bg-div {buttonType}">
-<a href={path} class="main-button">
-  <slot class="text-1" name="text-1">Titre</slot>
- <span class="text-2"><slot name="text-2">Description</slot></span>
-</a>
+  <a href={path} class="main-button">
+    <slot class="text-1" name="text-1">Titre</slot>
+    <span class="text-2"><slot name="text-2">Description</slot></span>
+  </a>
 </div>
+
 <style>
-  .main-button{
+  .main-button {
     color: var(--violet);
     position: absolute;
     right: 15px;
@@ -27,36 +28,50 @@
     text-decoration: none;
     gap: 16px;
   }
-  .bg-div:hover .main-button{
+  .bg-div:hover .main-button {
     right: 10px;
     bottom: 10px;
     transition: ease-out;
     transition-duration: 300ms;
     cursor: pointer;
   }
-  .bg-div:active .main-button{
+  .bg-div:active .main-button {
     right: 0px;
     bottom: 0px;
     transition: ease-out;
     transition-duration: 100ms;
   }
-  .bg-div{
+  .bg-div {
     position: relative;
     width: 370px;
     height: 110px;
     border-radius: 15px;
   }
-  .bg-div.main{
+  .bg-div.main {
     background-color: var(--violet);
   }
-  .bg-div.secondary{
+  .bg-div.secondary {
     background-color: var(--violet-secondary);
   }
-
-  .text-2{
+  .text-2 {
     font-weight: 700;
     font-size: 32px;
     color: var(--black);
     text-transform: uppercase;
+  }
+  @media screen and (max-width:320px){
+    .main-button {
+      right: 10px;
+      bottom: 10px;
+      width: 90vw;
+      height: 100px;
+    }
+    .bg-div {
+      width: 90vw;
+      height: 100px;
+    }
+    .text-2 {
+      font-size: 24px;
+    }
   }
 </style>

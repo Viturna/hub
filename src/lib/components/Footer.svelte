@@ -76,4 +76,77 @@
     margin-bottom: 24px;
     text-decoration: none;
   }
+  @media screen and (max-width:1080px){
+    .container-items{
+      flex-wrap: wrap;
+      margin-left: 64px;
+    }
+  }
+  @media screen and (max-width:500px){
+    footer{
+    flex-direction: column;
+    padding: 45px 7.5vw;
+  }
+  .container-logo{
+    flex-direction: row;
+    align-items: end;
+    gap: 16px;
+  }
+  .logo-michel{
+    width: 100px;
+    margin-bottom: 0px;
+  }
+  .hub{
+    font-size: 20px;
+  }
+  .container-items{
+    margin-top: 80px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .container-footer{
+    margin-bottom: 80px;
+  }
+  .title, .footer-item{
+    text-align: center;
+  }
+
+  }
+  @media screen and (max-width:300px){
+    footer{
+    flex-direction: column;
+    padding: 45px 7.5vw;
+  }
+  .container-logo{
+    flex-direction: row;
+    align-items: end;
+    gap: 16px;
+  }
+  .logo-michel{
+    width: 80px;
+    margin-bottom: 0px;
+  }
+  .hub{
+    font-size: 20px;
+  }
+  .container-items{
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .container-footer{
+    margin-bottom: 50px;
+  }
+  .title, .footer-item{
+    text-align: center;
+  }
+  footer .title{
+    font-size: 18px;
+  }
+  .footer-item{
+    font-size: 14px;
+  }
+  }
 </style>

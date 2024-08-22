@@ -49,4 +49,46 @@
     transition-duration: 100ms;
   }
 
+  @media screen and (max-width:320px){
+    .button{
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      height: 70px;
+      background-color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--black);
+      font-size: 18px;
+    }
+    .bg-button{
+      margin-left: 12px;
+      margin-top: 12px;
+      position: relative;
+      width: 300px;
+      height: 70px;
+      border-radius: 10px;
+      background-color: var(--violet-secondary);
+    }
+    .bg-button:hover .button{
+      margin-left: 7px;
+      right: 7px;
+      bottom: 7px;
+      transition: ease-out;
+      transition-duration: 300ms;
+      cursor: pointer;
+    }
+    .bg-button:active .button{
+      margin-left: 0px;
+      right: 0px;
+      bottom: 0px;
+      transition: ease-out;
+      transition-duration: 100ms;
+    }
+  }
+
 </style>
