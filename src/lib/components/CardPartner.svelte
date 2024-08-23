@@ -73,8 +73,41 @@
   .card-bottom {
     padding: 0 20px;
   }
-
   .adress, .horaire {
     font-size: 16px;
+  }
+
+  @media screen and (max-width:320px){
+    .partner-card {
+      padding: 10px 0;
+    min-width: 0;
+    width: 90vw;
+    height: 90vw;
+    gap: 22px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .cadre {
+    height: 100px;
+    width: 80%;
+  }
+
+  .reduc {
+    font-size: 32px;
+  }
+
+  .reduc-text {
+    font-size: 16px;
+  }
+
+  .card-bottom {
+    padding: 0 20px;
+  }
+  .adress, .horaire {
+    font-size: 15px;
+  }
   }
 </style>

@@ -3,12 +3,11 @@
 </script>
 <section class="header-page">
   <div class="box-title">
-    <h1>Photos</h1>
+    <h1>Les Photos</h1>
     <p class="subtitle">
       Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus.
     </p>
   </div>
-  <img src="/images/photo-bde.jpg" alt="Equipe du BDE MMI 26" class="img-top" />
 </section>
 <p class="top-text">Qorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 <section class="gallery">
@@ -49,5 +48,22 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: 48px;
     margin-bottom: 128px;
+  }
+
+  @media screen and (max-width:320px){
+    .header-page {
+      padding: 200px 5vw 180px 5vw;
+      height: 150px;
+    }
+    .top-text{
+      font-size: 16px;
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+    .gallery{
+      width: 90vw;
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 96px;
+    }
   }
 </style>

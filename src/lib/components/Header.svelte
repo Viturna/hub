@@ -18,8 +18,9 @@
 </script>
 
 <header>
-  <img src="/images/logo-header.svg" class="logo" alt="Logo BDE MMI" />
-
+  <button class="no-bg" on:click={() => handleItemClick('/')}>
+    <img src="/images/logo-header.svg" class="logo" alt="Logo BDE MMI" />
+  </button>
   <!-- Bouton burger -->
   <button class="burger-button" on:click={toggleMenu} aria-label="Menu">
     {#if !menuOpen}
@@ -59,6 +60,13 @@
 </header>
 
 <style>
+  .no-bg{
+    background: none;
+    border: none;
+  }
+  .logo{
+    cursor: pointer;
+  }
   header {
     background-color: #FFFFFF;
     position: fixed;
@@ -74,7 +82,9 @@
     transform: translateX(-50%);
     z-index: 999;
   }
-
+  .burger-button{
+    display: none;
+  }
   header ul {
     list-style: none;
     display: flex;
@@ -99,7 +109,7 @@
   }
 
   /* Styles pour mobile */
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 320px) {
     .logo {
       width: 115px;
     }
@@ -116,13 +126,13 @@
       position: fixed;
       width: 100vw;
       height: 100vh;
-      top: 0;
-      left: 0;
+      top: -30px;
+      left: -10px;
       background-color: white;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 40px;
+      gap: 30px;
       padding: 0;
       margin: 0;
       display: none;
@@ -142,7 +152,7 @@
     }
 
     .nav-item {
-      font-size: 20px;
+      font-size: 18px;
       text-align: center;
       width: 100%;
       padding: 10px 0;

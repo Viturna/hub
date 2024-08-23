@@ -119,7 +119,7 @@
       <div class="search-bar">
         <input
           type="text"
-          placeholder="Rechercher un événement par titre..."
+          placeholder="Rechercher un événement"
           bind:value={searchQuery}
           on:input={searchEvents}
         />
@@ -244,5 +244,52 @@
   }
   .prog h2 {
     margin-top: 64px;
+  }
+  @media screen and (max-width:320px){
+    .header-page {
+      padding: 200px 5vw 180px 5vw;
+      height: 150px;
+    }
+    .flex-header-prog {
+      width: 100vw;
+      flex-direction: column-reverse;
+      margin: 0px auto;
+      margin-top: -50px;
+      gap: 42px;
+    }
+    .search-bar {
+      text-align: left;
+    }
+    .search-bar input {
+      width: 80vw;
+      height: 50px;
+      padding: 10px 15px;
+    }
+
+    .search-results li {
+      padding: 15px;
+      width: 80vw;
+    }
+
+    .countdown-card {
+      right: 10px;
+      bottom: 10px;
+      width: 90vw;
+      height: 100px;
+
+    }
+    .countdown {
+      font-size: 16px;
+    }
+    .bg-card {
+      margin: 10px 0px 0px 10px;
+      width: 90vw;
+      height: 100px;
+    }
+
+    .prog {
+      width: 90vw;
+      margin-bottom: 96px;
+    }
   }
 </style>

@@ -82,4 +82,30 @@
   button:hover {
     background-color: #e4d2f9;
   }
+
+  @media screen and (max-width:320px){
+    .contact-page {
+      flex-direction: column;
+      padding: 200px 5vw 96px 5vw;
+      height: fit-content;
+    }
+
+    form {
+      margin-top: 64px;
+      width: 90vw;
+    }
+
+    label {
+      font-size: 16px;
+    }
+
+    input, textarea {
+      padding: 10px 10px 10px 15px;
+    }
+
+    button {
+      font-size: 16px;
+    }
+
+  }
 </style>

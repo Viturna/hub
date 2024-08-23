@@ -52,7 +52,7 @@
         <div class="info-event">
           <div class="top-info-container">
             <p class="info-date">
-              Le {event.day} {event.month} {event.year} à partir de {event.heure}
+              À partir de {event.heure}
             </p>
             <p class="info-billet">Billet : {event.billet}</p>
           </div>
@@ -214,5 +214,67 @@
     display: flex;
     gap: 8px;
     align-items: center;
+  }
+  @media screen and (max-width:320px){
+    ul {
+      margin-top: 48px;
+    }
+
+    li {
+      padding: 50px 0;
+      flex-direction: column;
+    }
+    .left-part {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .top-info-container {
+      flex-direction: column;
+    }
+    .top-info-container p {
+      text-align: center;
+    }
+    .date-container{
+      padding: 0;
+      margin-bottom: 48px;
+    }
+    .info-billet{
+      margin-top: 16px;
+    }
+    .month,
+    .year {
+      font-size: 16px;
+    }
+
+    .day {
+      font-size: 52px;
+    }
+
+    .info-event {
+      width: 90vw;
+      gap: 32px;
+    }
+    .info-event p {
+      font-size: 16px;
+    }
+
+    .button {
+      width: 85vw;
+      height: 60px;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .liquide {
+      font-size: 16px;
+    }
+    .container-button {
+      padding-left: 0px;
+      margin-top: 32px;
+    }
+    h3{
+      text-align: center;
+    }
   }
 </style>

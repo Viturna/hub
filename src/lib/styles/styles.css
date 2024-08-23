@@ -7,6 +7,12 @@
   width: 45vw;
   color: var(--white);
 }
+@media screen and (max-width:320px){
+  .subtitle{
+    width: 90vw;
+    font-size: 16px;
+  }
+}
 html{
   scroll-behavior: smooth;
 }

@@ -144,10 +144,47 @@
 <section class="why">
   <h2>Pourquoi adhérer au BDE ?</h2>
   <p class="why-subtitle">
-    Tu veux adhérer au BDE et ainsi nous aider grâce à ton achat ? On te propose
-    2 cartes : la carte adhérente et la carte SUPER adhérent.
+    Tu veux adhérer au BDE et ainsi nous aider grâce à ton achat ?
+    <br> On te propose 2 cartes : la carte adhérente et la carte SUPER adhérent.
   </p>
-  <img src="/images/tableau-avantage.png" alt="">
+  <table class="custom-table">
+    <tr>
+      <td></td>
+      <td class="header-tab"><p class="title">ADHÉRENT</p><p class="price">10€</p></td>
+      <td class="header-tab"><p class="title">super ADHÉRENT</p> <p class="price">15€</p></td>
+    </tr>
+    <tr>
+      <td>Réductions chez nos partenaires. *</td>
+      <td><img src="/images/michel-avantages-adherents.png" alt="1 Michel"></td>
+      <td><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"></td>
+    </tr>
+    <tr>
+      <td>Achat rentabilisé</td>
+      <td><img src="/images/michel-avantages-adherents.png" alt="1 Michel"></td>
+      <td><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"></td>
+    </tr>
+    <tr>
+      <td>Réduction sur les tarifs d’entrée aux soirées</td>
+      <td><img src="/images/michel-avantages-adherents.png" alt="1 Michel"></td>
+      <td><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"></td>
+    </tr>
+    <tr>
+      <td>Tarifs réduits sur les “merch” et en boutique</td>
+      <td><img src="/images/michel-avantages-adherents.png" alt="1 Michel"></td>
+      <td><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"></td>
+    </tr>
+    <tr>
+      <td>1 stickers offert à l’achat de la carte</td>
+      <td></td>
+      <td><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"></td>
+    </tr>
+    <tr>
+      <td>Réductions sur les gobelets à l’adhésion</td>
+      <td><img src="/images/gobelet-avantage-adherents.png" alt="1 Michel" class="gobelet-image"></td>
+      <td><img src="/images/gobelet-avantage-superadherents.png" alt="Reduction Gobelets" class="gobelet-image"></td>
+    </tr>
+  </table>
+  <p class="table-ast">Réductions chez nos partenaires. *</p>
 </section>
 
 <section class="partner" id="partner">
@@ -265,10 +302,73 @@
     width: 85vw;
     margin: 128px auto;
   }
-  .why img{
-    margin: 0 auto;
+
+  .header-tab{
+    width: 20%;
+    height: 145px;
+    background-color: var(--violet-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 15px 0 0;
+
+  }
+  .header-tab:last-child{
+    background-color: #D3AE37;
+  }
+  .header-tab .title{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 800;
+    text-align: center;
+  }
+  .header-tab .price{
+    font-size: 38px;
+    color: var(--white);
+    font-weight: 700;
+  }
+  .custom-table{
     margin-top: 64px;
-    width: 60%;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .custom-table tr:nth-child(even) {
+    background-color: #F4EBF4;
+  }
+  .custom-table tr {
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 28px 0;
+    gap: 70px;
+  }
+  .custom-table tr:first-child{
+    height: 145px;
+  }
+  .custom-table td:first-child {
+    width:50%;
+    padding-left: 40px;
+  }
+  .custom-table td:nth-child(2),
+  .custom-table td:nth-child(3) {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+  .custom-table img{
+    width: 85px;
+    height: 85px;
+  }
+  .custom-table .gobelet-image{
+    width: 115px;
+  }
+  .table-ast{
+    align-self: flex-end;
+    font-size: 16px;
+    margin-top: 24px;
   }
   .mockup-main {
     position:absolute;
@@ -345,6 +445,9 @@
     height: 550px;
     background-color: var(--violet-2);
     background-image: url("/images/bg-avantages.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -400,6 +503,7 @@
   .title-convaincu {
     font-size: 30px;
     font-weight: 500;
+    text-align: center;
   }
   .price {
     font-weight: 600;
@@ -418,7 +522,7 @@
   .card-face {
     width: 100%;
     height: 100%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     backface-visibility: hidden;
@@ -448,5 +552,111 @@
   }
   .card-adherent-back {
     background-image: url("/images/carte-adherent-back.png");
+  }
+
+  @media screen and (max-width:320px){
+    .top-main {
+      padding: 200px 5vw 180px 5vw;
+      height: 450px;
+    }
+    .subtitle {
+      width: 100%;
+    }
+    .mockup-main {
+      height: 280px;
+      top: 550px;
+    }
+    .why{
+      width: 90vw;
+      margin: 96px auto;
+    }
+    .why-subtitle{
+      font-size: 16px;
+    }
+
+
+
+    .partner {
+      margin-top: 96px;
+    }
+    .container-text-partner {
+      width: 90vw;
+    }
+    .partner-container {
+      margin-top: 48px;
+    }
+    .partner-items {
+      width: 100vw;
+      animation: none;
+      gap: 48px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .partner-subtitle, .why-subtitle {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .partner h3 {
+      margin-top: 72px;
+    }
+
+    .asterix {
+      font-size: 16px;
+    }
+
+
+    .avantages {
+      margin-top: 96px;
+      width: 90vw;
+      height: fit-content;
+      flex-direction: column;
+      padding: 96px 5vw;
+      gap: 80px;
+    }
+    .avantage-container {
+      width: 100%;
+    }
+    .avantage-number {
+      font-size: 24px;
+      padding: 15px 25px;
+      margin-bottom: 36px;
+    }
+    .avantage-container p {
+      margin-top: 24px;
+    }
+
+
+    .flex-convaincu {
+      width: 90vw;
+      margin: 96px auto;
+      flex-direction: column;
+      gap: 96px;
+    }
+    .convaincu {
+      width: 90vw;
+      margin: 96px auto;
+    }
+    .h2-subtitle {
+      margin-top: 16px;
+    }
+    .container-convaincu {
+      gap: 16px;
+    }
+    .title-convaincu {
+      font-size: 24px;
+    }
+    .price {
+      font-size: 16px;
+    }
+    .link-convaincu {
+      font-size: 16px;
+    }
+    .card {
+      width: 90vw;
+      height: 200px;
+    }
+
   }
 </style>

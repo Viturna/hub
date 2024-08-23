@@ -69,21 +69,39 @@
     height: 320px;
     text-decoration: none;
   }
-
-
   .card-text {
     margin-top: 8px;
     width: 100%;
   }
-
   .media {
     font-size: 18px;
     color: var(--violet);
   }
-
   .title {
     font-size: 24px;
     font-weight: 600;
     color: var(--black);
+  }
+
+  @media screen and (max-width:320px){
+    .photo-one{
+      height: 170px;
+    }
+    .photo-three-1,.photo-three-2{
+      height: 80px;
+    }
+    .photo-three-3{
+      height: 170px;
+    }
+    .event-card {
+      width: 90vw;
+      height: 250px;
+    }
+    .media {
+      font-size: 16px;
+    }
+    .title {
+      font-size: 20px;
+    }
   }
 </style>

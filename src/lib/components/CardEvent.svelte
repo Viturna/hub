@@ -79,4 +79,5 @@
     font-weight: 600;
     color: var(--black);
   }
+
 </style>

@@ -337,7 +337,7 @@
     align-items: center;
     padding: 200px 7vw 0px 7vw;
     background-color: #ae86c1;
-    height: 550px;
+    height: 650px;
     background-image: url("/images/lignes-fond.png");
     background-size: cover;
   }
@@ -610,11 +610,21 @@
       width: 100%;
       margin-bottom: 60px;
     }
+    /* événement */
+    .evenements {
+      width: 90vw;
+    }
+    .flex-evenements {
+      margin-top: 64px;
+      width: 90vw;
+    }
+
+    /* Partner */
 
     /* Boite à idées */
     .boite {
       flex-direction: column;
-      margin: 96px auto 96px auto;
+      margin: 96px auto 64px auto;
       width: 90vw;
     }
     form {
@@ -634,7 +644,7 @@
     }
     .boite img{
       position: absolute;
-      width: 100vw;
+      width: 90vw;
       margin-top: 94px;
     }
 

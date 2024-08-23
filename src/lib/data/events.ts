@@ -16,7 +16,7 @@ export interface Event {
 export const events: Event[] = [
   {
     id: 1,
-    date: "2024-07-25",
+    date: "2024-09-25",
     heure: "18:00",
     billet: "Gratuit",
     title: "Concert d'été",
