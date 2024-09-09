@@ -65,7 +65,7 @@
   .event-card {
     display: flex;
     flex-direction: column;
-    width: 360px;
+    width: 25.5vw;
     height: 320px;
     text-decoration: none;
   }
@@ -83,6 +83,99 @@
     color: var(--black);
   }
 
+  @media screen and (max-width:1350px){
+    .photo-one{
+      height: 210px;
+    }
+    .photo-three-1,.photo-three-2{
+      height: 100px;
+    }
+    .photo-three-3{
+      height: 210px;
+    }
+    .flex-three{
+      gap: 8px;
+    }
+    .event-card {
+      width: 28.5vw;
+      height: 280px;
+    }
+    .media {
+      font-size: 16px;
+    }
+    .title {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width:1024px){
+    .photo-one{
+      height: 190px;
+    }
+    .photo-three-1,.photo-three-2{
+      height: 90px;
+    }
+    .photo-three-3{
+      height: 190px;
+    }
+    .flex-three{
+      gap: 8px;
+    }
+    .event-card {
+      width: 28.5vw;
+      height: 250px;
+    }
+    .media {
+      font-size: 15px;
+    }
+    .title {
+      font-size: 19px;
+    }
+  }
+  @media screen and (max-width:768px){
+    .photo-one{
+      height: 190px;
+    }
+    .photo-three-1,.photo-three-2{
+      height: 90px;
+    }
+    .photo-three-3{
+      height: 190px;
+    }
+    .flex-three{
+      gap: 8px;
+    }
+    .event-card {
+      width: 42.5vw;
+      height: 250px;
+    }
+    .media {
+      font-size: 15px;
+    }
+    .title {
+      font-size: 19px;
+    }
+  }
+  @media screen and (max-width:425px){
+    .photo-one{
+      height: 190px;
+    }
+    .photo-three-1,.photo-three-2{
+      height: 90px;
+    }
+    .photo-three-3{
+      height: 190px;
+    }
+    .event-card {
+      width: 90vw;
+      height: 280px;
+    }
+    .media {
+      font-size: 16px;
+    }
+    .title {
+      font-size: 20px;
+    }
+  }
   @media screen and (max-width:320px){
     .photo-one{
       height: 170px;
@@ -98,10 +191,10 @@
       height: 250px;
     }
     .media {
-      font-size: 16px;
+      font-size: 15px;
     }
     .title {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 </style>

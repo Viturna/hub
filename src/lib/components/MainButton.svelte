@@ -59,6 +59,21 @@
     color: var(--black);
     text-transform: uppercase;
   }
+  @media screen and (max-width:425px){
+    .main-button {
+      right: 10px;
+      bottom: 10px;
+      width: 80vw;
+      height: 100px;
+    }
+    .bg-div {
+      width: 80vw;
+      height: 100px;
+    }
+    .text-2 {
+      font-size: 24px;
+    }
+  }
   @media screen and (max-width:320px){
     .main-button {
       right: 10px;

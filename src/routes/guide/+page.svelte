@@ -49,15 +49,50 @@
 
 <section class="guide">
   <h2>Par Michel, ton guide du BDE</h2>
-  <h3>Matériel et logiciels</h3>
+  <h3>Matériel indispensable</h3>
   <div class="flex-container">
     <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Resto U\' Le capu', 'Comment y manger ? Voici chaque étape pour manger au Crous :', '<span class="semibold violet">Tarifs :</span> <br><br> <span class="semibold">1€</span> pour les boursiers, <span class="semibold">3.30€</span> pour les non-boursiers, et <span class="semibold">30 centimes</span> pour les alternants <span class="violet">(chanceux !)</span>.<br><br><span class="semibold violet">Comment y manger :</span><br><br>1. Télécharge l’appli Izly (avec ce lien) et crée un compte.<br>2. Aller au resto U : Itinéraire ici. (attention, n’oubliez pas de prendre votre badge ainsi que votre carte étudiante).<br>3. Paiement sur place : Une fois arrivé dans le resto U, servez-vous puis dirigez-vous vers les caisses, la caisse de gauche et du milieu sont réservées aux paiements par Izly / carte étudiante, celle de droite est réservé aux paiements par cartes bleue.<br><br>Une fois à la caisse, présentez votre carte étudiante sur le lecteur de carte, ou présentez le QR code présent dans votre application Izly.<br><br>Si toutefois vous payez par carte, n’oubliez pas votre carte étudiante pour activer votre réduction. <span class="violet">(Bon ap !)</span>')}>
       <img src="/images/guide/crous.png" alt="" class="illustration">
-      <p>Le resto U</p>
+      <p>PC portable</p>
     </div>
     <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Autre titre', 'Autre sous-titre', 'Autre contenu HTML')}>
       <img src="/images/guide/crous.png" alt="" class="illustration">
-      <p>Autres informations</p>
+      <p>Stylo / crayon</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Resto U\' Le capu', 'Comment y manger ? Voici chaque étape pour manger au Crous :', '<span class="semibold violet">Tarifs :</span> <br><br> <span class="semibold">1€</span> pour les boursiers, <span class="semibold">3.30€</span> pour les non-boursiers, et <span class="semibold">30 centimes</span> pour les alternants <span class="violet">(chanceux !)</span>.<br><br><span class="semibold violet">Comment y manger :</span><br><br>1. Télécharge l’appli Izly (avec ce lien) et crée un compte.<br>2. Aller au resto U : Itinéraire ici. (attention, n’oubliez pas de prendre votre badge ainsi que votre carte étudiante).<br>3. Paiement sur place : Une fois arrivé dans le resto U, servez-vous puis dirigez-vous vers les caisses, la caisse de gauche et du milieu sont réservées aux paiements par Izly / carte étudiante, celle de droite est réservé aux paiements par cartes bleue.<br><br>Une fois à la caisse, présentez votre carte étudiante sur le lecteur de carte, ou présentez le QR code présent dans votre application Izly.<br><br>Si toutefois vous payez par carte, n’oubliez pas votre carte étudiante pour activer votre réduction. <span class="violet">(Bon ap !)</span>')}>
+      <img src="/images/guide/crous.png" alt="" class="illustration">
+      <p>Adaptateur VGA vers HDMI</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Resto U\' Le capu', 'Comment y manger ? Voici chaque étape pour manger au Crous :', '<span class="semibold violet">Tarifs :</span> <br><br> <span class="semibold">1€</span> pour les boursiers, <span class="semibold">3.30€</span> pour les non-boursiers, et <span class="semibold">30 centimes</span> pour les alternants <span class="violet">(chanceux !)</span>.<br><br><span class="semibold violet">Comment y manger :</span><br><br>1. Télécharge l’appli Izly (avec ce lien) et crée un compte.<br>2. Aller au resto U : Itinéraire ici. (attention, n’oubliez pas de prendre votre badge ainsi que votre carte étudiante).<br>3. Paiement sur place : Une fois arrivé dans le resto U, servez-vous puis dirigez-vous vers les caisses, la caisse de gauche et du milieu sont réservées aux paiements par Izly / carte étudiante, celle de droite est réservé aux paiements par cartes bleue.<br><br>Une fois à la caisse, présentez votre carte étudiante sur le lecteur de carte, ou présentez le QR code présent dans votre application Izly.<br><br>Si toutefois vous payez par carte, n’oubliez pas votre carte étudiante pour activer votre réduction. <span class="violet">(Bon ap !)</span>')}>
+      <img src="/images/guide/crous.png" alt="" class="illustration">
+      <p>Post-its, feutres, gommettes, patafix / scotch</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Resto U\' Le capu', 'Comment y manger ? Voici chaque étape pour manger au Crous :', '<span class="semibold violet">Tarifs :</span> <br><br> <span class="semibold">1€</span> pour les boursiers, <span class="semibold">3.30€</span> pour les non-boursiers, et <span class="semibold">30 centimes</span> pour les alternants <span class="violet">(chanceux !)</span>.<br><br><span class="semibold violet">Comment y manger :</span><br><br>1. Télécharge l’appli Izly (avec ce lien) et crée un compte.<br>2. Aller au resto U : Itinéraire ici. (attention, n’oubliez pas de prendre votre badge ainsi que votre carte étudiante).<br>3. Paiement sur place : Une fois arrivé dans le resto U, servez-vous puis dirigez-vous vers les caisses, la caisse de gauche et du milieu sont réservées aux paiements par Izly / carte étudiante, celle de droite est réservé aux paiements par cartes bleue.<br><br>Une fois à la caisse, présentez votre carte étudiante sur le lecteur de carte, ou présentez le QR code présent dans votre application Izly.<br><br>Si toutefois vous payez par carte, n’oubliez pas votre carte étudiante pour activer votre réduction. <span class="violet">(Bon ap !)</span>')}>
+      <img src="/images/guide/crous.png" alt="" class="illustration">
+      <p>Feutres pour tableau</p>
+    </div>
+  </div>
+  <h3>Logiciels à avoir</h3>
+  <div class="flex-container">
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Resto U\' Le capu', 'Comment y manger ? Voici chaque étape pour manger au Crous :', '<span class="semibold violet">Tarifs :</span> <br><br> <span class="semibold">1€</span> pour les boursiers, <span class="semibold">3.30€</span> pour les non-boursiers, et <span class="semibold">30 centimes</span> pour les alternants <span class="violet">(chanceux !)</span>.<br><br><span class="semibold violet">Comment y manger :</span><br><br>1. Télécharge l’appli Izly (avec ce lien) et crée un compte.<br>2. Aller au resto U : Itinéraire ici. (attention, n’oubliez pas de prendre votre badge ainsi que votre carte étudiante).<br>3. Paiement sur place : Une fois arrivé dans le resto U, servez-vous puis dirigez-vous vers les caisses, la caisse de gauche et du milieu sont réservées aux paiements par Izly / carte étudiante, celle de droite est réservé aux paiements par cartes bleue.<br><br>Une fois à la caisse, présentez votre carte étudiante sur le lecteur de carte, ou présentez le QR code présent dans votre application Izly.<br><br>Si toutefois vous payez par carte, n’oubliez pas votre carte étudiante pour activer votre réduction. <span class="violet">(Bon ap !)</span>')}>
+      <img src="/images/guide/crous.png" alt="" class="illustration">
+      <p>Figma</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Autre titre', 'Autre sous-titre', 'Autre contenu HTML')}>
+      <img src="/images/guide/crous.png" alt="" class="illustration">
+      <p>VS Code</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Resto U\' Le capu', 'Comment y manger ? Voici chaque étape pour manger au Crous :', '<span class="semibold violet">Tarifs :</span> <br><br> <span class="semibold">1€</span> pour les boursiers, <span class="semibold">3.30€</span> pour les non-boursiers, et <span class="semibold">30 centimes</span> pour les alternants <span class="violet">(chanceux !)</span>.<br><br><span class="semibold violet">Comment y manger :</span><br><br>1. Télécharge l’appli Izly (avec ce lien) et crée un compte.<br>2. Aller au resto U : Itinéraire ici. (attention, n’oubliez pas de prendre votre badge ainsi que votre carte étudiante).<br>3. Paiement sur place : Une fois arrivé dans le resto U, servez-vous puis dirigez-vous vers les caisses, la caisse de gauche et du milieu sont réservées aux paiements par Izly / carte étudiante, celle de droite est réservé aux paiements par cartes bleue.<br><br>Une fois à la caisse, présentez votre carte étudiante sur le lecteur de carte, ou présentez le QR code présent dans votre application Izly.<br><br>Si toutefois vous payez par carte, n’oubliez pas votre carte étudiante pour activer votre réduction. <span class="violet">(Bon ap !)</span>')}>
+      <img src="/images/guide/crous.png" alt="" class="illustration">
+      <p>GitHub</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Resto U\' Le capu', 'Comment y manger ? Voici chaque étape pour manger au Crous :', '<span class="semibold violet">Tarifs :</span> <br><br> <span class="semibold">1€</span> pour les boursiers, <span class="semibold">3.30€</span> pour les non-boursiers, et <span class="semibold">30 centimes</span> pour les alternants <span class="violet">(chanceux !)</span>.<br><br><span class="semibold violet">Comment y manger :</span><br><br>1. Télécharge l’appli Izly (avec ce lien) et crée un compte.<br>2. Aller au resto U : Itinéraire ici. (attention, n’oubliez pas de prendre votre badge ainsi que votre carte étudiante).<br>3. Paiement sur place : Une fois arrivé dans le resto U, servez-vous puis dirigez-vous vers les caisses, la caisse de gauche et du milieu sont réservées aux paiements par Izly / carte étudiante, celle de droite est réservé aux paiements par cartes bleue.<br><br>Une fois à la caisse, présentez votre carte étudiante sur le lecteur de carte, ou présentez le QR code présent dans votre application Izly.<br><br>Si toutefois vous payez par carte, n’oubliez pas votre carte étudiante pour activer votre réduction. <span class="violet">(Bon ap !)</span>')}>
+      <img src="/images/guide/crous.png" alt="" class="illustration">
+      <p>Adobe Suite</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Resto U\' Le capu', 'Comment y manger ? Voici chaque étape pour manger au Crous :', '<span class="semibold violet">Tarifs :</span> <br><br> <span class="semibold">1€</span> pour les boursiers, <span class="semibold">3.30€</span> pour les non-boursiers, et <span class="semibold">30 centimes</span> pour les alternants <span class="violet">(chanceux !)</span>.<br><br><span class="semibold violet">Comment y manger :</span><br><br>1. Télécharge l’appli Izly (avec ce lien) et crée un compte.<br>2. Aller au resto U : Itinéraire ici. (attention, n’oubliez pas de prendre votre badge ainsi que votre carte étudiante).<br>3. Paiement sur place : Une fois arrivé dans le resto U, servez-vous puis dirigez-vous vers les caisses, la caisse de gauche et du milieu sont réservées aux paiements par Izly / carte étudiante, celle de droite est réservé aux paiements par cartes bleue.<br><br>Une fois à la caisse, présentez votre carte étudiante sur le lecteur de carte, ou présentez le QR code présent dans votre application Izly.<br><br>Si toutefois vous payez par carte, n’oubliez pas votre carte étudiante pour activer votre réduction. <span class="violet">(Bon ap !)</span>')}>
+      <img src="/images/guide/crous.png" alt="" class="illustration">
+      <p>Trello</p>
     </div>
   </div>
 
@@ -69,7 +104,51 @@
     </div>
     <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Autre titre', 'Autre sous-titre', 'Autres détails importants à savoir...')}>
       <img src="/images/guide/u_express.svg" alt="" class="illustration">
+      <p>La cafétéria</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Autre titre', 'Autre sous-titre', 'Autres détails importants à savoir...')}>
+      <img src="/images/guide/u_express.svg" alt="" class="illustration">
+      <p>Distributeurs</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Autre titre', 'Autre sous-titre', 'Autres détails importants à savoir...')}>
+      <img src="/images/guide/u_express.svg" alt="" class="illustration">
       <p>Le super U</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Autre titre', 'Autre sous-titre', 'Autres détails importants à savoir...')}>
+      <img src="/images/guide/u_express.svg" alt="" class="illustration">
+      <p>IT Capucins</p>
+    </div>
+  </div>
+
+  <h3>Conseils argent</h3>
+  <div class="flex-container">
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Resto U\' Le capu', 'Comment y manger ? Voici chaque étape pour manger au Crous :', 'Détails supplémentaires sur le resto U...')}>
+      <img src="/images/guide/crous.png" alt="" class="illustration">
+      <p>Linkee</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Autre titre', 'Autre sous-titre', 'Autres détails importants à savoir...')}>
+      <img src="/images/guide/u_express.svg" alt="" class="illustration">
+      <p>Too Good To Go</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Autre titre', 'Autre sous-titre', 'Autres détails importants à savoir...')}>
+      <img src="/images/guide/u_express.svg" alt="" class="illustration">
+      <p>Licences étudiantes gratuites</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Autre titre', 'Autre sous-titre', 'Autres détails importants à savoir...')}>
+      <img src="/images/guide/u_express.svg" alt="" class="illustration">
+      <p>Tarification solidaire TBM</p>
+    </div>
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Autre titre', 'Autre sous-titre', 'Autres détails importants à savoir...')}>
+      <img src="/images/guide/u_express.svg" alt="" class="illustration">
+      <p>Aide à la mobilité parcoursup</p>
+    </div>
+  </div>
+
+  <h3>Nos 10 conseils</h3>
+  <div class="flex-container">
+    <div class="container" on:click={() => openPopup('/images/guide/popup-crous.png', 'Se restaurer', 'Resto U\' Le capu', 'Comment y manger ? Voici chaque étape pour manger au Crous :', 'Détails supplémentaires sur le resto U...')}>
+      <img src="/images/guide/crous.png" alt="" class="illustration">
+      <p>Linkee</p>
     </div>
   </div>
 </section>

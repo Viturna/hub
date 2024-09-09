@@ -49,7 +49,7 @@
     transition-duration: 100ms;
   }
 
-  @media screen and (max-width:320px){
+  @media screen and (max-width:425px){
     .button{
       right: 10px;
       bottom: 10px;

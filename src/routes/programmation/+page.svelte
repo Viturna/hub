@@ -117,12 +117,17 @@
   <div class="flex-header-prog">
     <div class="search">
       <div class="search-bar">
-        <input
-          type="text"
-          placeholder="Rechercher un événement"
-          bind:value={searchQuery}
-          on:input={searchEvents}
-        />
+        <div class="input-container">
+          <input
+            type="text"
+            placeholder="Rechercher un événement"
+            bind:value={searchQuery}
+            on:input={searchEvents}
+          />
+          <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.7738 16.181L12.3883 11.7955C13.375 10.5641 13.9116 9.03255 13.9091 7.45455C13.9091 3.6137 10.7956 0.5 6.95453 0.5C3.1137 0.5 0 3.6137 0 7.45455C0 11.2954 3.1137 14.4091 6.95453 14.4091C8.59658 14.4091 10.1057 13.84 11.2955 12.8882L15.6809 17.2736C15.7526 17.3455 15.8377 17.4024 15.9315 17.4413C16.0253 17.4802 16.1258 17.5001 16.2272 17.5C16.3801 17.5 16.5295 17.4547 16.6565 17.3698C16.7836 17.2849 16.8827 17.1642 16.9412 17.0231C16.9996 16.8819 17.015 16.7265 16.9852 16.5766C16.9554 16.4267 16.8818 16.289 16.7738 16.181ZM6.95453 12.8636C3.96718 12.8636 1.54545 10.4419 1.54545 7.45455C1.54545 4.46718 3.96718 2.04545 6.95453 2.04545C9.94209 2.04545 12.3636 4.46718 12.3636 7.45455C12.3636 10.4419 9.94209 12.8636 6.95453 12.8636Z" fill="#1B1B1B"/>
+          </svg>
+        </div>
       </div>
       <div class="search-results">
         {#if searchQuery}
@@ -176,18 +181,36 @@
   .search-bar {
     text-align: center;
   }
+
+  .input-container {
+    position: relative;
+    display: inline-block;
+  }
+
   .search-bar input {
     width: 340px;
     height: 50px;
-    padding: 10px 25px;
+    padding: 5px 25px;
     font-size: 16px;
     border: none;
     border-radius: 10px;
     color: var(--black);
+    padding-right: 50px;
   }
+
   input::placeholder {
     color: var(--black);
   }
+
+  .input-container svg {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    scale: 1.1;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
   .search-results {
     position: absolute;
     text-align: left;
@@ -245,10 +268,209 @@
   .prog h2 {
     margin-top: 64px;
   }
+  @media screen and (max-width:1350px){
+    .search-bar {
+      text-align: left;
+    }
+
+    .countdown {
+      font-size: 16px;
+    }
+
+    .countdown-card {
+      width: 300px;
+    }
+    .bg-card {
+      width: 300px;
+    }
+
+    .prog {
+      width: 90vw;
+      margin-bottom: 96px;
+    }
+  }
+  @media screen and (max-width:1024px){
+    .header-page {
+      padding: 230px 6vw 120px 6vw;
+      height: fit-content;
+    }
+    .flex-header-prog {
+      width: 90vw;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .search-bar {
+      text-align: left;
+    }
+    .search-bar input {
+      width: 320px;
+      height: 50px;
+      padding: 10px 15px;
+    }
+
+    .search-results li {
+      padding: 15px;
+      width: 320px;
+      font-size: 16px;
+    }
+
+    .countdown {
+      font-size: 16px;
+    }
+
+    .countdown-card {
+      width: 300px;
+    }
+    .bg-card {
+      width: 300px;
+    }
+
+    .prog {
+      width: 90vw;
+      margin-bottom: 96px;
+    }
+  }
+  @media screen and (max-width:768px){
+    .header-page {
+      padding: 230px 6vw 120px 6vw;
+      height: fit-content;
+    }
+    .flex-header-prog {
+      width: 90vw;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .search-bar {
+      text-align: left;
+    }
+    .search-bar input {
+      width: 380px;
+      height: 50px;
+      padding: 10px 15px;
+    }
+
+    .search-results li {
+      padding: 15px;
+      width: 380px;
+      font-size: 16px;
+    }
+
+    .countdown {
+      font-size: 16px;
+    }
+    .bg-card {
+      display: none;
+    }
+
+    .prog {
+      width: 90vw;
+      margin-bottom: 96px;
+    }
+  }
+  @media screen and (max-width:600px){
+    .header-page {
+      padding: 230px 5vw 140px 5vw;
+      height: fit-content;
+    }
+    .flex-header-prog {
+      width: 100vw;
+      flex-direction: column-reverse;
+      margin-top: -50px;
+      gap: 42px;
+    }
+    .search-bar {
+      text-align: left;
+    }
+    .search-bar input {
+      max-width: 350px;
+      width: 85vw;
+      height: 50px;
+      padding: 10px 15px;
+    }
+
+    .search-results li {
+      padding: 15px;
+      width: 85vw;
+      max-width: 350px;
+      font-size: 16px;
+    }
+
+    .countdown-card {
+      right: 10px;
+      bottom: 10px;
+      width: 80vw;
+      max-width: 320px;
+      height: 100px;
+
+    }
+    .countdown {
+      font-size: 16px;
+    }
+    .bg-card {
+      max-width: 320px;
+      width: 80vw;
+      height: 100px;
+      margin: 0 auto;
+    }
+
+    .prog {
+      width: 90vw;
+      margin-bottom: 96px;
+    }
+  }
+  @media screen and (max-width:425px){
+    .header-page {
+      padding: 200px 5vw 140px 5vw;
+      height: fit-content;
+    }
+    .flex-header-prog {
+      width: 100vw;
+      flex-direction: column-reverse;
+      margin: 0px auto;
+      margin-top: -50px;
+      gap: 42px;
+    }
+    .search-bar {
+      text-align: left;
+    }
+    .search-bar input {
+      width: 85vw;
+      height: 50px;
+      padding: 10px 15px;
+    }
+
+    .search-results li {
+      padding: 15px;
+      width: 85vw;
+      font-size: 16px;
+    }
+
+    .countdown-card {
+      right: 10px;
+      bottom: 10px;
+      width: 80vw;
+      height: 100px;
+
+    }
+    .countdown {
+      font-size: 16px;
+    }
+    .bg-card {
+      margin: 10px 0px 0px 10px;
+      width: 80vw;
+      height: 100px;
+      margin: 0 auto;
+    }
+
+    .prog {
+      width: 90vw;
+      margin-bottom: 96px;
+    }
+  }
   @media screen and (max-width:320px){
     .header-page {
-      padding: 200px 5vw 180px 5vw;
-      height: 150px;
+      padding: 200px 5vw 120px 5vw;
+      height: fit-content;
     }
     .flex-header-prog {
       width: 100vw;
@@ -269,6 +491,7 @@
     .search-results li {
       padding: 15px;
       width: 80vw;
+      font-size: 16px;
     }
 
     .countdown-card {

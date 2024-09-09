@@ -6,7 +6,8 @@
   <div class="text-content">
     <h1>Contact</h1>
     <p class="subtitle">
-      Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus.
+      Une idée, une suggestion ou une réclamation ? <br>
+      Nous sommes à ton écoute ! Utilise ce formulaire pour nous faire part de ton message, et nous y répondrons au plus vite.
     </p>
   </div>
   <div class="form-container">
@@ -40,6 +41,7 @@
 
   form {
     width: 30vw;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
   }
@@ -82,7 +84,56 @@
   button:hover {
     background-color: #e4d2f9;
   }
+  @media screen and (max-width:1024px){
+    .contact-page {
+      flex-direction: column;
+      padding: 200px 5vw 96px 5vw;
+      height: fit-content;
+    }
 
+    form {
+      margin-top: 64px;
+      width: 500px;
+    }
+
+    label {
+      font-size: 18px;
+    }
+
+    input, textarea {
+      padding: 10px 10px 10px 15px;
+    }
+
+    button {
+      font-size: 18px;
+    }
+
+  }
+  @media screen and (max-width:600px){
+    .contact-page {
+      flex-direction: column;
+      padding: 200px 5vw 96px 5vw;
+      height: fit-content;
+    }
+
+    form {
+      margin-top: 64px;
+      width: 90vw;
+    }
+
+    label {
+      font-size: 16px;
+    }
+
+    input, textarea {
+      padding: 10px 10px 10px 15px;
+    }
+
+    button {
+      font-size: 16px;
+    }
+
+  }
   @media screen and (max-width:320px){
     .contact-page {
       flex-direction: column;

@@ -77,7 +77,7 @@
     text-decoration: none;
   }
 
-  @media screen and (max-width:320px){
+  @media screen and (max-width:425px){
     footer{
       flex-direction: column;
       padding: 45px 7.5vw;

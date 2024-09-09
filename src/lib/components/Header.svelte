@@ -37,28 +37,29 @@
   </button>
 
   <!-- Menu de navigation -->
-  <ul class:open={menuOpen}>
-    <li>
-      <button class="nav-item {currentPath === '/' ? 'active' : ''}" on:click={() => handleItemClick('/')}>Accueil</button>
-    </li>
-    <li>
-      <button class="nav-item {currentPath === '/programmation' ? 'active' : ''}" on:click={() => handleItemClick('/programmation')}>Programmation</button>
-    </li>
-    <li>
-      <button class="nav-item {currentPath === '/photos' ? 'active' : ''}" on:click={() => handleItemClick('/photos')}>Photos</button>
-    </li>
-    <li>
-      <button class="nav-item {currentPath === '/guide' ? 'active' : ''}" on:click={() => handleItemClick('/guide')}>Guide</button>
-    </li>
-    <li>
-      <button class="nav-item {currentPath === '/contact' ? 'active' : ''}" on:click={() => handleItemClick('/contact')}>Contact</button>
-    </li>
-    <li>
-      <button class="nav-item bold {currentPath === '/avantages' ? 'active' : ''}" on:click={() => handleItemClick('/avantages')}>Vos avantages</button>
-    </li>
-  </ul>
+  <div class="mobile-bg {menuOpen ? 'open' : ''}">
+    <ul>
+      <li>
+        <button class="nav-item {currentPath === '/' ? 'active' : ''}" on:click={() => handleItemClick('/')}>Accueil</button>
+      </li>
+      <li>
+        <button class="nav-item {currentPath === '/programmation' ? 'active' : ''}" on:click={() => handleItemClick('/programmation')}>Programmation</button>
+      </li>
+      <li>
+        <button class="nav-item {currentPath === '/photos' ? 'active' : ''}" on:click={() => handleItemClick('/photos')}>Photos</button>
+      </li>
+      <li>
+        <button class="nav-item {currentPath === '/guide' ? 'active' : ''}" on:click={() => handleItemClick('/guide')}>Guide</button>
+      </li>
+      <li>
+        <button class="nav-item {currentPath === '/contact' ? 'active' : ''}" on:click={() => handleItemClick('/contact')}>Contact</button>
+      </li>
+      <li>
+        <button class="nav-item bold {currentPath === '/avantages' ? 'active' : ''}" on:click={() => handleItemClick('/avantages')}>Vos avantages</button>
+      </li>
+    </ul>
+  </div>
 </header>
-
 <style>
   .no-bg{
     background: none;
@@ -96,12 +97,13 @@
     border: none;
     font-size: 16px;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
   .nav-item:hover {
-    opacity: 0.6;
+    opacity: 0.5;
+    color: var(--violet);
     transition: .2s;
-    cursor: pointer;
   }
 
   .active {
@@ -109,15 +111,27 @@
   }
 
   /* Styles pour mobile */
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 1350px) {
     .logo {
-      width: 115px;
+      width: 145px;
+    }
+    .nav-item {
+      font-size: 16px;
+      padding: 0px 15px;
+    }
+    header ul {
+      gap: 0px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .logo {
+      width: 130px;
     }
 
     header {
-      width: 80vw;
-      top: 30px;
-      height: 75px;
+      width: 85vw;
+      top: 50px;
+      height: 85px;
       padding: 0px 20px;
       border-radius: 15px;
     }
@@ -126,8 +140,6 @@
       position: fixed;
       width: 100vw;
       height: 100vh;
-      top: -30px;
-      left: -10px;
       background-color: white;
       flex-direction: column;
       align-items: center;
@@ -143,6 +155,104 @@
       display: flex;
     }
 
+    .burger-button {
+      display: flex;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .nav-item {
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+      padding: 15px 0;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .logo {
+      width: 115px;
+    }
+
+    header {
+      width: 80vw;
+      top: 45px;
+      height: 75px;
+      padding: 0px 20px;
+      border-radius: 15px;
+    }
+
+    header ul {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+      display: none;
+      z-index: 999;
+    }
+
+    header ul.open {
+      display: flex;
+    }
+
+    .burger-button {
+      display: flex;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .nav-item {
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+      padding: 15px 0;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    .logo {
+      width: 115px;
+    }
+
+    header {
+      width: 80vw;
+      top: 40px;
+      height: 75px;
+      padding: 0px 20px;
+      border-radius: 10px;
+    }
+
+    header .mobile-bg {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+      display: none;
+      z-index: 999;
+      top: 0;
+      left: 0;
+    }
+    .mobile-bg.open {
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
     .burger-button {
       display: flex;
       background: none;

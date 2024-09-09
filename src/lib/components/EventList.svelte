@@ -163,7 +163,7 @@
     gap: 32px;
   }
   .info-event p {
-    font-size: 16px;
+    font-size: 18px;
   }
   .info-date {
     line-height: 110%;
@@ -215,13 +215,240 @@
     gap: 8px;
     align-items: center;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width:1350px){
+
+li {
+  margin: 0 auto;
+  padding: 35px 0;
+}
+.top-info-container {
+  gap: 12px;
+}
+.date-container{
+  padding: 0;
+  padding-right: 48px;
+  margin-bottom: 24px;
+}
+.info-billet{
+  margin-top: 0px;
+}
+
+.info-event {
+  max-width: 650px;
+  width: 50vw;
+  gap: 30px;
+}
+
+.button {
+  width: 25vw;
+  max-width: 240px;
+  margin-bottom: 16px;
+}
+
+.container-button {
+  padding-left: 65px;
+  margin-top: 32px;
+}
+}
+  @media screen and (max-width:1024px){
+
+    li {
+      margin: 0 auto;
+      padding: 35px 0;
+    }
+    .top-info-container {
+      gap: 12px;
+    }
+    .date-container{
+      padding: 0;
+      padding-right: 48px;
+      margin-bottom: 24px;
+    }
+    .info-billet{
+      margin-top: 0px;
+    }
+
+    .day {
+      font-size: 48px;
+    }
+    .month,
+    .year {
+      font-size: 16px;
+    }
+
+    .info-event {
+      width: 45vw;
+      gap: 30px;
+    }
+    .info-event p {
+      font-size: 16px;
+    }
+
+    .button {
+      font-size: 16px;
+      width: 25vw;
+      margin-bottom: 16px;
+    }
+
+    .container-button {
+      padding-left: 65px;
+      margin-top: 32px;
+    }
+  }
+  @media screen and (max-width:768px){
     ul {
       margin-top: 48px;
     }
 
     li {
-      padding: 50px 0;
+      margin: 0 auto;
+      padding: 35px 0;
+      flex-direction: column;
+    }
+    .top-info-container {
+      flex-direction: column-reverse;
+      gap: 12px;
+    }
+    .date-container{
+      padding: 0;
+      padding-right: 48px;
+      margin-bottom: 24px;
+    }
+    .info-billet{
+      margin-top: 0px;
+    }
+    .month,
+    .year {
+      font-size: 16px;
+    }
+
+    .day {
+      font-size: 52px;
+    }
+
+    .info-event {
+      width: 70vw;
+      gap: 24px;
+    }
+
+    .button {
+      width: 280px;
+      margin-bottom: 16px;
+    }
+
+    .container-button {
+      padding-left: 0px;
+      margin-top: 32px;
+    }
+  }
+  @media screen and (max-width:600px){
+    ul {
+      margin-top: 48px;
+    }
+
+    li {
+      margin: 0 auto;
+      padding: 35px 0;
+      flex-direction: column;
+    }
+    .top-info-container {
+      flex-direction: column-reverse;
+      gap: 12px;
+    }
+    .date-container{
+      padding: 0;
+      padding-right: 48px;
+      margin-bottom: 24px;
+    }
+    .info-billet{
+      margin-top: 0px;
+    }
+    .month,
+    .year {
+      font-size: 16px;
+    }
+
+    .day {
+      font-size: 52px;
+    }
+
+    .info-event {
+      width: 70vw;
+      gap: 24px;
+    }
+
+    .button {
+      width: 280px;
+      height: 60px;
+      margin-bottom: 16px;
+    }
+
+    .container-button {
+      padding-left: 0px;
+      margin-top: 32px;
+    }
+  }
+  @media screen and (max-width:425px){
+    ul {
+      margin-top: 48px;
+    }
+
+    li {
+      margin: 0 auto;
+      padding: 35px 0;
+      flex-direction: column;
+    }
+    .top-info-container {
+      flex-direction: column-reverse;
+      gap: 8px;
+    }
+    .date-container{
+      padding: 0;
+      padding-right: 24px;
+      margin-bottom: 24px;
+    }
+    .info-billet{
+      margin-top: 0px;
+    }
+    .month,
+    .year {
+      font-size: 16px;
+    }
+
+    .day {
+      font-size: 52px;
+    }
+
+    .info-event {
+      width: 70vw;
+      gap: 24px;
+    }
+    .info-event p {
+      font-size: 16px;
+    }
+
+    .button {
+      width: 85vw;
+      height: 60px;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .liquide {
+      font-size: 15px;
+    }
+    .container-button {
+      padding-left: 0px;
+      margin-top: 32px;
+    }
+  }
+  @media screen and (max-width:360px){
+    ul {
+      margin-top: 48px;
+    }
+
+    li {
+      padding: 35px 0;
       flex-direction: column;
     }
     .left-part {
@@ -230,14 +457,15 @@
       justify-content: center;
     }
     .top-info-container {
-      flex-direction: column;
+      flex-direction: column-reverse;
+      gap: 16px;
     }
     .top-info-container p {
       text-align: center;
     }
     .date-container{
       padding: 0;
-      margin-bottom: 48px;
+      margin-bottom: 24px;
     }
     .info-billet{
       margin-top: 16px;
@@ -253,7 +481,7 @@
 
     .info-event {
       width: 90vw;
-      gap: 32px;
+      gap: 26px;
     }
     .info-event p {
       font-size: 16px;
@@ -267,7 +495,7 @@
     }
 
     .liquide {
-      font-size: 16px;
+      font-size: 15px;
     }
     .container-button {
       padding-left: 0px;

@@ -126,9 +126,8 @@
   <div class="box-title">
     <h1 class="title">Vos avantages</h1>
     <p class="subtitle">
-      Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus.
+      Découvre la carte adhérent du HUB !<br>
+      Avec cette carte tu aides à financer l’association, tu accèdes à de nombreuses offres auprès de nos partenaires et obtiens des tarifs réduits sur tous nos évènements !
     </p>
     <Button path="">
       <span slot="text">Adhérer au BDE</span>
@@ -294,7 +293,6 @@
   }
   .subtitle {
     margin-bottom: 56px;
-    width: 40%;
   }
   .why{
     display: flex;

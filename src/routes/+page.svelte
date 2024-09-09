@@ -66,12 +66,12 @@
 <section class="top-main">
   <div class="box-title">
     <h1 class="main-title">
-      <span class="violet">Torem</span> ipsum dolor sit amet, consectetur
+      <span class="violet">House</span> of <span class="violet">united brothers</span>,<br>
+      bde mmi
     </h1>
     <p class="main-text">
-      Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-      molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-      accumsan, risus sem sollicitudin lacus.
+      Bienvenue sur le site du BDE MMI Bordeaux !<br>
+      Ici retrouve toutes nos actus et tous les renseignements dont tu as besoin pour profiter au maximum de ton année.
     </p>
   </div>
   <img src="/images/michel.gif" alt="Michel" class="michel-gif" />
@@ -143,14 +143,15 @@
         <span slot="title">Aucun événement à venir</span>
       </CardEvent>
     {:else if upcomingEvents.length === 1}
+    <div class="card-event-1">
       <CardEvent
         path="#boite"
         cardType="secondary"
-        imageUrl="/images/default-event.png"
-      >
+        imageUrl="/images/default-event.png">
         <span slot="date">Bientôt</span>
         <span slot="title">D'autres événements bientôt</span>
       </CardEvent>
+      </div>
       <CardEvent
         path={upcomingEvents[0]?.path || "#"}
         cardType="main"
@@ -163,69 +164,33 @@
           >{upcomingEvents[0]?.title || "Événement à venir"}</span
         >
       </CardEvent>
-      <CardEvent
-        path="#boite"
-        cardType="secondary"
-        imageUrl="/images/default-event.png"
-      >
-        <span slot="date">Bientôt</span>
-        <span slot="title">D'autres événements bientôt</span>
-      </CardEvent>
-    {:else if upcomingEvents.length === 2}
-      <div class="event-container">
-        <CardEvent
-          path={upcomingEvents[0]?.path || "#"}
-          cardType="secondary"
-          imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.png"}
-        >
-          <span slot="date"
-            >{new Date(upcomingEvents[0]?.date).toLocaleDateString(
-              "fr-FR",
-            )}</span
-          >
-          <span slot="title"
-            >{upcomingEvents[0]?.title || "Événement à venir"}</span
-          >
-        </CardEvent>
-        <CardEvent
-          path={upcomingEvents[1]?.path || "#"}
-          cardType="main"
-          imageUrl={upcomingEvents[1]?.srcphoto || "/images/default-event.png"}
-        >
-          <span slot="date"
-            >{new Date(upcomingEvents[1]?.date).toLocaleDateString(
-              "fr-FR",
-            )}</span
-          >
-          <span slot="title"
-            >{upcomingEvents[1]?.title || "Événement à venir"}</span
-          >
-        </CardEvent>
+      <div class="card-event-3">
         <CardEvent
           path="#boite"
           cardType="secondary"
-          imageUrl="/images/default-event.png"
-        >
+          imageUrl="/images/default-event.png">
           <span slot="date">Bientôt</span>
           <span slot="title">D'autres événements bientôt</span>
         </CardEvent>
       </div>
-    {:else}
+    {:else if upcomingEvents.length === 2}
       <div class="event-container">
-        <CardEvent
-          path={upcomingEvents[0]?.path || "#"}
-          cardType="secondary"
-          imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.png"}
-        >
-          <span slot="date"
-            >{new Date(upcomingEvents[0]?.date).toLocaleDateString(
-              "fr-FR",
-            )}</span
+        <div class="card-event-1">
+          <CardEvent
+            path={upcomingEvents[0]?.path || "#"}
+            cardType="secondary"
+            imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.png"}
           >
-          <span slot="title"
-            >{upcomingEvents[0]?.title || "Événement à venir"}</span
-          >
-        </CardEvent>
+            <span slot="date"
+              >{new Date(upcomingEvents[0]?.date).toLocaleDateString(
+                "fr-FR",
+              )}</span
+            >
+            <span slot="title"
+              >{upcomingEvents[0]?.title || "Événement à venir"}</span
+            >
+          </CardEvent>
+        </div>
         <CardEvent
           path={upcomingEvents[1]?.path || "#"}
           cardType="main"
@@ -240,6 +205,49 @@
             >{upcomingEvents[1]?.title || "Événement à venir"}</span
           >
         </CardEvent>
+        <div class="card-event-3">
+          <CardEvent
+            path="#boite"
+            cardType="secondary"
+            imageUrl="/images/default-event.png"
+          >
+            <span slot="date">Bientôt</span>
+            <span slot="title">D'autres événements bientôt</span>
+          </CardEvent>
+        </div>
+      </div>
+    {:else}
+      <div class="card-event-1">
+        <CardEvent
+            path={upcomingEvents[0]?.path || "#"}
+            cardType="secondary"
+            imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.png"}
+          >
+            <span slot="date"
+              >{new Date(upcomingEvents[0]?.date).toLocaleDateString(
+                "fr-FR",
+              )}</span
+            >
+            <span slot="title"
+              >{upcomingEvents[0]?.title || "Événement à venir"}</span
+            >
+        </CardEvent>
+      </div>
+      <CardEvent
+          path={upcomingEvents[1]?.path || "#"}
+          cardType="main"
+          imageUrl={upcomingEvents[1]?.srcphoto || "/images/default-event.png"}
+        >
+          <span slot="date"
+            >{new Date(upcomingEvents[1]?.date).toLocaleDateString(
+              "fr-FR",
+            )}</span
+          >
+          <span slot="title"
+            >{upcomingEvents[1]?.title || "Événement à venir"}</span
+          >
+      </CardEvent>
+      <div class="card-event-3">
         <CardEvent
           path={upcomingEvents[2]?.path || "#"}
           cardType="secondary"
@@ -271,22 +279,9 @@
       <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
       <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
       <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <!-- Duplicate items for seamless scroll -->
-      <a href=""><img src="/images/partenaire/logo1.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
     </div>
   </div>
-  <a href="/avantages#partner" class="button-secondary"
-    >Voir toutes les offres</a
-  >
+  <a href="/avantages#partner" class="button-secondary">Voir toutes les offres</a>
 </section>
 
 <section class="boite" id="boite">
@@ -357,6 +352,7 @@
 
   .flex-main-button {
     display: flex;
+    max-width: 1200px;
     width: 65vw;
     justify-content: space-between;
     margin: 0 auto;
@@ -381,7 +377,7 @@
 
   .adherents {
     margin-top: 128px;
-    padding: 80px 10vw;
+    padding: 60px 10vw;
     gap: 80px;
     display: flex;
     align-items: center;
@@ -416,16 +412,16 @@
   .flex-evenements {
     margin-top: 82px;
     width: 85vw;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     gap: 20px;
   }
-  .event-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+  .card-event-1{
+    margin-top: 80px;
   }
-
+  .card-event-3{
+    margin-top: 120px;
+  }
   .partner {
     margin-top: 128px;
     height: 500px;
@@ -453,13 +449,6 @@
     position: relative;
   }
 
-  .flex-partner .scrolling {
-    display: flex;
-    gap: 100px;
-    width: calc(200% + 20px);
-    animation: scroll 20s linear infinite;
-  }
-
   .flex-partner .scrolling a {
     flex: none;
     margin: 0 10px;
@@ -480,14 +469,6 @@
   }
   .button-secondary:hover {
     background-color: #e4d2f9;
-  }
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
   }
 
   .boite {
@@ -550,6 +531,114 @@
   .submit-button:hover {
     background-color: #a274b7;
   }
+  @media screen and (max-width: 425px){
+    .top-main {
+      flex-direction: column;
+      padding: 220px 5vw 80px 5vw;
+      height: 550px;
+    }
+    .main-title {
+      width: 100%;
+    }
+    .main-text {
+      width: 100%;
+    }
+    .michel-gif {
+      margin-top: -25px;
+      align-self: flex-end;
+      height: 160px;
+      rotate: 10deg;
+    }
+    .flex-main-button {
+      width: 90vw;
+      gap: 30px;
+      align-items: center;
+      flex-direction: column;
+      margin-top: -180px;
+    }
+    /* About Us */
+    .about-us {
+      width: 90vw;
+      margin-top: 96px;
+      flex-direction: column;
+    }
+    .text-about p {
+      margin-top: 32px;
+      width: 100%;
+    }
+    .about-us img {
+      width: 80vw;
+      height: auto;
+      rotate: -5deg;
+      margin-top: 48px;
+    }
+    /* Adhérents */
+    .adherents {
+      margin-top: 96px;
+      padding: 80px 5vw;
+      flex-direction: column;
+    }
+    .bg-adherents-img{
+      width: 80vw;
+      height: auto;
+    }
+    .adherents-img {
+      width: 80vw;
+      height: auto;
+      left: 10%;
+    }
+    .text-adherents{
+      width: 100%;
+    }
+    .text-adherents p {
+      margin-top: 20px;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    /* événement */
+    .evenements {
+      width: 90vw;
+    }
+    .flex-evenements {
+      margin-top: 64px;
+      width: 90vw;
+    }
+
+    /* Partner */
+
+    /* Boite à idées */
+    .boite {
+      flex-direction: column;
+      margin: 96px auto 64px auto;
+      width: 90vw;
+    }
+    form {
+      position: relative;
+      margin-top: 32px;
+      width: 90vw;
+    }
+
+    input {
+      height: 35px;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 20px;
+      padding: 10px 10px 10px 20px;
+    }
+    .boite img{
+      position: absolute;
+      z-index: 0;
+      width: 90vw;
+      margin-top: 94px;
+    }
+
+    .submit-button{
+      width: 90vw;
+    }
+
+  }
   @media screen and (max-width:320px){
     .top-main {
       flex-direction: column;
@@ -585,7 +674,8 @@
       width: 100%;
     }
     .about-us img {
-      height: 200px;
+      width: 80vw;
+      height: auto;
       rotate: -5deg;
       margin-top: 48px;
     }
