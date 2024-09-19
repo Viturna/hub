@@ -110,7 +110,7 @@
             </svg>
           </div>
         {:else}
-          <a href="{event.pathphoto}" class="button">Voir les photos</a>
+          <a href="{event.pathphoto}" target="_blank" class="button">Voir les photos</a>
         {/if}
 
       </div>

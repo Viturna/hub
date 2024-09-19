@@ -270,16 +270,12 @@
 <section class="partner">
   <h2>Nos partenaires</h2>
   <div class="flex-partner">
-    <div class="scrolling">
-      <a href=""><img src="/images/partenaire/logo1.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-      <a href=""><img src="/images/partenaire/logo2.jpg" alt="" /></a>
-    </div>
+      <a href="Blast Event"><img src="/images/partenaire/partner2.jpg" alt="" /></a>
+      <a href="" title="IT Capucins"><img src="/images/partenaire/partner1.jpg" alt="" /></a>
+      <a href="" title="Grizzly"><img src="/images/partenaire/partner6.jpg" alt="" /></a>
+      <a href="" title="BMF"><img src="/images/partenaire/partner4.jpg" alt="" /></a>
+      <a href="" title="Drinki"><img src="/images/partenaire/partner3.jpg" alt="" /></a>
+      <a href="" title="Garorock"><img src="/images/partenaire/partner5.jpg" alt="" /></a>
   </div>
   <a href="/avantages#partner" class="button-secondary">Voir toutes les offres</a>
 </section>
@@ -442,16 +438,20 @@
     margin-top: 82px;
   }
   .flex-partner {
-    margin-top: 60px;
     display: flex;
     overflow: hidden;
-    width: 100vw;
+    width: 85vw;
+    gap: 5vw;
+    margin: 0 auto;
+    margin-top: 60px;
     position: relative;
   }
 
-  .flex-partner .scrolling a {
-    flex: none;
-    margin: 0 10px;
+  .flex-partner a img {
+    width: 10vw;
+  }
+  .flex-partner a:hover{
+    opacity: 0.8;
   }
 
   .button-secondary {

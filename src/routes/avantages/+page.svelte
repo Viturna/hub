@@ -9,47 +9,24 @@
       id: 1,
       path: "",
       type: "main",
-      name: "Test1",
-      discount: "-20%",
+      name: "IT Capucins",
+      discount: "-10%",
+      dtext: "Sur toute la carte",
       address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
+      hours: "12:00 – 15:00 / 19:00–22:00 (Hors dimanche soir)",
     },
     {
       id: 2,
       path: "",
-      type: "Encore",
-      name: "Grizzlbbby",
-      discount: "-20%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
-    {
-      id: 3,
-      path: "",
       type: "secondary",
-      name: "ajtre FIn",
-      discount: "-10%",
+      name: "Grizzly",
+      discount: "HAPPY HOUR",
+      dtext: "24h/24H",
       address: "54 Pl. des Capucins, 33000 Bordeaux",
       hours: "Tous les jours : 14h00 - 02h00",
     },
-    {
-      id: 4,
-      path: "",
-      type: "secondary",
-      name: "ajtre FIn",
-      discount: "-10%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
-    {
-      id: 5,
-      path: "",
-      type: "secondary",
-      name: "ajtre FIn",
-      discount: "-10%",
-      address: "54 Pl. des Capucins, 33000 Bordeaux",
-      hours: "Tous les jours : 14h00 - 02h00",
-    },
+
+
   ];
 
   let partnersponctuels = [
@@ -93,33 +70,6 @@
 
   let partnerItems: HTMLDivElement;
 
-  onMount(() => {
-    const items = partnerItems;
-
-    const adjustWidth = () => {
-      if (items) {
-        const totalWidth = Array.from(
-          items.querySelectorAll<HTMLDivElement>(".card-partner")
-        ).reduce((width, item) => width + item.offsetWidth, 0);
-        items.style.width = `${totalWidth}px`;
-      }
-    };
-
-    const startAnimation = () => {
-      if (items) {
-        items.style.animation = "scroll 23s linear infinite";
-      }
-    };
-
-    adjustWidth();
-    startAnimation();
-
-    window.addEventListener("resize", adjustWidth);
-
-    return () => {
-      window.removeEventListener("resize", adjustWidth);
-    };
-  });
 </script>
 
 <section class="top-main">
@@ -204,6 +154,7 @@
         <CardPartner path="{partner.path}" cardType={partner.type}>
           <span slot="name">{partner.name}</span>
           <span slot="reduc">{partner.discount}</span>
+          <span slot="reduc-text">{partner.dtext}</span>
           <span slot="adress">{partner.address}</span>
           <span slot="horaire">{partner.hours}</span>
         </CardPartner>
@@ -267,7 +218,7 @@
       </div>
       <p class="title-convaincu">Devenir Super Adhérent</p>
       <p class="price">15,00€</p>
-      <a href="#" class="link-convaincu">Payer en ligne</a>
+      <a href="https://www.helloasso.com/associations/house-of-united-brothers/adhesions/cartes-adherent" target="_blank" class="link-convaincu">Payer en ligne</a>
     </div>
     <div class="container-convaincu">
       <div class="card">
@@ -276,7 +227,7 @@
       </div>
       <p class="title-convaincu">Devenir Adhérent</p>
       <p class="price">10,00€</p>
-      <a href="#" class="link-convaincu">Payer en ligne</a>
+      <a href="https://www.helloasso.com/associations/house-of-united-brothers/adhesions/cartes-adherent" target="_blank" class="link-convaincu">Payer en ligne</a>
     </div>
   </div>
 </section>

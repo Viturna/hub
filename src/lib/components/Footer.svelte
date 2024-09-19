@@ -21,7 +21,7 @@
       <a href="/" class="footer-item">Accueil</a>
       <a href="/programmation" class="footer-item">Programmation</a>
       <a href="/photos" class="footer-item">Photos</a>
-      <a href="/guide" class="footer-item">Guide du MMI</a>
+      <!-- <a href="/guide" class="footer-item">Guide du MMI</a> -->
       <a href="/avantages" class="footer-item">Vos avantages</a>
     </div>
     <div class="container-footer">

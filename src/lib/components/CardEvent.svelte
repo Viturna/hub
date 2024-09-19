@@ -80,4 +80,62 @@
     color: var(--black);
   }
 
+  @media screen and (max-width:600px){
+    .event-card {
+      width: 80vw;
+      max-width: 345px;
+      height: 310px;
+      gap: 4px;
+    }
+    .image-event{
+      width: 70vw;
+      height: 150px;
+      max-width: 300px;
+    }
+    .bg-card {
+      width: 80vw;
+      max-width: 345px;
+      height: 310px;
+    }
+
+    .card-text {
+      margin-top: 30px;
+      width: 70vw;
+      max-width: 300px;
+    }
+
+  }
+  @media screen and (max-width:360px){
+    .event-card {
+      right: 0px;
+      bottom: 0px;
+      width: 90vw;
+      height: 310px;
+      gap: 4px;
+    }
+    .image-event{
+      width: 80vw;
+      height: 150px;
+    }
+    .bg-card:hover .event-card {
+      right: 0px;
+      bottom: 0px;
+    }
+    .bg-card {
+      margin: 0px;
+      width: 90vw;
+      height: 310px;
+    }
+
+    .card-text {
+      margin-top: 30px;
+      width: 80vw;
+    }
+    .date {
+      font-size: 14px;
+    }
+    .title {
+      font-size: 18px;
+    }
+  }
 </style>
