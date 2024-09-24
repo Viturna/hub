@@ -49,6 +49,23 @@
     transition-duration: 100ms;
   }
 
+  @media screen and (max-width:1024px){
+    .button{
+      right: 10px;
+      bottom: 10px;
+      max-width: 300px;
+      width: 85vw;
+      height: 60px;
+      font-size: 16px;
+    }
+    .bg-button{
+      margin-left: 10px;
+      margin-top: 10px;
+      width: 85vw;
+      max-width: 300px;
+      height: 60px;
+    }
+  }
   @media screen and (max-width:425px){
     .button{
       right: 10px;

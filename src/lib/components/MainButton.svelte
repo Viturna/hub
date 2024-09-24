@@ -59,6 +59,32 @@
     color: var(--black);
     text-transform: uppercase;
   }
+  @media screen and (max-width: 1200px){
+    .main-button {
+      height: 110px;
+    }
+    .bg-div {
+      height: 110px;
+    }
+    .text-2 {
+      font-size: 28px;
+    }
+  }
+  @media screen and (max-width:600px){
+    .main-button {
+      width: 80vw;
+      max-width: 370px;
+      height: 110px;
+    }
+    .bg-div {
+      width: 80vw;
+      max-width: 370px;
+      height: 110px;
+    }
+    .text-2 {
+      font-size: 24px;
+    }
+  }
   @media screen and (max-width:425px){
     .main-button {
       right: 10px;

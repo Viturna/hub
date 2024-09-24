@@ -270,10 +270,9 @@
 <section class="partner">
   <h2>Nos partenaires</h2>
   <div class="flex-partner">
-      <a href="Blast Event"><img src="/images/partenaire/partner2.jpg" alt="" /></a>
-      <a href="" title="IT Capucins"><img src="/images/partenaire/partner1.jpg" alt="" /></a>
-      <a href="" title="Grizzly"><img src="/images/partenaire/partner6.jpg" alt="" /></a>
-      <a href="" title="BMF"><img src="/images/partenaire/partner4.jpg" alt="" /></a>
+      <a href="https://restaurants.it-trattoria.fr/bordeaux-capucins/" title="IT Capucins"><img src="/images/partenaire/partner1.jpg" alt="" /></a>
+      <a href="https://www.instagram.com/thegrizzlypubbordeaux/?hl=fr" title="Grizzly"><img src="/images/partenaire/partner6.jpg" alt="" /></a>
+      <a href="https://bad-mother-fucker-pub.eatbu.com/?lang=fr" title="BMF"><img src="/images/partenaire/partner4.jpg" alt="" /></a>
       <a href="" title="Drinki"><img src="/images/partenaire/partner3.jpg" alt="" /></a>
       <a href="" title="Garorock"><img src="/images/partenaire/partner5.jpg" alt="" /></a>
   </div>
@@ -531,6 +530,236 @@
   .submit-button:hover {
     background-color: #a274b7;
   }
+  @media screen and (max-width: 1350px){
+    .michel-gif {
+      height: 35vw;
+      max-height: 500px;
+    }
+    .flex-main-button {
+      width: 75vw;
+    }
+    .about-us img {
+      max-height: 335px;
+      height: 25vw;
+  }
+  }
+
+  @media screen and (max-width: 1000px){
+    .top-main {
+      flex-direction: column;
+      padding: 220px 7vw 80px 7vw;
+      height: 550px;
+    }
+    .michel-gif {
+      margin-top: -10px;
+      align-self: flex-end;
+      height: 220px;
+      rotate: 10deg;
+    }
+    .flex-main-button {
+      width: 90vw;
+      gap: 45px;
+      align-items: center;
+      flex-direction: column;
+      margin-top: -190px;
+    }
+    /* About Us */
+    .about-us {
+      width: 90vw;
+      margin-top: 96px;
+      flex-direction: column;
+    }
+    .text-about p {
+      margin-top: 32px;
+      width: 100%;
+    }
+    .about-us img {
+      width: 80vw;
+      max-width: 370px;
+      height: auto;
+      rotate: -5deg;
+      margin-top: 48px;
+    }
+    /* Adhérents */
+    .adherents {
+      margin-top: 96px;
+      padding: 80px 7vw;
+      flex-direction: column;
+    }
+    .bg-adherents-img{
+      width: 80vw;
+      max-width: 370px;
+      height: auto;
+    }
+    .adherents-img {
+      max-width: 370px;
+      width: 80vw;
+      height: auto;
+      left: 10%;
+    }
+    .text-adherents{
+      width: 100%;
+    }
+    .text-adherents p {
+      margin-top: 20px;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    /* événement */
+    .evenements {
+      width: 90vw;
+    }
+    .flex-evenements {
+      margin-top: 64px;
+      width: 90vw;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Partner */
+
+    /* Boite à idées */
+    .boite {
+      margin: 96px auto 64px auto;
+      width: 90vw;
+    }
+    form {
+      position: relative;
+      width: 90vw;
+      max-width: 300px;
+    }
+
+    input {
+      height: 35px;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 20px;
+      padding: 10px 10px 10px 20px;
+    }
+    .boite img{
+      width: 50vw;
+      object-fit: contain;
+    }
+
+    .submit-button{
+      width: 90vw;
+      max-width: 300px;
+    }
+
+  }
+  @media screen and (max-width: 600px){
+    .top-main {
+      flex-direction: column;
+      padding: 220px 7vw 80px 7vw;
+      height: 550px;
+    }
+    .main-title {
+      width: 100%;
+    }
+    .main-text {
+      width: 100%;
+    }
+    .michel-gif {
+      margin-top: -10px;
+      align-self: flex-end;
+      height: 160px;
+      rotate: 10deg;
+    }
+    .flex-main-button {
+      width: 90vw;
+      gap: 45px;
+      align-items: center;
+      flex-direction: column;
+      margin-top: -190px;
+    }
+    /* About Us */
+    .about-us {
+      width: 90vw;
+      margin-top: 96px;
+      flex-direction: column;
+    }
+    .text-about p {
+      margin-top: 32px;
+      width: 100%;
+    }
+    .about-us img {
+      width: 80vw;
+      max-width: 370px;
+      height: auto;
+      rotate: -5deg;
+      margin-top: 48px;
+    }
+    /* Adhérents */
+    .adherents {
+      margin-top: 96px;
+      padding: 80px 7vw;
+      flex-direction: column;
+    }
+    .bg-adherents-img{
+      width: 80vw;
+      max-width: 370px;
+      height: auto;
+    }
+    .adherents-img {
+      max-width: 370px;
+      width: 80vw;
+      height: auto;
+      left: 10%;
+    }
+    .text-adherents{
+      width: 100%;
+    }
+    .text-adherents p {
+      margin-top: 20px;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    /* événement */
+    .evenements {
+      width: 90vw;
+    }
+    .flex-evenements {
+      margin-top: 64px;
+      width: 90vw;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Partner */
+
+    /* Boite à idées */
+    .boite {
+      margin: 96px auto 64px auto;
+      width: 90vw;
+    }
+    form {
+      position: relative;
+      margin-top: 32px;
+      width: 90vw;
+      max-width: 300px;
+    }
+
+    input {
+      height: 35px;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 20px;
+      padding: 10px 10px 10px 20px;
+    }
+    .boite img{
+    display: none;
+    }
+
+    .submit-button{
+      width: 90vw;
+      max-width: 300px;
+    }
+
+  }
   @media screen and (max-width: 425px){
     .top-main {
       flex-direction: column;
@@ -544,7 +773,7 @@
       width: 100%;
     }
     .michel-gif {
-      margin-top: -25px;
+      margin-top: -10px;
       align-self: flex-end;
       height: 160px;
       rotate: 10deg;
@@ -602,6 +831,7 @@
     .flex-evenements {
       margin-top: 64px;
       width: 90vw;
+      flex-direction: column;
     }
 
     /* Partner */
@@ -652,7 +882,7 @@
       width: 100%;
     }
     .michel-gif {
-      margin-top: -25px;
+      margin-top: -15px;
       align-self: flex-end;
       height: 150px;
       rotate: 10deg;

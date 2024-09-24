@@ -8,7 +8,7 @@
   <p class="name"><slot name="name">Nom entreprise</slot></p>
   <div class="cadre">
     <p class="reduc"><slot name="reduc">-00%</slot></p>
-    <p class="reduc-text"><slot name="reduc-text">sur toute la carte</slot>*</p>
+    <p class="reduc-text"><slot name="reduc-text">sur toute la carte</slot></p>
   </div>
   <div class="card-bottom">
     <p class="adress">
@@ -60,7 +60,7 @@
   }
 
   .reduc {
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 700;
     color: var(--violet);
   }
@@ -68,6 +68,8 @@
   .reduc-text {
     font-size: 18px;
     color: var(--violet);
+    text-align: center;
+    line-height: 110%;
   }
 
   .card-bottom {

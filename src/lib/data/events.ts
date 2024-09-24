@@ -27,4 +27,17 @@ export const events: Event[] = [
     srcphoto: "/images/card-event.png",
     cardType: "main",
   },
+  {
+    id: 2,
+    date: "2024-10-03",
+    heure: "21:00",
+    billet: "6€/7€/8.5€",
+    title: "Soirée d'inté",
+    adresse: "LES CANAILLES BORDEAUX, 7 QUAI DES QUEYRIES, 33100 BDX",
+    description: "",
+    path: "",
+    pathphoto: "",
+    srcphoto: "/images/card-event.png",
+    cardType: "main",
+  }
 ];

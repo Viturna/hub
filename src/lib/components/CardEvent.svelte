@@ -79,7 +79,6 @@
     font-weight: 600;
     color: var(--black);
   }
-
   @media screen and (max-width:600px){
     .event-card {
       width: 80vw;
