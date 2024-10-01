@@ -1,3 +1,24 @@
+<svelte:head>
+    <title>Explorez la programmation de l'année</title>
+    <meta name="description" content="Soyez au courant de tout ce qui se passe cette année ! Découvrez notre programmation riche en événements et activités pour tous. Ne manquez rien !">
+    <meta name="keywords" content="programmation, événements, BDE, calendrier">
+
+    <!-- Balises Open Graph -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Explorez la programmation de l'année - House of United Brothers">
+    <meta property="og:site_name" content="House of United Brothers">
+    <meta property="og:url" content="https://houseofunitedbrothers.fr/programmation">
+    <meta property="og:description" content="Soyez au courant de tout ce qui se passe cette année ! Découvrez notre programmation riche en événements et activités pour tous. Ne manquez rien !">
+
+    <!-- Balises pour Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@houseofunitedbrothers">
+    <meta name="twitter:title" content="Explorez la programmation de l'année - House of United Brothers">
+    <meta name="twitter:description" content="Soyez au courant de tout ce qui se passe cette année ! Découvrez notre programmation riche en événements et activités pour tous. Ne manquez rien !">
+    <meta property="og:url" content="https://houseofunitedbrothers.fr/programmation">
+</svelte:head>
+
 <script lang="ts">
   import { events } from "$lib/data/events";
   import EventList from "$lib/components/EventList.svelte";

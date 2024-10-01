@@ -1,3 +1,23 @@
+<svelte:head>
+    <title>Mentions légales</title>
+    <meta name="description" content="Consultez nos mentions légales pour tout savoir sur notre engagement envers la transparence.">
+    <meta name="keywords" content="mentions légales, BDE">
+
+    <!-- Balises Open Graph -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mentions légales - House of United Brothers">
+    <meta property="og:site_name" content="House of United Brothers">
+    <meta property="og:url" content="https://houseofunitedbrothers.fr/mentions-legales">
+    <meta property="og:description" content="Consultez nos mentions légales pour tout savoir sur notre engagement envers la transparence.">
+
+    <!-- Balises pour Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@houseofunitedbrothers">
+    <meta name="twitter:title" content="Mentions légales - House of United Brothers">
+    <meta name="twitter:description" content="Consultez nos mentions légales pour tout savoir sur notre engagement envers la transparence.">
+    <meta property="og:url" content="https://houseofunitedbrothers.fr/mentions-legales">
+</svelte:head>
 <script lang="ts">
 </script>
 <section class="header-page">

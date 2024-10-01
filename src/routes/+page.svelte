@@ -1,3 +1,24 @@
+<svelte:head>
+    <title>Naviguez sur le site du BDE MMI Bordeaux | House of United Brothers</title>
+    <meta name="description" content="Bienvenue sur le site du BDE MMI Bordeaux ! Explorez nos activités, événements à venir et toutes les ressources pour les étudiants. Ensemble, faisons de cette année une expérience mémorable !">
+    <meta name="keywords" content="BDE MMI Bordeaux, étudiants, événements, ressources">
+
+     <!-- Balises Open Graph -->
+     <meta property="og:locale" content="fr_FR">
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="Naviguez sur le site du BDE MMI Bordeaux - House of United Brothers">
+     <meta property="og:site_name" content="House of United Brothers">
+     <meta property="og:url" content="https://houseofunitedbrothers.fr">
+     <meta property="og:description" content="Bienvenue sur le site du BDE MMI Bordeaux ! Explorez nos activités, événements à venir et toutes les ressources pour les étudiants. Ensemble, faisons de cette année une expérience mémorable !">
+
+     <!-- Balises pour Twitter -->
+     <meta name="twitter:card" content="summary">
+     <meta name="twitter:site" content="@houseofunitedbrothers">
+     <meta name="twitter:title" content="Naviguez sur le site du BDE MMI Bordeaux - House of United Brothers">
+     <meta name="twitter:description" content="Bienvenue sur le site du BDE MMI Bordeaux ! Explorez nos activités, événements à venir et toutes les ressources pour les étudiants. Ensemble, faisons de cette année une expérience mémorable !">
+     <meta property="og:url" content="https://houseofunitedbrothers.fr">
+</svelte:head>
+
 <script lang="ts">
   import { onMount } from "svelte";
   import MainButton from "$lib/components/MainButton.svelte";

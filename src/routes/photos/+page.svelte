@@ -1,3 +1,24 @@
+<svelte:head>
+    <title>Découvrez vos photos</title>
+    <meta name="description" content="Revivez vos moments inoubliables avec notre galerie de photos ! Retrouvez toutes les photos des événements et partagez vos souvenirs avec vos amis.">
+    <meta name="keywords" content="photos, galerie, souvenirs, BDE">
+
+      <!-- Balises Open Graph -->
+      <meta property="og:locale" content="fr_FR">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Découvrez vos photos - House of United Brothers">
+      <meta property="og:site_name" content="House of United Brothers">
+      <meta property="og:url" content="https://houseofunitedbrothers.fr/photos">
+      <meta property="og:description" content="Revivez vos moments inoubliables avec notre galerie de photos ! Retrouvez toutes les photos des événements et partagez vos souvenirs avec vos amis.">
+
+      <!-- Balises pour Twitter -->
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@houseofunitedbrothers">
+      <meta name="twitter:title" content="Découvrez vos photos - House of United Brothers">
+      <meta name="twitter:description" content="Revivez vos moments inoubliables avec notre galerie de photos ! Retrouvez toutes les photos des événements et partagez vos souvenirs avec vos amis.">
+      <meta property="og:url" content="https://houseofunitedbrothers.fr/photos">
+</svelte:head>
+
 <script lang="ts">
     import Photos from "$lib/components/Photos.svelte";
 </script>

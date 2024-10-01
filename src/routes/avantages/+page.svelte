@@ -1,3 +1,24 @@
+<svelte:head>
+    <title>Vos avantages en adhérent chez nous</title>
+    <meta name="description" content="Adhérez à notre BDE et découvrez des avantages exclusifs : réductions, événements réservés et gains. Rejoignez la grande famille MMI !">
+    <meta name="keywords" content="adhésion, avantages, BDE, exclusivités">
+
+    <!-- Balises Open Graph -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vos avantages en adhérent chez nous - House of United Brothers">
+    <meta property="og:site_name" content="House of United Brothers">
+    <meta property="og:url" content="https://houseofunitedbrothers.fr/avantages">
+    <meta property="og:description" content="Adhérez à notre BDE et découvrez des avantages exclusifs : réductions, événements réservés et gains. Rejoignez la grande famille MMI !">
+
+    <!-- Balises pour Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@houseofunitedbrothers">
+    <meta name="twitter:title" content="Vos avantages en adhérent chez nous - House of United Brothers">
+    <meta name="twitter:description" content="Adhérez à notre BDE et découvrez des avantages exclusifs : réductions, événements réservés et gains. Rejoignez la grande famille MMI !">
+    <meta property="og:url" content="https://houseofunitedbrothers.fr/avantages">
+</svelte:head>
+
 <script lang="ts">
   import CardPartner from "$lib/components/CardPartner.svelte";
   import Button from "$lib/components/Button.svelte";

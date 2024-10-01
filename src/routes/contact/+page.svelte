@@ -1,3 +1,24 @@
+<svelte:head>
+    <title>Contactez-nous en cas de besoin</title>
+    <meta name="description" content="Une question ou besoin d'aide ? N'hésitez pas à nous contacter ! Notre équipe est là pour vous accompagner et répondre à vos besoins.">
+    <meta name="keywords" content="Contact, BDE, assistance">
+
+    <!-- Balises Open Graph -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contactez-nous en cas de besoin - House of United Brothers">
+    <meta property="og:site_name" content="House of United Brothers">
+    <meta property="og:url" content="https://houseofunitedbrothers.fr/contact">
+    <meta property="og:description" content="Une question ou besoin d'aide ? N'hésitez pas à nous contacter ! Notre équipe est là pour vous accompagner et répondre à vos besoins.">
+
+    <!-- Balises pour Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@houseofunitedbrothers">
+    <meta name="twitter:title" content="Contactez-nous en cas de besoin - House of United Brothers">
+    <meta name="twitter:description" content="Une question ou besoin d'aide ? N'hésitez pas à nous contacter ! Notre équipe est là pour vous accompagner et répondre à vos besoins.">
+    <meta property="og:url" content="https://houseofunitedbrothers.fr/contact">
+</svelte:head>
+
 
 
 <section class="contact-page">

@@ -13,14 +13,15 @@
   <div class="container-items">
     <div class="container-footer">
       <p class="title">Contact</p>
-      <a href="mailto:bde@mmibordeaux.com" class="footer-item"
+      <a href="mailto:bde@mmibordeaux.com"  target="_blank" class="footer-item"
         >bde@mmibordeaux.com</a
       >
-      <a href="https://www.instagram.com/bdemmi_montaigne/" class="footer-item"
+      <a href="https://www.instagram.com/bdemmi_montaigne/"  target="_blank" class="footer-item"
         >Instragram</a
       >
       <a
         href="https://www.helloasso.com/associations/house-of-united-brothers"
+        target="_blank"
         class="footer-item">HelloAsso</a
       >
     </div>
