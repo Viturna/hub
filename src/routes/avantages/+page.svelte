@@ -973,10 +973,11 @@
       padding: 15px 25px;
       margin-bottom: 36px;
     }
-    .avantage-container p {
-      margin-top: 24px;
-    }
 
+    .avantage-container p {
+      padding: 0 20px;
+      width: 100%;
+    }
     .flex-convaincu {
       width: 90vw;
       margin: 96px auto;
@@ -1005,6 +1006,7 @@
     }
     .card {
       width: 90vw;
+      background-size: cover;
       height: 200px;
     }
   }

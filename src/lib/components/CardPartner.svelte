@@ -120,6 +120,8 @@
       padding: 10px 0;
       min-width: 0;
       width: 90vw;
+      max-width: 330px;
+      max-height: 330px;
       height: 90vw;
       gap: 22px;
     }
