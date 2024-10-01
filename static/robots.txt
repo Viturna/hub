@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /sendEmail.php
+Disallow: /sendIdea.php
+Sitemap: https://houseofunitedbrothers.fr/sitemap.xml

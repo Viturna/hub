@@ -139,11 +139,11 @@
   <div class="text-adherents">
     <h2>La carte adhérent</h2>
     <p>
-      Découvre la <span class="violet bold">carte adhérente</span> du HUB !<br
+      Découvre la <span class="bold">carte adhérente</span> du HUB !<br
       />
       Avec cette carte tu aides à financer l’association, tu accèdes à de nombreuses
       offres auprès de nos partenaires et obtiens des tarifs réduits sur
-      <span class="violet bold">tous nos évènements !</span>
+      <span class="bold">tous nos évènements !</span>
     </p>
     <Button path="/avantages">
       <span slot="text"
