@@ -46,6 +46,7 @@
     width: 370px;
     height: 110px;
     border-radius: 15px;
+    margin-left: 15px;
   }
   .bg-div.main {
     background-color: var(--violet);
@@ -61,13 +62,16 @@
   }
   @media screen and (max-width: 1200px){
     .main-button {
-      height: 110px;
+      height: 100px;
+      width: 350px;
+      gap: 12px;
     }
     .bg-div {
-      height: 110px;
+      height: 100px;
+      width: 350px;
     }
     .text-2 {
-      font-size: 28px;
+      font-size: 26px;
     }
   }
   @media screen and (max-width:600px){
@@ -95,6 +99,7 @@
     .bg-div {
       width: 80vw;
       height: 100px;
+      margin-left: 10px;
     }
     .text-2 {
       font-size: 24px;
@@ -110,6 +115,7 @@
     .bg-div {
       width: 90vw;
       height: 100px;
+      margin-left: 10px;
     }
     .text-2 {
       font-size: 24px;

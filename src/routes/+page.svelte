@@ -66,12 +66,14 @@
 <section class="top-main">
   <div class="box-title">
     <h1 class="main-title">
-      <span class="violet">House</span> of <span class="violet">united brothers</span>,<br>
+      <span class="violet">House</span> of
+      <span class="violet">united brothers</span>,<br />
       bde mmi
     </h1>
     <p class="main-text">
-      Bienvenue sur le site du BDE MMI Bordeaux !<br>
-      Ici retrouve toutes nos actus et tous les renseignements dont tu as besoin pour profiter au maximum de ton année.
+      Bienvenue sur le site du BDE MMI Bordeaux !<br />
+      Ici retrouve toutes nos actus et tous les renseignements dont tu as besoin
+      pour profiter au maximum de ton année.
     </p>
   </div>
   <img src="/images/michel.gif" alt="Michel" class="michel-gif" />
@@ -143,14 +145,15 @@
         <span slot="title">Aucun événement à venir</span>
       </CardEvent>
     {:else if upcomingEvents.length === 1}
-    <div class="card-event-1">
-      <CardEvent
-        path="#boite"
-        cardType="secondary"
-        imageUrl="/images/default-event.png">
-        <span slot="date">Bientôt</span>
-        <span slot="title">D'autres événements bientôt</span>
-      </CardEvent>
+      <div class="card-event-1">
+        <CardEvent
+          path="#boite"
+          cardType="secondary"
+          imageUrl="/images/default-event.png"
+        >
+          <span slot="date">Bientôt</span>
+          <span slot="title">D'autres événements bientôt</span>
+        </CardEvent>
       </div>
       <CardEvent
         path={upcomingEvents[0]?.path || "#"}
@@ -168,7 +171,8 @@
         <CardEvent
           path="#boite"
           cardType="secondary"
-          imageUrl="/images/default-event.png">
+          imageUrl="/images/default-event.png"
+        >
           <span slot="date">Bientôt</span>
           <span slot="title">D'autres événements bientôt</span>
         </CardEvent>
@@ -179,7 +183,8 @@
           <CardEvent
             path={upcomingEvents[0]?.path || "#"}
             cardType="secondary"
-            imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.png"}
+            imageUrl={upcomingEvents[0]?.srcphoto ||
+              "/images/default-event.png"}
           >
             <span slot="date"
               >{new Date(upcomingEvents[0]?.date).toLocaleDateString(
@@ -219,33 +224,31 @@
     {:else}
       <div class="card-event-1">
         <CardEvent
-            path={upcomingEvents[0]?.path || "#"}
-            cardType="secondary"
-            imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.png"}
-          >
-            <span slot="date"
-              >{new Date(upcomingEvents[0]?.date).toLocaleDateString(
-                "fr-FR",
-              )}</span
-            >
-            <span slot="title"
-              >{upcomingEvents[0]?.title || "Événement à venir"}</span
-            >
-        </CardEvent>
-      </div>
-      <CardEvent
-          path={upcomingEvents[1]?.path || "#"}
-          cardType="main"
-          imageUrl={upcomingEvents[1]?.srcphoto || "/images/default-event.png"}
+          path={upcomingEvents[0]?.path || "#"}
+          cardType="secondary"
+          imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.png"}
         >
           <span slot="date"
-            >{new Date(upcomingEvents[1]?.date).toLocaleDateString(
+            >{new Date(upcomingEvents[0]?.date).toLocaleDateString(
               "fr-FR",
             )}</span
           >
           <span slot="title"
-            >{upcomingEvents[1]?.title || "Événement à venir"}</span
+            >{upcomingEvents[0]?.title || "Événement à venir"}</span
           >
+        </CardEvent>
+      </div>
+      <CardEvent
+        path={upcomingEvents[1]?.path || "#"}
+        cardType="main"
+        imageUrl={upcomingEvents[1]?.srcphoto || "/images/default-event.png"}
+      >
+        <span slot="date"
+          >{new Date(upcomingEvents[1]?.date).toLocaleDateString("fr-FR")}</span
+        >
+        <span slot="title"
+          >{upcomingEvents[1]?.title || "Événement à venir"}</span
+        >
       </CardEvent>
       <div class="card-event-3">
         <CardEvent
@@ -270,25 +273,51 @@
 <section class="partner">
   <h2>Nos partenaires</h2>
   <div class="flex-partner">
-      <a href="https://restaurants.it-trattoria.fr/bordeaux-capucins/" title="IT Capucins"><img src="/images/partenaire/partner1.jpg" alt="" /></a>
-      <a href="https://www.instagram.com/thegrizzlypubbordeaux/?hl=fr" title="Grizzly"><img src="/images/partenaire/partner6.jpg" alt="" /></a>
-      <a href="https://bad-mother-fucker-pub.eatbu.com/?lang=fr" title="BMF"><img src="/images/partenaire/partner4.jpg" alt="" /></a>
-      <a href="" title="Drinki"><img src="/images/partenaire/partner3.jpg" alt="" /></a>
-      <a href="" title="Garorock"><img src="/images/partenaire/partner5.jpg" alt="" /></a>
+    <a
+      href="https://restaurants.it-trattoria.fr/bordeaux-capucins/"
+      title="IT Capucins"
+      target="_blank"><img src="/images/partenaire/partner1.jpg" alt="" /></a
+    >
+    <a
+      href="https://www.instagram.com/thegrizzlypubbordeaux/?hl=fr"
+      target="_blank"
+      title="Grizzly"><img src="/images/partenaire/partner6.jpg" alt="" /></a
+    >
+    <a
+      href="https://bad-mother-fucker-pub.eatbu.com/?lang=fr"
+      target="_blank"
+      title="BMF"><img src="/images/partenaire/partner4.jpg" alt="" /></a
+    >
+    <a href="https://linktr.ee/drinkibordeaux" title="Drinki" target="_blank"
+      ><img src="/images/partenaire/partner3.jpg" alt="" /></a
+    >
+    <a href="" title="Garorock" target="_blank"
+      ><img src="/images/partenaire/partner5.jpg" alt="" /></a
+    >
   </div>
-  <a href="/avantages#partner" class="button-secondary">Voir toutes les offres</a>
+  <a href="/avantages#partner" class="button-secondary"
+    >Voir toutes les offres</a
+  >
 </section>
 
 <section class="boite" id="boite">
   <div>
     <h2>Boîtes à idées</h2>
-    <form>
+    <form action="sendIdea.php" method="POST">
       <label for="name">Votre nom</label>
       <input
         type="text"
         id="name"
         name="name"
         placeholder="Michel Hub"
+        required
+      />
+      <label for="email">Votre email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="bde@mmibordeaux.com"
         required
       />
 
@@ -394,7 +423,6 @@
     color: var(--white);
   }
 
-
   .evenements {
     width: 85vw;
     margin: 0 auto;
@@ -411,10 +439,10 @@
     justify-content: center;
     gap: 20px;
   }
-  .card-event-1{
+  .card-event-1 {
     margin-top: 80px;
   }
-  .card-event-3{
+  .card-event-3 {
     margin-top: 120px;
   }
   .partner {
@@ -438,6 +466,7 @@
   }
   .flex-partner {
     display: flex;
+    justify-content: space-between;
     overflow: hidden;
     width: 85vw;
     gap: 5vw;
@@ -449,7 +478,7 @@
   .flex-partner a img {
     width: 10vw;
   }
-  .flex-partner a:hover{
+  .flex-partner a:hover {
     opacity: 0.8;
   }
 
@@ -530,21 +559,91 @@
   .submit-button:hover {
     background-color: #a274b7;
   }
-  @media screen and (max-width: 1350px){
+
+  @media screen and (max-width: 1350px) {
     .michel-gif {
-      height: 35vw;
-      max-height: 500px;
+      height: 300px;
     }
     .flex-main-button {
-      width: 75vw;
+      width: 80vw;
     }
+    /* About Us */
     .about-us img {
-      max-height: 335px;
-      height: 25vw;
-  }
-  }
+      width: 60vw;
+      height: auto;
+      max-width: 370px;
+    }
+    /* Adhérents */
+    .bg-adherents-img {
+      width: 80vw;
+      max-width: 370px;
+      height: auto;
+    }
+    .adherents-img {
+      max-width: 370px;
+      width: 80vw;
+      height: auto;
+      left: 12%;
+    }
 
-  @media screen and (max-width: 1000px){
+    /* Événements */
+    .flex-evenements {
+      margin-top: 64px;
+      width: 90vw;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Partner */
+    .partner {
+      height: fit-content;
+      padding: 64px 0;
+    }
+    .partner h2 {
+      margin-top: 0;
+    }
+    .flex-partner {
+      width: 90vw;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .flex-partner a img {
+      width: 100px;
+    }
+
+    /* Boite à idées */
+    .boite {
+      margin: 96px auto 64px auto;
+      width: 90vw;
+    }
+    form {
+      position: relative;
+      width: 90vw;
+      max-width: 400px;
+    }
+
+    input {
+      height: 35px;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 20px;
+      padding: 10px 10px 10px 20px;
+    }
+    .boite img {
+      width: 50vw;
+      object-fit: contain;
+    }
+
+    .submit-button {
+      width: 90vw;
+      max-width: 300px;
+    }
+  }
+  @media screen and (max-width: 1000px) {
     .top-main {
       flex-direction: column;
       padding: 220px 7vw 80px 7vw;
@@ -586,7 +685,7 @@
       padding: 80px 7vw;
       flex-direction: column;
     }
-    .bg-adherents-img{
+    .bg-adherents-img {
       width: 80vw;
       max-width: 370px;
       height: auto;
@@ -595,9 +694,9 @@
       max-width: 370px;
       width: 80vw;
       height: auto;
-      left: 10%;
+      left: 25%;
     }
-    .text-adherents{
+    .text-adherents {
       width: 100%;
     }
     .text-adherents p {
@@ -617,6 +716,23 @@
     }
 
     /* Partner */
+    .partner {
+      height: fit-content;
+      padding: 64px 0;
+    }
+    .partner h2 {
+      margin-top: 0;
+    }
+    .flex-partner {
+      width: 90vw;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .flex-partner a img {
+      width: 100px;
+    }
 
     /* Boite à idées */
     .boite {
@@ -626,7 +742,7 @@
     form {
       position: relative;
       width: 90vw;
-      max-width: 300px;
+      max-width: 400px;
     }
 
     input {
@@ -638,18 +754,17 @@
       margin-bottom: 20px;
       padding: 10px 10px 10px 20px;
     }
-    .boite img{
+    .boite img {
       width: 50vw;
       object-fit: contain;
     }
 
-    .submit-button{
+    .submit-button {
       width: 90vw;
       max-width: 300px;
     }
-
   }
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 600px) {
     .top-main {
       flex-direction: column;
       padding: 220px 7vw 80px 7vw;
@@ -697,7 +812,7 @@
       padding: 80px 7vw;
       flex-direction: column;
     }
-    .bg-adherents-img{
+    .bg-adherents-img {
       width: 80vw;
       max-width: 370px;
       height: auto;
@@ -706,9 +821,9 @@
       max-width: 370px;
       width: 80vw;
       height: auto;
-      left: 10%;
+      left: 20%;
     }
-    .text-adherents{
+    .text-adherents {
       width: 100%;
     }
     .text-adherents p {
@@ -728,7 +843,23 @@
     }
 
     /* Partner */
-
+    .partner {
+      height: fit-content;
+      padding: 64px 0;
+    }
+    .partner h2 {
+      margin-top: 0;
+    }
+    .flex-partner {
+      width: 90vw;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .flex-partner a img {
+      width: 20vw;
+    }
     /* Boite à idées */
     .boite {
       margin: 96px auto 64px auto;
@@ -750,17 +881,16 @@
       margin-bottom: 20px;
       padding: 10px 10px 10px 20px;
     }
-    .boite img{
-    display: none;
+    .boite img {
+      display: none;
     }
 
-    .submit-button{
+    .submit-button {
       width: 90vw;
       max-width: 300px;
     }
-
   }
-  @media screen and (max-width: 425px){
+  @media screen and (max-width: 425px) {
     .top-main {
       flex-direction: column;
       padding: 220px 5vw 80px 5vw;
@@ -807,7 +937,7 @@
       padding: 80px 5vw;
       flex-direction: column;
     }
-    .bg-adherents-img{
+    .bg-adherents-img {
       width: 80vw;
       height: auto;
     }
@@ -816,7 +946,7 @@
       height: auto;
       left: 10%;
     }
-    .text-adherents{
+    .text-adherents {
       width: 100%;
     }
     .text-adherents p {
@@ -835,6 +965,25 @@
     }
 
     /* Partner */
+    .partner {
+      height: fit-content;
+      padding: 64px 0;
+    }
+    .partner h2 {
+      margin-top: 0;
+    }
+    .flex-partner {
+      width: 90vw;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .flex-partner a img {
+      width: 40vw;
+      max-width: 100px;
+    }
 
     /* Boite à idées */
     .boite {
@@ -857,19 +1006,18 @@
       margin-bottom: 20px;
       padding: 10px 10px 10px 20px;
     }
-    .boite img{
+    .boite img {
       position: absolute;
       z-index: 0;
       width: 90vw;
       margin-top: 94px;
     }
 
-    .submit-button{
+    .submit-button {
       width: 90vw;
     }
-
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: 320px) {
     .top-main {
       flex-direction: column;
       padding: 180px 5vw 80px 5vw;
@@ -915,14 +1063,14 @@
       padding: 80px 5vw;
       flex-direction: column;
     }
-    .bg-adherents-img{
-      width: 280px;
+    .bg-adherents-img {
+      width: 80vw;
     }
     .adherents-img {
-      width: 270px;
-      left: 5%;
+      width: 78vw;
+      left: 15%;
     }
-    .text-adherents{
+    .text-adherents {
       width: 100%;
     }
     .text-adherents p {
@@ -935,11 +1083,29 @@
       width: 90vw;
     }
     .flex-evenements {
-      margin-top: 64px;
+      display: flex;
+      margin-top: 48px;
       width: 90vw;
     }
 
     /* Partner */
+    .partner {
+      height: fit-content;
+      padding: 64px 0;
+    }
+    .partner h2 {
+      margin-top: 0;
+    }
+    .flex-partner {
+      width: 90vw;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .flex-partner a img {
+      width: 40vw;
+    }
 
     /* Boite à idées */
     .boite {
@@ -962,15 +1128,15 @@
       margin-bottom: 20px;
       padding: 10px 10px 10px 20px;
     }
-    .boite img{
+    .boite img {
       position: absolute;
       width: 90vw;
       margin-top: 94px;
     }
 
-    .submit-button{
+    .submit-button {
       width: 90vw;
+      font-size: 16px;
     }
-
   }
 </style>

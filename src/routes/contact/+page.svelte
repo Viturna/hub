@@ -1,6 +1,4 @@
-<script lang="ts">
 
-</script>
 
 <section class="contact-page">
   <div class="text-content">
@@ -11,7 +9,7 @@
     </p>
   </div>
   <div class="form-container">
-    <form>
+    <form action="sendEmail.php" method="POST">
       <label for="name">Votre nom</label>
       <input type="text" id="name" name="name" placeholder="Michel Hub" required>
 
@@ -19,7 +17,7 @@
       <input type="text" id="object" name="object" placeholder="Problème à propos d'un évènement" required>
 
       <label for="email">Votre email</label>
-      <input type="email" id="email" name="email" placeholder="michel.hub@mmibordeaux.com" required>
+      <input type="email" id="email" name="email" placeholder="bde@mmibordeaux.com" required>
 
       <label for="message">Contenu</label>
       <textarea id="message" name="message" rows="4" placeholder="Ecrivez votre contenu ici ..." required></textarea>

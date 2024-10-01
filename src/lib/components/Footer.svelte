@@ -34,9 +34,9 @@
     </div>
     <div class="container-footer">
       <p class="title">Autres</p>
-      <a href="" class="footer-item">Mentions légales</a>
+      <a href="/mentions-legales" class="footer-item">Mentions légales</a>
       <a href="" class="footer-item">Confidentialité</a>
-      <a href="" class="footer-item">Contact</a>
+      <a href="/contact" class="footer-item">Contact</a>
     </div>
   </div>
 </footer>
@@ -84,7 +84,7 @@
     margin-bottom: 24px;
     text-decoration: none;
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (min-width: 801px) and (max-width: 1100px) {
     footer {
       padding: 64px 5vw;
     }

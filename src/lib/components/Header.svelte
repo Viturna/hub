@@ -1,12 +1,13 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
   import { page } from '$app/stores';
+  import { onMount } from 'svelte';
 
   let currentPath = $page.url.pathname;
   let menuOpen = false;
 
   function handleItemClick(path: string) {
-    menuOpen = false; // Ferme le menu après navigation
+    menuOpen = false;
     goto(path);
   }
 
@@ -14,10 +15,42 @@
     menuOpen = !menuOpen;
   }
 
-  $: currentPath = $page.url.pathname; // Pour détecter le changement de route et mettre à jour l'URL
+  $: currentPath = $page.url.pathname;
+
+  // Variables pour gérer le défilement
+  let lastScrollY = 0;
+  let headerVisible = true;
+  let scrollThreshold = 0; // Initialiser à 0 par défaut
+
+  function handleScroll() {
+    const currentScrollY = window.scrollY;
+
+    // Afficher ou cacher le header en fonction de la position de défilement
+    if (currentScrollY > scrollThreshold) {
+      if (currentScrollY > lastScrollY) {
+        headerVisible = false; // Cacher le header lorsqu'on défile vers le bas
+      } else {
+        headerVisible = true; // Montrer le header lorsqu'on défile vers le haut
+      }
+    } else {
+      headerVisible = true; // Toujours visible lorsque moins de 40vh
+    }
+
+    lastScrollY = currentScrollY;
+  }
+
+  onMount(() => {
+    // Initialiser la valeur de scrollThreshold une fois que le composant est monté
+    scrollThreshold = window.innerHeight * 0.15;
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
 </script>
 
-<header class:menu-open={menuOpen}>
+<header class:menu-open={menuOpen} class:hidden={!headerVisible}>
   <button class="no-bg" on:click={() => handleItemClick('/')}>
     <img src="/images/logo-header.svg" class="logo" alt="Logo BDE MMI" />
   </button>
@@ -81,9 +114,12 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
+    transition: top 0.5s ease;
+  }
+  .hidden {
+    top: -100px; /* Cache le header en le déplaçant vers le haut */
     transition: top 0.3s ease;
   }
-
   header.menu-open {
     top: 0; /* Quand le menu est ouvert, le header est aligné en haut */
   }

@@ -10,7 +10,7 @@
 <h2>1 - Informations légales</h2>
 <p>
   Nom de l'association : House of United Brothers<br>
-  Adresse du siège social : 1 Rue Jacques Elul<br>
+  Adresse du siège social : 1 rue Jacques Elul<br>
   Téléphone : 07 89 42 64 95<br>
   Adresse e-mail : <a href="mailto:bde@mmibordeaux.com" target="_blank">bde@mmibordeaux.com</a><br>
   Directeur de la publication : RIQUIER Thomas<br>

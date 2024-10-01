@@ -30,6 +30,7 @@
     width: 330px;
     height: 330px;
     background-image: url("/images/bg-card-partner.png");
+    background-size: cover;
     border-radius: 10px;
     text-decoration: none;
     gap: 28px;
@@ -40,7 +41,7 @@
   }
 
   .partner-card.secondary {
-    background-color: #F3EBF4;
+    background-color: #f3ebf4;
   }
 
   .name {
@@ -60,7 +61,7 @@
   }
 
   .reduc {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 700;
     color: var(--violet);
   }
@@ -75,41 +76,77 @@
   .card-bottom {
     padding: 0 20px;
   }
-  .adress, .horaire {
+  .adress,
+  .horaire {
     font-size: 16px;
   }
 
-  @media screen and (max-width:320px){
+  @media screen and (max-width: 768px) {
     .partner-card {
       padding: 10px 0;
-    min-width: 0;
-    width: 90vw;
-    height: 90vw;
-    gap: 22px;
-  }
+      min-width: 300px;
+      width: 300px;
+      height: 300px;
+      gap: 22px;
+    }
 
-  .name {
-    font-size: 24px;
-  }
+    .name {
+      font-size: 24px;
+    }
 
-  .cadre {
-    height: 100px;
-    width: 80%;
-  }
+    .cadre {
+      height: 100px;
+      width: 80%;
+    }
 
-  .reduc {
-    font-size: 32px;
-  }
+    .reduc {
+      font-size: 28px;
+    }
 
-  .reduc-text {
-    font-size: 16px;
-  }
+    .reduc-text {
+      font-size: 16px;
+    }
 
-  .card-bottom {
-    padding: 0 20px;
+    .card-bottom {
+      padding: 0 20px;
+    }
+    .adress,
+    .horaire {
+      font-size: 15px;
+    }
   }
-  .adress, .horaire {
-    font-size: 15px;
-  }
+  @media screen and (max-width: 425px) {
+    .partner-card {
+      padding: 10px 0;
+      min-width: 0;
+      width: 90vw;
+      height: 90vw;
+      gap: 22px;
+    }
+
+    .name {
+      font-size: 24px;
+    }
+
+    .cadre {
+      height: 100px;
+      width: 80%;
+    }
+
+    .reduc {
+      font-size: 28px;
+    }
+
+    .reduc-text {
+      font-size: 16px;
+    }
+
+    .card-bottom {
+      padding: 0 20px;
+    }
+    .adress,
+    .horaire {
+      font-size: 15px;
+    }
   }
 </style>

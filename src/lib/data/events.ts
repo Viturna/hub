@@ -35,9 +35,9 @@ export const events: Event[] = [
     title: "Soirée d'inté",
     adresse: "LES CANAILLES BORDEAUX, 7 QUAI DES QUEYRIES, 33100 BDX",
     description: "",
-    path: "",
+    path: "https://www.helloasso.com/associations/house-of-united-brothers/evenements/soiree-d-integration",
     pathphoto: "",
-    srcphoto: "/images/card-event.png",
+    srcphoto: "/images/soiree-inte.png",
     cardType: "main",
   }
 ];

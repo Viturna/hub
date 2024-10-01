@@ -11,7 +11,7 @@
 </section>
 <p class="top-text">On vous laisse regardez ce que vous avez loupé si vous n’êtes pas venu</p>
 <section class="gallery">
-  <Photos path="https://drive.google.com/drive/folders/19WfzagHtuXFofe9OAtrUP8ub6HGKVH6Q?usp=sharing" cardType="one" imageUrl1="/images/photo-gallery.png"> <span slot="title">Souvenirs des familles</span> <span slot="media">7</span></Photos>
+  <Photos path="https://drive.google.com/drive/folders/19WfzagHtuXFofe9OAtrUP8ub6HGKVH6Q?usp=sharing" cardType="one" imageUrl1="/images/photo-famille.png"> <span slot="title">Souvenirs des familles</span> <span slot="media">7</span></Photos>
   <!-- <Photos path="" cardType="three" imageUrl1="/images/photo-gallery.png" imageUrl2="/images/photo-gallery.png" imageUrl3="/images/photo-gallery.png"></Photos> -->
 </section>
 

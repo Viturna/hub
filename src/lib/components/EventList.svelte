@@ -65,7 +65,7 @@
 
       <div class="container-button">
         {#if event.date >= now}
-          <a href="{event.path}" class="button">Prend ta place</a>
+          <a href="{event.path}" class="button" target="_blank">Prend ta place</a>
           <div class="liquide-container">
             <p class="liquide">Paiement liquide possible</p>
             <svg

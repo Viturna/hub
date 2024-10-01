@@ -7,7 +7,7 @@
   let partners = [
     {
       id: 1,
-      path: "",
+      path: "https://restaurants.it-trattoria.fr/bordeaux-capucins/",
       type: "main",
       name: "IT Capucins",
       discount: "-10%",
@@ -17,7 +17,7 @@
     },
     {
       id: 2,
-      path: "",
+      path: "https://www.instagram.com/thegrizzlypubbordeaux/?hl=fr",
       type: "secondary",
       name: "Grizzly",
       discount: "24h/24H",
@@ -27,7 +27,7 @@
     },
     {
       id: 3,
-      path: "",
+      path: "https://bad-mother-fucker-pub.eatbu.com/?lang=fr",
       type: "main",
       name: "BMF",
       discount: "3€",
@@ -37,7 +37,7 @@
     },
     {
       id: 4,
-      path: "",
+      path: "https://bad-mother-fucker-pub.eatbu.com/?lang=fr",
       type: "secondary",
       name: "BMF",
       discount: "5€",
@@ -47,7 +47,7 @@
     },
     {
       id: 5,
-      path: "",
+      path: "https://bad-mother-fucker-pub.eatbu.com/?lang=fr",
       type: "main",
       name: "BMF",
       discount: "1 Shot",
@@ -57,7 +57,7 @@
     },
     {
       id: 6,
-      path: "",
+      path: "https://linktr.ee/drinkibordeaux",
       type: "secondary",
       name: "Drinky APP",
       discount: "Télécharger",
@@ -65,7 +65,6 @@
       address: "x",
       hours: "x",
     },
-
   ];
 
   let partnersponctuels = [
@@ -81,17 +80,18 @@
   ];
 
   let partnerItems: HTMLDivElement;
-
 </script>
 
 <section class="top-main">
   <div class="box-title">
     <h1 class="title">Vos avantages</h1>
     <p class="subtitle">
-      Découvre la carte adhérent du HUB !<br>
-      Avec cette carte tu aides à financer l’association, tu accèdes à de nombreuses offres auprès de nos partenaires et obtiens des tarifs réduits sur tous nos évènements !
+      Découvre la carte adhérent du HUB !<br />
+      Avec cette carte tu aides à financer l’association, tu accèdes à de nombreuses
+      offres auprès de nos partenaires et obtiens des tarifs réduits sur tous nos
+      évènements !
     </p>
-    <Button path="">
+    <Button path="#convaincu">
       <span slot="text">Adhérer au BDE</span>
     </Button>
   </div>
@@ -106,43 +106,103 @@
   <h2>Pourquoi adhérer au BDE ?</h2>
   <p class="why-subtitle">
     Tu veux adhérer au BDE et ainsi nous aider grâce à ton achat ?
-    <br> On te propose 2 cartes : la carte adhérente et la carte SUPER adhérent.
+    <br /> On te propose 2 cartes : la carte adhérente et la carte SUPER adhérent.
   </p>
   <table class="custom-table">
     <tr>
       <td></td>
-      <td class="header-tab"><p class="title">ADHÉRENT</p><p class="price">10€</p></td>
-      <td class="header-tab"><p class="title">super ADHÉRENT</p> <p class="price">15€</p></td>
+      <td class="header-tab"
+        ><p class="title">ADHÉRENT</p>
+        <p class="price">10€</p></td
+      >
+      <td class="header-tab"
+        ><p class="title">super ADHÉRENT</p>
+        <p class="price">15€</p></td
+      >
     </tr>
     <tr>
       <td>Réductions chez nos partenaires. *</td>
-      <td><img src="/images/michel-avantages-adherents.png" alt="1 Michel"></td>
-      <td><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"></td>
+      <td
+        ><img src="/images/michel-avantages-adherents.png" alt="1 Michel" /></td
+      >
+      <td
+        ><img
+          src="/images/michel-avantages-superadherents.png"
+          alt="1 Michel"
+        /></td
+      >
     </tr>
     <tr>
       <td>Achat rentabilisé</td>
-      <td><img src="/images/michel-avantages-adherents.png" alt="1 Michel"></td>
-      <td><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"></td>
+      <td
+        ><img src="/images/michel-avantages-adherents.png" alt="1 Michel" /></td
+      >
+      <td
+        ><img
+          src="/images/michel-avantages-superadherents.png"
+          alt="1 Michel"
+        /><img
+          src="/images/michel-avantages-superadherents.png"
+          alt="1 Michel"
+        /></td
+      >
     </tr>
     <tr>
       <td>Réduction sur les tarifs d’entrée aux soirées</td>
-      <td><img src="/images/michel-avantages-adherents.png" alt="1 Michel"></td>
-      <td><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"></td>
+      <td
+        ><img src="/images/michel-avantages-adherents.png" alt="1 Michel" /></td
+      >
+      <td
+        ><img
+          src="/images/michel-avantages-superadherents.png"
+          alt="1 Michel"
+        /><img
+          src="/images/michel-avantages-superadherents.png"
+          alt="1 Michel"
+        /></td
+      >
     </tr>
     <tr>
       <td>Tarifs réduits sur les “merch” et en boutique</td>
-      <td><img src="/images/michel-avantages-adherents.png" alt="1 Michel"></td>
-      <td><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"></td>
+      <td
+        ><img src="/images/michel-avantages-adherents.png" alt="1 Michel" /></td
+      >
+      <td
+        ><img
+          src="/images/michel-avantages-superadherents.png"
+          alt="1 Michel"
+        /><img
+          src="/images/michel-avantages-superadherents.png"
+          alt="1 Michel"
+        /></td
+      >
     </tr>
     <tr>
       <td>1 stickers offert à l’achat de la carte</td>
       <td></td>
-      <td><img src="/images/michel-avantages-superadherents.png" alt="1 Michel"></td>
+      <td
+        ><img
+          src="/images/michel-avantages-superadherents.png"
+          alt="1 Michel"
+        /></td
+      >
     </tr>
     <tr>
       <td>Réductions sur les gobelets à l’adhésion</td>
-      <td><img src="/images/gobelet-avantage-adherents.png" alt="1 Michel" class="gobelet-image"></td>
-      <td><img src="/images/gobelet-avantage-superadherents.png" alt="Reduction Gobelets" class="gobelet-image"></td>
+      <td
+        ><img
+          src="/images/gobelet-avantage-adherents.png"
+          alt="1 Michel"
+          class="gobelet-image"
+        /></td
+      >
+      <td
+        ><img
+          src="/images/gobelet-avantage-superadherents.png"
+          alt="Reduction Gobelets"
+          class="gobelet-image"
+        /></td
+      >
     </tr>
   </table>
   <p class="table-ast">Réductions chez nos partenaires. *</p>
@@ -152,9 +212,14 @@
   <div class="container-text-partner">
     <h2>Nos partenaires</h2>
     <p class="partner-subtitle">
-      Grâce à la carte adhérente bénéficie toute l’année de réduction chez nos partenaires.  Découvre des lieux que tu ne connais peut être pas encore !
-      Parmi nos partenaires on peut compter 5 bars, 3 restaurants et 5 activités à faire seul ou à plusieurs ! Mais c’est pas tout, on a aussi des partenaires ponctuels. Dans cette catégorie t’y retrouveras des réductions pour des festivals, concert ou autre évènement temporaire.
-      Pour les utiliser il te suffis de présenter ta carte au commerçant lors de ton achat.
+      Grâce à la carte adhérente bénéficie toute l’année de réduction chez nos
+      partenaires. Découvre des lieux que tu ne connais peut être pas encore !
+      Parmi nos partenaires on peut compter 5 bars, 3 restaurants et 5 activités
+      à faire seul ou à plusieurs ! Mais c’est pas tout, on a aussi des
+      partenaires ponctuels. Dans cette catégorie t’y retrouveras des réductions
+      pour des festivals, concert ou autre évènement temporaire. Pour les
+      utiliser il te suffis de présenter ta carte au commerçant lors de ton
+      achat.
     </p>
     <h3>Partenaires à l’année</h3>
     <p class="asterix">*sous présentation de votre carte adhérent</p>
@@ -163,7 +228,7 @@
   <div class="partner-container">
     <div class="partner-items" bind:this={partnerItems}>
       {#each partners as partner (partner.id)}
-        <CardPartner path="{partner.path}" cardType={partner.type}>
+        <CardPartner path={partner.path} cardType={partner.type}>
           <span slot="name">{partner.name}</span>
           <span slot="reduc">{partner.discount}</span>
           <span slot="reduc-text">{partner.dtext}</span>
@@ -181,7 +246,7 @@
   <div class="partner-container">
     <div class="partner-items" bind:this={partnerItems}>
       {#each partnersponctuels as partner (partner.id)}
-        <CardPartner path="{partner.path}" cardType={partner.type}>
+        <CardPartner path={partner.path} cardType={partner.type}>
           <span slot="name">{partner.name}</span>
           <span slot="reduc">{partner.discount}</span>
           <span slot="adress">{partner.address}</span>
@@ -195,10 +260,10 @@
 <section class="avantages">
   <div class="avantage-container">
     <div class="avantage-number">150€</div>
-    <h2>Des économies</h2>
+    <h2>D'économies</h2>
     <p>
-      Economise toute l’année grâce à nos partenaires ainsi qu’au tarif réduit
-      sur la totalité de nos évènements
+      Économise toute l’année grâce à nos partenaires ainsi qu’aux tarifs
+      réduits sur la totalité de nos évènements
     </p>
   </div>
   <div class="avantage-container">
@@ -219,7 +284,7 @@
   </div>
 </section>
 
-<section class="convaincu">
+<section class="convaincu" id="convaincu">
   <h2>Alors, On t’a <span class="violet">convaincu</span> ?</h2>
   <p class="h2-subtitle">Commande dès maintenant ta carte adhérent</p>
   <div class="flex-convaincu">
@@ -230,7 +295,11 @@
       </div>
       <p class="title-convaincu">Devenir Super Adhérent</p>
       <p class="price">15,00€</p>
-      <a href="https://www.helloasso.com/associations/house-of-united-brothers/adhesions/cartes-adherent" target="_blank" class="link-convaincu">Payer en ligne</a>
+      <a
+        href="https://www.helloasso.com/associations/house-of-united-brothers/adhesions/cartes-adherent"
+        target="_blank"
+        class="link-convaincu">Payer en ligne</a
+      >
     </div>
     <div class="container-convaincu">
       <div class="card">
@@ -239,7 +308,11 @@
       </div>
       <p class="title-convaincu">Devenir Adhérent</p>
       <p class="price">10,00€</p>
-      <a href="https://www.helloasso.com/associations/house-of-united-brothers/adhesions/cartes-adherent" target="_blank" class="link-convaincu">Payer en ligne</a>
+      <a
+        href="https://www.helloasso.com/associations/house-of-united-brothers/adhesions/cartes-adherent"
+        target="_blank"
+        class="link-convaincu">Payer en ligne</a
+      >
     </div>
   </div>
 </section>
@@ -257,14 +330,14 @@
   .subtitle {
     margin-bottom: 56px;
   }
-  .why{
+  .why {
     display: flex;
     flex-direction: column;
     width: 85vw;
     margin: 128px auto;
   }
 
-  .header-tab{
+  .header-tab {
     width: 20%;
     height: 145px;
     background-color: var(--violet-2);
@@ -273,30 +346,29 @@
     align-items: center;
     justify-content: center;
     border-radius: 15px 15px 0 0;
-
   }
-  .header-tab:last-child{
-    background-color: #D3AE37;
+  .header-tab:last-child {
+    background-color: #d3ae37;
   }
-  .header-tab .title{
+  .header-tab .title {
     font-size: 24px;
     text-transform: uppercase;
     color: var(--white);
     font-weight: 800;
     text-align: center;
   }
-  .header-tab .price{
+  .header-tab .price {
     font-size: 38px;
     color: var(--white);
     font-weight: 700;
   }
-  .custom-table{
+  .custom-table {
     margin-top: 64px;
     border-collapse: collapse;
     width: 100%;
   }
   .custom-table tr:nth-child(even) {
-    background-color: #F4EBF4;
+    background-color: #f4ebf4;
   }
   .custom-table tr {
     height: 100px;
@@ -306,11 +378,11 @@
     margin: 28px 0;
     gap: 70px;
   }
-  .custom-table tr:first-child{
+  .custom-table tr:first-child {
     height: 145px;
   }
   .custom-table td:first-child {
-    width:50%;
+    width: 50%;
     padding-left: 40px;
   }
   .custom-table td:nth-child(2),
@@ -319,20 +391,20 @@
     display: flex;
     justify-content: center;
   }
-  .custom-table img{
+  .custom-table img {
     width: 85px;
     height: 85px;
   }
-  .custom-table .gobelet-image{
-    width: 115px;
+  .custom-table .gobelet-image {
+    width: fit-content;
   }
-  .table-ast{
+  .table-ast {
     align-self: flex-end;
     font-size: 16px;
     margin-top: 24px;
   }
   .mockup-main {
-    position:absolute;
+    position: absolute;
     height: 780px;
     top: 0;
     right: 0;
@@ -352,7 +424,8 @@
   }
 
   .partner-container {
-    overflow: hidden; /* Cache les barres de défilement */
+    margin-left: 7vw;
+    overflow: hidden;
     position: relative;
     width: 100%;
     margin-top: 64px;
@@ -361,13 +434,13 @@
   .partner-items {
     gap: 64px;
     display: flex;
-    flex-wrap: nowrap;
-    width: max-content;
+    flex-wrap: wrap;
+    width: 90vw;
     animation: scroll 22s linear infinite;
   }
 
   /* Animation du défilement */
-  @keyframes scroll {
+  /* @keyframes scroll {
     0% {
       transform: translateX(0);
     }
@@ -382,13 +455,14 @@
     100% {
       transform: translateX(50%);
     }
-  }
+  } */
 
   .partner-container:hover .partner-items {
     animation-play-state: paused; /* Pause l'animation au survol */
   }
 
-  .partner-subtitle, .why-subtitle {
+  .partner-subtitle,
+  .why-subtitle {
     margin-top: 16px;
     width: 75%;
   }
@@ -515,36 +589,116 @@
     background-image: url("/images/carte-adherent-back.png");
   }
 
-  @media screen and (max-width:320px){
-    .top-main {
-      padding: 200px 5vw 180px 5vw;
-      height: 450px;
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .header-tab {
+      height: 100px;
     }
+    .header-tab .title {
+      font-size: 18px;
+      padding: 0 10px;
+    }
+    .header-tab .price {
+      font-size: 30px;
+    }
+    .custom-table tr {
+      height: auto;
+      gap: 30px;
+    }
+    .custom-table td:first-child {
+      padding-left: 20px;
+      width: 50%;
+    }
+    .custom-table td {
+      width: auto;
+    }
+    .custom-table img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  /* Mobile Tab */
+  @media screen and (max-width: 768px) {
+    .header-tab {
+      height: 100px;
+    }
+    .header-tab .title {
+      font-size: 16px;
+      padding: 10px;
+    }
+    .header-tab .price {
+      font-size: 24px;
+    }
+
+    .custom-table img {
+      width: 65px;
+      height: 65px;
+    }
+
+    .custom-table {
+      width: 100%;
+      display: block;
+    }
+
+    .custom-table tr {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      gap: 16px;
+    }
+
+    .custom-table td {
+      padding: 10px 5px;
+      width: 100%;
+      font-size: 15px;
+      display: block;
+      text-align: left;
+    }
+
+    /* Make the first column take 100% width */
+    .custom-table td:first-child {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    /* Make the second and third columns take 50% width each and align side by side */
+    .custom-table td:nth-child(2),
+    .custom-table td:nth-child(3) {
+      width: 40%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+
+
+
+  /*Responsive*/
+  @media screen and (max-width: 1024px) {
     .subtitle {
       width: 100%;
     }
-    .mockup-main {
-      height: 280px;
-      top: 550px;
-    }
-    .why{
+
+    .why {
       width: 90vw;
       margin: 96px auto;
     }
-    .why-subtitle{
+    .why-subtitle {
       font-size: 16px;
     }
-
-
 
     .partner {
       margin-top: 96px;
     }
     .container-text-partner {
       width: 90vw;
+
     }
     .partner-container {
       margin-top: 48px;
+      margin-left: 0;
     }
     .partner-items {
       width: 100vw;
@@ -552,9 +706,10 @@
       gap: 48px;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
+      flex-wrap: wrap;
     }
-    .partner-subtitle, .why-subtitle {
+    .partner-subtitle,
+    .why-subtitle {
       width: 100%;
       font-size: 16px;
     }
@@ -566,7 +721,6 @@
     .asterix {
       font-size: 16px;
     }
-
 
     .avantages {
       margin-top: 96px;
@@ -580,14 +734,14 @@
       width: 100%;
     }
     .avantage-number {
-      font-size: 24px;
+      font-size: 22px;
       padding: 15px 25px;
       margin-bottom: 36px;
     }
     .avantage-container p {
       margin-top: 24px;
+      width: 50%;
     }
-
 
     .flex-convaincu {
       width: 90vw;
@@ -606,7 +760,221 @@
       gap: 16px;
     }
     .title-convaincu {
-      font-size: 24px;
+      font-size: 22px;
+      width: 80%;
+    }
+    .price {
+      font-size: 16px;
+    }
+    .link-convaincu {
+      font-size: 16px;
+    }
+    .card {
+      width: 90vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+    }
+    .card-face {
+    width: 310px;
+  }
+  }
+  @media screen and (max-width: 768px) {
+    .subtitle {
+      width: 100%;
+    }
+
+    .why {
+      width: 90vw;
+      margin: 96px auto;
+    }
+    .why-subtitle {
+      font-size: 16px;
+    }
+
+    .partner {
+      margin-top: 96px;
+    }
+    .container-text-partner {
+      width: 90vw;
+
+    }
+    .partner-container {
+      margin-top: 48px;
+      margin-left: 0;
+    }
+    .partner-items {
+      width: 100vw;
+      animation: none;
+      gap: 48px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .partner-subtitle,
+    .why-subtitle {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .partner h3 {
+      margin-top: 72px;
+    }
+
+    .asterix {
+      font-size: 16px;
+    }
+
+    .avantages {
+      margin-top: 96px;
+      width: 90vw;
+      height: fit-content;
+      flex-direction: column;
+      padding: 96px 5vw;
+      gap: 80px;
+    }
+    .avantage-container {
+      width: 100%;
+    }
+    .avantage-number {
+      font-size: 22px;
+      padding: 15px 25px;
+      margin-bottom: 36px;
+    }
+    .avantage-container p {
+      margin-top: 24px;
+      width: 50%;
+    }
+
+    .flex-convaincu {
+      width: 90vw;
+      margin: 96px auto;
+      flex-direction: column;
+      gap: 96px;
+    }
+    .convaincu {
+      width: 90vw;
+      margin: 96px auto;
+    }
+    .h2-subtitle {
+      margin-top: 16px;
+    }
+    .container-convaincu {
+      gap: 16px;
+    }
+    .title-convaincu {
+      font-size: 22px;
+      width: 80%;
+    }
+    .price {
+      font-size: 16px;
+    }
+    .link-convaincu {
+      font-size: 16px;
+    }
+    .card {
+      width: 90vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+    }
+    .card-face {
+    width: 310px;
+  }
+  }
+  @media screen and (max-width: 425px) {
+    .top-main {
+      padding: 200px 5vw 180px 5vw;
+      height: 450px;
+    }
+    .subtitle {
+      width: 100%;
+    }
+    .mockup-main {
+      height: 280px;
+      top: 550px;
+    }
+    .why {
+      width: 90vw;
+      margin: 96px auto;
+    }
+    .why-subtitle {
+      font-size: 16px;
+    }
+
+    .partner {
+      margin-top: 96px;
+    }
+    .container-text-partner {
+      width: 90vw;
+    }
+    .partner-container {
+      margin-top: 48px;
+      margin-left: 0;
+    }
+    .partner-items {
+      width: 100vw;
+      animation: none;
+      gap: 48px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .partner-subtitle,
+    .why-subtitle {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .partner h3 {
+      margin-top: 72px;
+    }
+
+    .asterix {
+      font-size: 16px;
+    }
+
+    .avantages {
+      margin-top: 96px;
+      width: 90vw;
+      height: fit-content;
+      flex-direction: column;
+      padding: 96px 5vw;
+      gap: 80px;
+    }
+    .avantage-container {
+      width: 100%;
+    }
+    .avantage-number {
+      font-size: 22px;
+      padding: 15px 25px;
+      margin-bottom: 36px;
+    }
+    .avantage-container p {
+      margin-top: 24px;
+    }
+
+    .flex-convaincu {
+      width: 90vw;
+      margin: 96px auto;
+      flex-direction: column;
+      gap: 96px;
+    }
+    .convaincu {
+      width: 90vw;
+      margin: 96px auto;
+    }
+    .h2-subtitle {
+      margin-top: 16px;
+    }
+    .container-convaincu {
+      gap: 16px;
+    }
+    .title-convaincu {
+      font-size: 22px;
+      width: 80%;
     }
     .price {
       font-size: 16px;
@@ -618,6 +986,5 @@
       width: 90vw;
       height: 200px;
     }
-
   }
 </style>

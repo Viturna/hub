@@ -52,7 +52,7 @@
   }
   .bg-card {
     position: relative;
-    margin: 15px;
+    margin-left: 15px;
     width: 345px;
     height: 325px;
     border-radius: 10px;
@@ -79,30 +79,88 @@
     font-weight: 600;
     color: var(--black);
   }
+  @media screen and (max-width:1000px){
+    .event-card {
+      width: 70vw;
+      max-width: 345px;
+      height: 320px;
+      gap: 4px;
+    }
+    .image-event{
+      width: 60vw;
+      height: 155px;
+      max-width: 300px;
+    }
+    .bg-card {
+      width: 70vw;
+      max-width: 345px;
+      height: 320px;
+    }
+
+    .card-text {
+      margin-top: 30px;
+      width: 60vw;
+      max-width: 300px;
+    }
+
+  }
   @media screen and (max-width:600px){
     .event-card {
-      width: 80vw;
+      width: 70vw;
       max-width: 345px;
       height: 310px;
       gap: 4px;
     }
     .image-event{
-      width: 70vw;
+      width: 60vw;
       height: 150px;
       max-width: 300px;
     }
     .bg-card {
-      width: 80vw;
+      width: 70vw;
       max-width: 345px;
       height: 310px;
     }
 
     .card-text {
       margin-top: 30px;
-      width: 70vw;
+      width: 60vw;
       max-width: 300px;
     }
 
+  }
+  @media screen and (max-width:450px){
+    .event-card {
+      right: 0px;
+      bottom: 0px;
+      width: 80vw;
+      height: 310px;
+      gap: 4px;
+    }
+    .image-event{
+      width: 70vw;
+      height: 150px;
+    }
+    .bg-card:hover .event-card {
+      right: 0px;
+      bottom: 0px;
+    }
+    .bg-card {
+      margin: 0px;
+      width: 80vw;
+      height: 310px;
+    }
+
+    .card-text {
+      margin-top: 30px;
+      width: 70vw;
+    }
+    .date {
+      font-size: 16px;
+    }
+    .title {
+      font-size: 18px;
+    }
   }
   @media screen and (max-width:360px){
     .event-card {
