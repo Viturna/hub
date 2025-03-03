@@ -1,23 +1,34 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
+  export let footerType: "main" | "gold" = "main";
   function handleItemClick(path: string) {
     goto(path);
   }
 </script>
 
-<footer>
+<footer class={footerType}>
   <div class="container-logo">
-    <img src="/images/michel.png" alt="Mascotte Michel" class="logo-michel" />
+    {#if footerType === "main"}
+      <img src="/images/michel.png" alt="Mascotte Michel" class="logo-michel" />
+    {:else}
+      <img
+        src="/images/michel-gold.png"
+        alt="Mascotte Michel"
+        class="logo-michel"
+      />
+    {/if}
     <span class="hub">House of <br />United Brothers</span>
   </div>
   <div class="container-items">
     <div class="container-footer">
       <p class="title">Contact</p>
-      <a href="mailto:bde@mmibordeaux.com"  target="_blank" class="footer-item"
+      <a href="mailto:bde@mmibordeaux.com" target="_blank" class="footer-item"
         >bde@mmibordeaux.com</a
       >
-      <a href="https://www.instagram.com/bdemmi_montaigne/"  target="_blank" class="footer-item"
-        >Instragram</a
+      <a
+        href="https://www.instagram.com/bdemmi_montaigne/"
+        target="_blank"
+        class="footer-item">Instragram</a
       >
       <a
         href="https://www.helloasso.com/associations/house-of-united-brothers"
@@ -36,7 +47,6 @@
     <div class="container-footer">
       <p class="title">Autres</p>
       <a href="/mentions-legales" class="footer-item">Mentions légales</a>
-      <a href="" class="footer-item">Confidentialité</a>
       <a href="/contact" class="footer-item">Contact</a>
     </div>
   </div>
@@ -50,6 +60,9 @@
     justify-content: space-between;
     padding: 64px 7.5vw;
   }
+  footer.gold {
+    background-color: #1b1b1b;
+  }
   .container-logo {
     display: flex;
     flex-direction: column;
@@ -60,9 +73,14 @@
   }
   .hub {
     font-weight: 800;
-    color: var(--violet-secondary);
     text-transform: uppercase;
     font-size: 20px;
+  }
+  .main .hub {
+    color: var(--violet-secondary);
+  }
+  .gold .hub {
+    color: var(--white);
   }
   .container-items {
     display: flex;
@@ -139,7 +157,6 @@
     .footer-item {
       text-align: center;
     }
-
   }
   @media screen and (max-width: 425px) {
     footer {

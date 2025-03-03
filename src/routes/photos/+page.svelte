@@ -32,8 +32,9 @@
 </section>
 <p class="top-text">On vous laisse regardez ce que vous avez loupé si vous n’êtes pas venu<br>(POUR ACCÉDER AUX PHOTOS, IL VOUS FAUT UNE ADRESSE MMI)</p>
 <section class="gallery">
+  <Photos path="https://drive.google.com/drive/u/0/folders/16eqz2_F4qrlUBbHTivvRoFDwDX5Uztcz" cardType="three" imageUrl1="/images/photo-halloween1.png" imageUrl3="/images/photo-halloween3.png" imageUrl2="/images/photo-halloween2.png"> <span slot="title">Souvenirs de la soirée Hallloween</span> <span slot="media">47</span></Photos>
+  <Photos path="https://drive.google.com/drive/folders/1dl1fzf4m-1KJAAscyjxHVPgmTBjTYVe3?usp=sharing" cardType="three" imageUrl1="/images/photo-inte1.png" imageUrl3="/images/photo-inte2.png" imageUrl2="/images/photo-inte3.png"> <span slot="title">Souvenirs de la soirée d'inté</span> <span slot="media">115</span></Photos>
   <Photos path="https://drive.google.com/drive/folders/19WfzagHtuXFofe9OAtrUP8ub6HGKVH6Q?usp=sharing" cardType="one" imageUrl1="/images/photo-famille.png"> <span slot="title">Souvenirs des familles</span> <span slot="media">7</span></Photos>
-  <!-- <Photos path="" cardType="three" imageUrl1="/images/photo-gallery.png" imageUrl2="/images/photo-gallery.png" imageUrl3="/images/photo-gallery.png"></Photos> -->
 </section>
 
 

@@ -1,7 +1,7 @@
 <script lang="ts">
   import "$lib/styles/styles.css";
   export let path: string;
-  export let buttonType: "main" | "secondary" = "main";
+  export let buttonType: "main" | "secondary" | "gold" | "dark" = "main";
 </script>
 
 <div class="bg-div {buttonType}">
@@ -54,13 +54,25 @@
   .bg-div.secondary {
     background-color: var(--violet-secondary);
   }
+  .bg-div.gold {
+    background-color: var(--gold);
+  }
+  .bg-div.dark {
+    background-color: var(--black);
+  }
+  .gold .main-button {
+    color: var(--gold);
+  }
+  .dark .main-button {
+    color: var(--black);
+  }
   .text-2 {
     font-weight: 700;
     font-size: 32px;
     color: var(--black);
     text-transform: uppercase;
   }
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1200px) {
     .main-button {
       height: 100px;
       width: 350px;
@@ -74,7 +86,7 @@
       font-size: 26px;
     }
   }
-  @media screen and (max-width:600px){
+  @media screen and (max-width: 600px) {
     .main-button {
       width: 80vw;
       max-width: 370px;
@@ -89,7 +101,7 @@
       font-size: 24px;
     }
   }
-  @media screen and (max-width:425px){
+  @media screen and (max-width: 425px) {
     .main-button {
       right: 10px;
       bottom: 10px;
@@ -105,7 +117,7 @@
       font-size: 24px;
     }
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: 320px) {
     .main-button {
       right: 10px;
       bottom: 10px;
