@@ -139,7 +139,7 @@
     <li>
       <button
         class="nav-item bold {currentPath === '/gala' ? 'active' : ''}"
-        on:click={() => handleItemClick("/gala")}>Nuit des pépites</button
+        on:click={() => handleItemClick("/gala")}>Cérémonie des pépites</button
       >
     </li>
   </ul>

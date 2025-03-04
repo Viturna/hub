@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import MainButton from "$lib/components/MainButton.svelte";
   import Button from "$lib/components/Button.svelte";
 </script>
@@ -23,7 +22,10 @@
     content="Cérémonie des Pépites X Gala | House of United Brothers"
   />
   <meta property="og:site_name" content="House of United Brothers" />
-  <meta property="og:url" content="https://houseofunitedbrothers.fr/gala" />
+  <meta
+    property="og:url"
+    content="https://houseofunitedbrothers.fr/gala"
+  />
   <meta
     property="og:description"
     content="Cette année, nous organisons un événement spécial : la Nuit des Pépites ! Une cérémonie inspirée des Oscars où plusieurs catégories seront récompensées.
@@ -62,7 +64,7 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
 </section>
 
 <div class="flex-main-button">
-  <MainButton path="/gala/reglement" buttonType="gold">
+  <MainButton path="/reglement" buttonType="gold">
     <span slot="text-1">Voir le</span>
     <span slot="text-2">Règlement</span>
   </MainButton>
@@ -169,7 +171,7 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
       >
         <span slot="text">Déposer mes projets</span>
       </Button>
-      <Button path="/gala/reglement" buttonType="dark">
+      <Button path="/reglement" buttonType="dark">
         <span slot="text">Découvrir le règlement</span></Button
       >
     </div>
@@ -355,6 +357,9 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
       height: 220px;
       rotate: 10deg;
     }
+    .pepite2 {
+      height: 320px;
+    }
     .flex-main-button {
       width: 90vw;
       gap: 45px;
@@ -421,6 +426,9 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
       align-self: flex-end;
       height: 160px;
       rotate: 10deg;
+    }
+    .pepite2 {
+      height: 240px;
     }
     .flex-main-button {
       width: 90vw;
@@ -499,6 +507,9 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
       height: 160px;
       rotate: 10deg;
     }
+    .pepite2 {
+      height: 240px;
+    }
     .flex-main-button {
       width: 90vw;
       gap: 30px;
@@ -558,6 +569,9 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
     }
   }
   @media screen and (max-width: 320px) {
+    .pepite2 {
+      height: 200px;
+    }
     .top-main {
       flex-direction: column;
       padding: 180px 5vw 80px 5vw;

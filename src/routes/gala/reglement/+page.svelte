@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="House of United Brothers" />
   <meta
     property="og:url"
-    content="https://houseofunitedbrothers.fr/gala/reglement"
+    content="https://houseofunitedbrothers.fr/reglement"
   />
   <meta
     property="og:description"
@@ -39,7 +39,7 @@
   />
   <meta
     property="twitter:url"
-    content="https://houseofunitedbrothers.fr/gala/reglement"
+    content="https://houseofunitedbrothers.fr/reglement"
   />
 </svelte:head>
 <section class="header-page">

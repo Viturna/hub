@@ -1,47 +1,85 @@
 <svelte:head>
-    <title>Contactez-nous en cas de besoin</title>
-    <meta name="description" content="Une question ou besoin d'aide ? N'hésitez pas à nous contacter ! Notre équipe est là pour vous accompagner et répondre à vos besoins.">
-    <meta name="keywords" content="Contact, BDE, assistance">
+  <title>Contactez-nous en cas de besoin</title>
+  <meta
+    name="description"
+    content="Une question ou besoin d'aide ? N'hésitez pas à nous contacter ! Notre équipe est là pour vous accompagner et répondre à vos besoins."
+  />
+  <meta name="keywords" content="Contact, BDE, assistance" />
 
-    <!-- Balises Open Graph -->
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Contactez-nous en cas de besoin - House of United Brothers">
-    <meta property="og:site_name" content="House of United Brothers">
-    <meta property="og:url" content="https://houseofunitedbrothers.fr/contact">
-    <meta property="og:description" content="Une question ou besoin d'aide ? N'hésitez pas à nous contacter ! Notre équipe est là pour vous accompagner et répondre à vos besoins.">
+  <!-- Balises Open Graph -->
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Contactez-nous en cas de besoin - House of United Brothers"
+  />
+  <meta property="og:site_name" content="House of United Brothers" />
+  <meta property="og:url" content="https://houseofunitedbrothers.fr/contact" />
+  <meta
+    property="og:description"
+    content="Une question ou besoin d'aide ? N'hésitez pas à nous contacter ! Notre équipe est là pour vous accompagner et répondre à vos besoins."
+  />
 
-    <!-- Balises pour Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@houseofunitedbrothers">
-    <meta name="twitter:title" content="Contactez-nous en cas de besoin - House of United Brothers">
-    <meta name="twitter:description" content="Une question ou besoin d'aide ? N'hésitez pas à nous contacter ! Notre équipe est là pour vous accompagner et répondre à vos besoins.">
-    <meta property="og:url" content="https://houseofunitedbrothers.fr/contact">
+  <!-- Balises pour Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@houseofunitedbrothers" />
+  <meta
+    name="twitter:title"
+    content="Contactez-nous en cas de besoin - House of United Brothers"
+  />
+  <meta
+    name="twitter:description"
+    content="Une question ou besoin d'aide ? N'hésitez pas à nous contacter ! Notre équipe est là pour vous accompagner et répondre à vos besoins."
+  />
+  <meta property="og:url" content="https://houseofunitedbrothers.fr/contact" />
 </svelte:head>
-
-
 
 <section class="contact-page">
   <div class="text-content">
     <h1>Contact</h1>
     <p class="subtitle">
-      Une idée, une suggestion ou une réclamation ? <br>
-      Nous sommes à ton écoute ! Utilise ce formulaire pour nous faire part de ton message, et nous y répondrons au plus vite.
+      Une idée, une suggestion ou une réclamation ? <br />
+      Nous sommes à ton écoute ! Utilise ce formulaire pour nous faire part de ton
+      message, et nous y répondrons au plus vite.
     </p>
   </div>
   <div class="form-container">
-    <form action="sendEmail.php" method="POST">
+    <form name="contact" data-netlify="true" method="post">
       <label for="name">Votre nom</label>
-      <input type="text" id="name" name="name" placeholder="Michel Hub" required>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Michel Hub"
+        required
+      />
 
       <label for="object">Objet</label>
-      <input type="text" id="object" name="object" placeholder="Problème à propos d'un évènement" required>
+      <input
+        type="text"
+        id="object"
+        name="object"
+        placeholder="Problème à propos d'un évènement"
+        required
+      />
 
       <label for="email">Votre email</label>
-      <input type="email" id="email" name="email" placeholder="bde@mmibordeaux.com" required>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="bde@mmibordeaux.com"
+        required
+      />
 
       <label for="message">Contenu</label>
-      <textarea id="message" name="message" rows="4" placeholder="Ecrivez votre contenu ici ..." required></textarea>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="Ecrivez votre contenu ici ..."
+        required
+      ></textarea>
 
       <button type="submit">Envoyer</button>
     </form>
@@ -70,19 +108,21 @@
     font-weight: bold;
     color: var(--white);
   }
-  input{
+  input {
     height: 35px;
   }
-  input::placeholder, textarea::placeholder{
+  input::placeholder,
+  textarea::placeholder {
     font-size: 14px;
-    font-family: 'Poppins';
-    color: #BDA9D4;
+    font-family: "Poppins";
+    color: #bda9d4;
   }
-  textarea{
+  textarea {
     resize: none;
     height: 150px;
   }
-  input, textarea {
+  input,
+  textarea {
     margin-bottom: 20px;
     padding: 10px 10px 10px 20px;
     border: 1px solid #ccc;
@@ -103,7 +143,7 @@
   button:hover {
     background-color: #e4d2f9;
   }
-  @media screen and (max-width:1024px){
+  @media screen and (max-width: 1024px) {
     .contact-page {
       flex-direction: column;
       padding: 200px 5vw 96px 5vw;
@@ -119,16 +159,16 @@
       font-size: 18px;
     }
 
-    input, textarea {
+    input,
+    textarea {
       padding: 10px 10px 10px 15px;
     }
 
     button {
       font-size: 18px;
     }
-
   }
-  @media screen and (max-width:600px){
+  @media screen and (max-width: 600px) {
     .contact-page {
       flex-direction: column;
       padding: 200px 5vw 96px 5vw;
@@ -144,16 +184,16 @@
       font-size: 16px;
     }
 
-    input, textarea {
+    input,
+    textarea {
       padding: 10px 10px 10px 15px;
     }
 
     button {
       font-size: 16px;
     }
-
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: 320px) {
     .contact-page {
       flex-direction: column;
       padding: 200px 5vw 96px 5vw;
@@ -169,13 +209,13 @@
       font-size: 16px;
     }
 
-    input, textarea {
+    input,
+    textarea {
       padding: 10px 10px 10px 15px;
     }
 
     button {
       font-size: 16px;
     }
-
   }
 </style>
