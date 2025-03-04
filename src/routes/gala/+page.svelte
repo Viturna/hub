@@ -70,7 +70,7 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
     buttonType="dark"
   >
     <span slot="text-1">Devenir</span>
-    <span slot="text-2">Partcipant</span>
+    <span slot="text-2">Participant</span>
   </MainButton>
 </div>
 
