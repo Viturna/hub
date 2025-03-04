@@ -22,10 +22,7 @@
     content="Cérémonie des Pépites X Gala | House of United Brothers"
   />
   <meta property="og:site_name" content="House of United Brothers" />
-  <meta
-    property="og:url"
-    content="https://houseofunitedbrothers.fr/gala"
-  />
+  <meta property="og:url" content="https://houseofunitedbrothers.fr/gala" />
   <meta
     property="og:description"
     content="Cette année, nous organisons un événement spécial : la Nuit des Pépites ! Une cérémonie inspirée des Oscars où plusieurs catégories seront récompensées.
@@ -59,8 +56,8 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
       occasion de passer une soirée ensemble
     </p>
   </div>
-  <img src="/images/pepites.png" alt="Pépite" class="pepite2" />
-  <img src="/images/pepites.png" alt="Pépite" class="michel-gif" />
+  <img src="/images/pepites.webp" alt="Pépite" class="pepite2" />
+  <img src="/images/pepites.webp" alt="Pépite" class="michel-gif" />
 </section>
 
 <div class="flex-main-button">
@@ -99,7 +96,7 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
       🕒 Heure : <span class="semibold">18h</span><br />
     </p>
   </div>
-  <img src="/images/bdexmmi.jpg" alt="BDE X MMI" />
+  <img src="/images/bdexmmi.webp" alt="BDE X MMI" />
 </section>
 
 <section class="category">
@@ -144,7 +141,7 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
 </section>
 
 <section class="jury">
-  <img src="/images/jury.jpg" alt="Jury" />
+  <img src="/images/jury.webp" alt="Jury" />
   <div class="container-text-jury">
     <h2>Le jury</h2>
     <p>
@@ -207,7 +204,7 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
     padding: 180px 7vw 0px 7vw;
     background-color: #07070f;
     height: 650px;
-    background-image: url("/images/bg-gala.png");
+    background-image: url("/images/bg-gala.webp");
     background-size: cover;
   }
   .main-title {

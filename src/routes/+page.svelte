@@ -1,24 +1,3 @@
-<svelte:head>
-    <title>Naviguez sur le site du BDE MMI Bordeaux | House of United Brothers</title>
-    <meta name="description" content="Bienvenue sur le site du BDE MMI Bordeaux ! Explorez nos activités, événements à venir et toutes les ressources pour les étudiants. Ensemble, faisons de cette année une expérience mémorable !">
-    <meta name="keywords" content="BDE MMI Bordeaux, étudiants, événements, ressources">
-
-     <!-- Balises Open Graph -->
-     <meta property="og:locale" content="fr_FR">
-     <meta property="og:type" content="website">
-     <meta property="og:title" content="Naviguez sur le site du BDE MMI Bordeaux - House of United Brothers">
-     <meta property="og:site_name" content="House of United Brothers">
-     <meta property="og:url" content="https://houseofunitedbrothers.fr">
-     <meta property="og:description" content="Bienvenue sur le site du BDE MMI Bordeaux ! Explorez nos activités, événements à venir et toutes les ressources pour les étudiants. Ensemble, faisons de cette année une expérience mémorable !">
-
-     <!-- Balises pour Twitter -->
-     <meta name="twitter:card" content="summary">
-     <meta name="twitter:site" content="@houseofunitedbrothers">
-     <meta name="twitter:title" content="Naviguez sur le site du BDE MMI Bordeaux - House of United Brothers">
-     <meta name="twitter:description" content="Bienvenue sur le site du BDE MMI Bordeaux ! Explorez nos activités, événements à venir et toutes les ressources pour les étudiants. Ensemble, faisons de cette année une expérience mémorable !">
-     <meta property="og:url" content="https://houseofunitedbrothers.fr">
-</svelte:head>
-
 <script lang="ts">
   import { onMount } from "svelte";
   import MainButton from "$lib/components/MainButton.svelte";
@@ -28,7 +7,7 @@
   import { events } from "$lib/data/events";
 
   let lightbulb: HTMLImageElement | null = null;
-  let lightbulbSrc = "/images/michel-idee-off.png";
+  let lightbulbSrc = "/images/michel-idee-off.webp";
   let isLightOn = false;
 
   // Calculer la date actuelle
@@ -67,10 +46,10 @@
 
         if (visibilityPercentage >= threshold && !isLightOn) {
           isLightOn = true;
-          lightbulbSrc = "/images/michel-idee-on.png";
+          lightbulbSrc = "/images/michel-idee-on.webp";
         } else if (visibilityPercentage < threshold && isLightOn) {
           isLightOn = false;
-          lightbulbSrc = "/images/michel-idee-off.png";
+          lightbulbSrc = "/images/michel-idee-off.webp";
         }
       }
     };
@@ -83,6 +62,47 @@
     };
   });
 </script>
+
+<svelte:head>
+  <title
+    >Naviguez sur le site du BDE MMI Bordeaux | House of United Brothers</title
+  >
+  <meta
+    name="description"
+    content="Bienvenue sur le site du BDE MMI Bordeaux ! Explorez nos activités, événements à venir et toutes les ressources pour les étudiants. Ensemble, faisons de cette année une expérience mémorable !"
+  />
+  <meta
+    name="keywords"
+    content="BDE MMI Bordeaux, étudiants, événements, ressources"
+  />
+
+  <!-- Balises Open Graph -->
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Naviguez sur le site du BDE MMI Bordeaux - House of United Brothers"
+  />
+  <meta property="og:site_name" content="House of United Brothers" />
+  <meta property="og:url" content="https://houseofunitedbrothers.fr" />
+  <meta
+    property="og:description"
+    content="Bienvenue sur le site du BDE MMI Bordeaux ! Explorez nos activités, événements à venir et toutes les ressources pour les étudiants. Ensemble, faisons de cette année une expérience mémorable !"
+  />
+
+  <!-- Balises pour Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@houseofunitedbrothers" />
+  <meta
+    name="twitter:title"
+    content="Naviguez sur le site du BDE MMI Bordeaux - House of United Brothers"
+  />
+  <meta
+    name="twitter:description"
+    content="Bienvenue sur le site du BDE MMI Bordeaux ! Explorez nos activités, événements à venir et toutes les ressources pour les étudiants. Ensemble, faisons de cette année une expérience mémorable !"
+  />
+  <meta property="og:url" content="https://houseofunitedbrothers.fr" />
+</svelte:head>
 
 <section class="top-main">
   <div class="box-title">
@@ -128,19 +148,18 @@
       <br />Ensemble, nous créons une expériences étudiante unique !
     </p>
   </div>
-  <img src="/images/photo-bde.jpg" alt="Équipe BDE 26" />
+  <img src="/images/photo-bde.webp" alt="Équipe BDE 26" />
 </section>
 
 <section class="adherents">
   <div class="box-img">
-    <img src="/images/rond-carte.png" alt="" class="bg-adherents-img" />
-    <img class="adherents-img" src="/images/cartes-adherents.png" alt="" />
+    <img src="/images/rond-carte.webp" alt="" class="bg-adherents-img" />
+    <img class="adherents-img" src="/images/cartes-adherents.webp" alt="" />
   </div>
   <div class="text-adherents">
     <h2>La carte adhérent</h2>
     <p>
-      Découvre la <span class="bold">carte adhérente</span> du HUB !<br
-      />
+      Découvre la <span class="bold">carte adhérente</span> du HUB !<br />
       Avec cette carte tu aides à financer l’association, tu accèdes à de nombreuses
       offres auprès de nos partenaires et obtiens des tarifs réduits sur
       <span class="bold">tous nos évènements !</span>
@@ -160,7 +179,7 @@
       <CardEvent
         path="#boite"
         cardType="secondary"
-        imageUrl="/images/default-event.png"
+        imageUrl="/images/default-event.webp"
       >
         <span slot="date">Bientôt</span>
         <span slot="title">Aucun événement à venir</span>
@@ -170,7 +189,7 @@
         <CardEvent
           path="#boite"
           cardType="secondary"
-          imageUrl="/images/default-event.png"
+          imageUrl="/images/default-event.webp"
         >
           <span slot="date">Bientôt</span>
           <span slot="title">D'autres événements bientôt</span>
@@ -179,7 +198,7 @@
       <CardEvent
         path={upcomingEvents[0]?.path || "#"}
         cardType="main"
-        imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.png"}
+        imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.webp"}
       >
         <span slot="date"
           >{new Date(upcomingEvents[0]?.date).toLocaleDateString("fr-FR")}</span
@@ -192,7 +211,7 @@
         <CardEvent
           path="#boite"
           cardType="secondary"
-          imageUrl="/images/default-event.png"
+          imageUrl="/images/default-event.webp"
         >
           <span slot="date">Bientôt</span>
           <span slot="title">D'autres événements bientôt</span>
@@ -205,11 +224,11 @@
             path={upcomingEvents[0]?.path || "#"}
             cardType="secondary"
             imageUrl={upcomingEvents[0]?.srcphoto ||
-              "/images/default-event.png"}
+              "/images/default-event.webp"}
           >
             <span slot="date"
               >{new Date(upcomingEvents[0]?.date).toLocaleDateString(
-                "fr-FR",
+                "fr-FR"
               )}</span
             >
             <span slot="title"
@@ -220,11 +239,11 @@
         <CardEvent
           path={upcomingEvents[1]?.path || "#"}
           cardType="main"
-          imageUrl={upcomingEvents[1]?.srcphoto || "/images/default-event.png"}
+          imageUrl={upcomingEvents[1]?.srcphoto || "/images/default-event.webp"}
         >
           <span slot="date"
             >{new Date(upcomingEvents[1]?.date).toLocaleDateString(
-              "fr-FR",
+              "fr-FR"
             )}</span
           >
           <span slot="title"
@@ -235,7 +254,7 @@
           <CardEvent
             path="#boite"
             cardType="secondary"
-            imageUrl="/images/default-event.png"
+            imageUrl="/images/default-event.webp"
           >
             <span slot="date">Bientôt</span>
             <span slot="title">D'autres événements bientôt</span>
@@ -247,11 +266,11 @@
         <CardEvent
           path={upcomingEvents[0]?.path || "#"}
           cardType="secondary"
-          imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.png"}
+          imageUrl={upcomingEvents[0]?.srcphoto || "/images/default-event.webp"}
         >
           <span slot="date"
             >{new Date(upcomingEvents[0]?.date).toLocaleDateString(
-              "fr-FR",
+              "fr-FR"
             )}</span
           >
           <span slot="title"
@@ -262,7 +281,7 @@
       <CardEvent
         path={upcomingEvents[1]?.path || "#"}
         cardType="main"
-        imageUrl={upcomingEvents[1]?.srcphoto || "/images/default-event.png"}
+        imageUrl={upcomingEvents[1]?.srcphoto || "/images/default-event.webp"}
       >
         <span slot="date"
           >{new Date(upcomingEvents[1]?.date).toLocaleDateString("fr-FR")}</span
@@ -275,11 +294,11 @@
         <CardEvent
           path={upcomingEvents[2]?.path || "#"}
           cardType="secondary"
-          imageUrl={upcomingEvents[2]?.srcphoto || "/images/default-event.png"}
+          imageUrl={upcomingEvents[2]?.srcphoto || "/images/default-event.webp"}
         >
           <span slot="date"
             >{new Date(upcomingEvents[2]?.date).toLocaleDateString(
-              "fr-FR",
+              "fr-FR"
             )}</span
           >
           <span slot="title"
@@ -297,23 +316,30 @@
     <a
       href="https://restaurants.it-trattoria.fr/bordeaux-capucins/"
       title="IT Capucins"
-      target="_blank"><img src="/images/partenaire/partner1.jpg" alt="" /></a
+      target="_blank"><img src="/images/partenaire/partner1.webp" alt="" /></a
     >
     <a
       href="https://www.instagram.com/thegrizzlypubbordeaux/?hl=fr"
       target="_blank"
-      title="Grizzly"><img src="/images/partenaire/partner6.jpg" alt="" /></a
+      title="Grizzly"><img src="/images/partenaire/partner6.webp" alt="" /></a
     >
     <a
       href="https://bad-mother-fucker-pub.eatbu.com/?lang=fr"
       target="_blank"
-      title="BMF"><img src="/images/partenaire/partner4.jpg" alt="" /></a
+      title="BMF"><img src="/images/partenaire/partner4.webp" alt="" /></a
     >
     <a href="https://linktr.ee/drinkibordeaux" title="Drinki" target="_blank"
-      ><img src="/images/partenaire/partner3.jpg" alt="" /></a
+      ><img src="/images/partenaire/partner3.webp" alt="" /></a
     >
-    <a href="" title="Garorock" target="_blank"
-      ><img src="/images/partenaire/partner5.jpg" alt="" /></a
+    <a
+      href="https://www.instagram.com/p/DFxQfVgNE9q/?img_index=1"
+      title="Garorock"
+      target="_blank"><img src="/images/partenaire/partner5.webp" alt="" /></a
+    >
+    <a
+      href="https://www.instagram.com/moramora.coffee/"
+      title="Mora Mora"
+      target="_blank"><img src="/images/partenaire/partner7.webp" alt="" /></a
     >
   </div>
   <a href="/avantages#partner" class="button-secondary"
@@ -378,7 +404,7 @@
     padding: 200px 7vw 0px 7vw;
     background-color: #ae86c1;
     height: 650px;
-    background-image: url("/images/lignes-fond.png");
+    background-image: url("/images/lignes-fond.webp");
     background-size: cover;
   }
   .main-title {
@@ -475,7 +501,7 @@
         rgba(174, 134, 193, 0.6),
         rgba(174, 134, 193, 0.6)
       ),
-      url("/images/bg-partner.png");
+      url("/images/bg-partner.webp");
     background-size: cover;
     background-position: center;
     display: flex;

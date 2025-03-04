@@ -9,10 +9,14 @@
 <footer class={footerType}>
   <div class="container-logo">
     {#if footerType === "main"}
-      <img src="/images/michel.png" alt="Mascotte Michel" class="logo-michel" />
+      <img
+        src="/images/michel.webp"
+        alt="Mascotte Michel"
+        class="logo-michel"
+      />
     {:else}
       <img
-        src="/images/michel-gold.png"
+        src="/images/michel-gold.webp"
         alt="Mascotte Michel"
         class="logo-michel"
       />

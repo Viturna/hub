@@ -93,7 +93,7 @@
     padding: 300px 7vw 0px 7vw;
     background-color: #ae86c1;
     height: 630px;
-    background-image: url("/images/lignes-fond.png");
+    background-image: url("/images/lignes-fond.webp");
   }
 
   form {

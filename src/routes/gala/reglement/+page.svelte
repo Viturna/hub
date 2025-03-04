@@ -197,7 +197,7 @@
     <span class="semibold">Règlement écrit le 21/02/2025</span>
   </p>
   <img
-    src="/images/michel-signature.png"
+    src="/images/michel-signature.webp"
     alt="signature de Michel"
     class="signature-michel"
   />
@@ -210,7 +210,7 @@
     padding: 300px 7vw 200px 7vw;
     height: 100px;
     background-color: #07070f;
-    background-image: url("/images/bg-gala2.png");
+    background-image: url("/images/bg-gala2.webp");
   }
   .filariane {
     font-size: 20px;

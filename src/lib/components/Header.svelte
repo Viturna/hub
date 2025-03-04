@@ -65,7 +65,11 @@
   </button>
 
   <!-- Boutons hamburger et close pour mobile -->
-  <button class="menu-toggle no-bg" on:click={toggleMenu}>
+  <button
+    class="menu-toggle no-bg"
+    on:click={toggleMenu}
+    title="Ouvrir le menu"
+  >
     <svg
       width="30"
       height="21"

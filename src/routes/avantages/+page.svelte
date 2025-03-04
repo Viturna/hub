@@ -1,24 +1,3 @@
-<svelte:head>
-    <title>Vos avantages en adhérent chez nous</title>
-    <meta name="description" content="Adhérez à notre BDE et découvrez des avantages exclusifs : réductions, événements réservés et gains. Rejoignez la grande famille MMI !">
-    <meta name="keywords" content="adhésion, avantages, BDE, exclusivités">
-
-    <!-- Balises Open Graph -->
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Vos avantages en adhérent chez nous - House of United Brothers">
-    <meta property="og:site_name" content="House of United Brothers">
-    <meta property="og:url" content="https://houseofunitedbrothers.fr/avantages">
-    <meta property="og:description" content="Adhérez à notre BDE et découvrez des avantages exclusifs : réductions, événements réservés et gains. Rejoignez la grande famille MMI !">
-
-    <!-- Balises pour Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@houseofunitedbrothers">
-    <meta name="twitter:title" content="Vos avantages en adhérent chez nous - House of United Brothers">
-    <meta name="twitter:description" content="Adhérez à notre BDE et découvrez des avantages exclusifs : réductions, événements réservés et gains. Rejoignez la grande famille MMI !">
-    <meta property="og:url" content="https://houseofunitedbrothers.fr/avantages">
-</svelte:head>
-
 <script lang="ts">
   import CardPartner from "$lib/components/CardPartner.svelte";
   import Button from "$lib/components/Button.svelte";
@@ -103,6 +82,48 @@
   let partnerItems: HTMLDivElement;
 </script>
 
+<svelte:head>
+  <title>Vos avantages en adhérent chez nous</title>
+  <meta
+    name="description"
+    content="Adhérez à notre BDE et découvrez des avantages exclusifs : réductions, événements réservés et gains. Rejoignez la grande famille MMI !"
+  />
+  <meta name="keywords" content="adhésion, avantages, BDE, exclusivités" />
+
+  <!-- Balises Open Graph -->
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Vos avantages en adhérent chez nous - House of United Brothers"
+  />
+  <meta property="og:site_name" content="House of United Brothers" />
+  <meta
+    property="og:url"
+    content="https://houseofunitedbrothers.fr/avantages"
+  />
+  <meta
+    property="og:description"
+    content="Adhérez à notre BDE et découvrez des avantages exclusifs : réductions, événements réservés et gains. Rejoignez la grande famille MMI !"
+  />
+
+  <!-- Balises pour Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@houseofunitedbrothers" />
+  <meta
+    name="twitter:title"
+    content="Vos avantages en adhérent chez nous - House of United Brothers"
+  />
+  <meta
+    name="twitter:description"
+    content="Adhérez à notre BDE et découvrez des avantages exclusifs : réductions, événements réservés et gains. Rejoignez la grande famille MMI !"
+  />
+  <meta
+    property="og:url"
+    content="https://houseofunitedbrothers.fr/avantages"
+  />
+</svelte:head>
+
 <section class="top-main">
   <div class="box-title">
     <h1 class="title">Vos avantages</h1>
@@ -117,7 +138,7 @@
     </Button>
   </div>
   <img
-    src="/images/mockup-card.png"
+    src="/images/mockup-card.webp"
     alt="Mockup des cartes adhérents"
     class="mockup-main"
   />
@@ -144,11 +165,14 @@
     <tr>
       <td>Réductions chez nos partenaires. *</td>
       <td
-        ><img src="/images/michel-avantages-adherents.png" alt="1 Michel" /></td
+        ><img
+          src="/images/michel-avantages-adherents.webp"
+          alt="1 Michel"
+        /></td
       >
       <td
         ><img
-          src="/images/michel-avantages-superadherents.png"
+          src="/images/michel-avantages-superadherents.webp"
           alt="1 Michel"
         /></td
       >
@@ -156,14 +180,17 @@
     <tr>
       <td>Achat rentabilisé</td>
       <td
-        ><img src="/images/michel-avantages-adherents.png" alt="1 Michel" /></td
+        ><img
+          src="/images/michel-avantages-adherents.webp"
+          alt="1 Michel"
+        /></td
       >
       <td
         ><img
-          src="/images/michel-avantages-superadherents.png"
+          src="/images/michel-avantages-superadherents.webp"
           alt="1 Michel"
         /><img
-          src="/images/michel-avantages-superadherents.png"
+          src="/images/michel-avantages-superadherents.webp"
           alt="1 Michel"
         /></td
       >
@@ -171,14 +198,17 @@
     <tr>
       <td>Réduction sur les tarifs d’entrée aux soirées</td>
       <td
-        ><img src="/images/michel-avantages-adherents.png" alt="1 Michel" /></td
+        ><img
+          src="/images/michel-avantages-adherents.webp"
+          alt="1 Michel"
+        /></td
       >
       <td
         ><img
-          src="/images/michel-avantages-superadherents.png"
+          src="/images/michel-avantages-superadherents.webp"
           alt="1 Michel"
         /><img
-          src="/images/michel-avantages-superadherents.png"
+          src="/images/michel-avantages-superadherents.webp"
           alt="1 Michel"
         /></td
       >
@@ -186,14 +216,17 @@
     <tr>
       <td>Tarifs réduits sur les “merch” et en boutique</td>
       <td
-        ><img src="/images/michel-avantages-adherents.png" alt="1 Michel" /></td
+        ><img
+          src="/images/michel-avantages-adherents.webp"
+          alt="1 Michel"
+        /></td
       >
       <td
         ><img
-          src="/images/michel-avantages-superadherents.png"
+          src="/images/michel-avantages-superadherents.webp"
           alt="1 Michel"
         /><img
-          src="/images/michel-avantages-superadherents.png"
+          src="/images/michel-avantages-superadherents.webp"
           alt="1 Michel"
         /></td
       >
@@ -203,7 +236,7 @@
       <td></td>
       <td
         ><img
-          src="/images/michel-avantages-superadherents.png"
+          src="/images/michel-avantages-superadherents.webp"
           alt="1 Michel"
         /></td
       >
@@ -212,14 +245,14 @@
       <td>Réductions sur les gobelets à l’adhésion</td>
       <td
         ><img
-          src="/images/gobelet-avantage-adherents.png"
+          src="/images/gobelet-avantage-adherents.webp"
           alt="1 Michel"
           class="gobelet-image"
         /></td
       >
       <td
         ><img
-          src="/images/gobelet-avantage-superadherents.png"
+          src="/images/gobelet-avantage-superadherents.webp"
           alt="Reduction Gobelets"
           class="gobelet-image"
         /></td
@@ -344,7 +377,7 @@
     padding: 300px 7vw 80px 7vw;
     background-color: #ae86c1;
     height: 400px;
-    background-image: url("/images/lignes-fond.png");
+    background-image: url("/images/lignes-fond.webp");
     position: relative;
     overflow: hidden;
   }
@@ -500,7 +533,7 @@
     width: 85vw;
     height: 550px;
     background-color: var(--violet-2);
-    background-image: url("/images/bg-avantages.png");
+    background-image: url("/images/bg-avantages.webp");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -598,16 +631,16 @@
     transform: rotateY(0deg);
   }
   .card-sadherent {
-    background-image: url("/images/carte-sadherent-face.png");
+    background-image: url("/images/carte-sadherent-face.webp");
   }
   .card-sadherent-back {
-    background-image: url("/images/carte-sadherent-back.png");
+    background-image: url("/images/carte-sadherent-back.webp");
   }
   .card-adherent {
-    background-image: url("/images/carte-adherent-face.png");
+    background-image: url("/images/carte-adherent-face.webp");
   }
   .card-adherent-back {
-    background-image: url("/images/carte-adherent-back.png");
+    background-image: url("/images/carte-adherent-back.webp");
   }
 
   /* Responsive Styles */
@@ -693,9 +726,6 @@
     }
   }
 
-
-
-
   /*Responsive*/
   @media screen and (max-width: 1024px) {
     .subtitle {
@@ -715,7 +745,6 @@
     }
     .container-text-partner {
       width: 90vw;
-
     }
     .partner-container {
       margin-top: 48px;
@@ -798,8 +827,8 @@
       height: 200px;
     }
     .card-face {
-    width: 310px;
-  }
+      width: 310px;
+    }
   }
   @media screen and (max-width: 768px) {
     .subtitle {
@@ -819,7 +848,6 @@
     }
     .container-text-partner {
       width: 90vw;
-
     }
     .partner-container {
       margin-top: 48px;
@@ -902,8 +930,8 @@
       height: 200px;
     }
     .card-face {
-    width: 310px;
-  }
+      width: 310px;
+    }
   }
   @media screen and (max-width: 425px) {
     .top-main {

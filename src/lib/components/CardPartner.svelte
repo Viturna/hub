@@ -29,7 +29,7 @@
     min-width: 330px;
     width: 330px;
     height: 330px;
-    background-image: url("/images/bg-card-partner.png");
+    background-image: url("/images/bg-card-partner.webp");
     background-size: cover;
     border-radius: 10px;
     text-decoration: none;
