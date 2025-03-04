@@ -45,6 +45,7 @@
 <section class="header-page">
   <div class="box-title">
     <h1>Mentions légales</h1>
+    <p>04/03/2025</p>
   </div>
 </section>
 <section class="legales">
@@ -74,14 +75,13 @@
   <h2>2 - Hébergement</h2>
   <p>
     Le site est hébergé par :<br />
-    Hostinger International Ltd<br />
-    Siège social : 61 Lordou Vironos str., 6023 Larnaca, Chypre<br />
-    Contact :
-    <a href="mailto:fr@hostinger.com" target="_blank">fr@hostinger.com</a><br />
-    Site web :
-    <a href="https://www.hostinger.fr" target="_blank"
-      >https://www.hostinger.fr</a
-    >
+    Netlify, Inc.<br />
+    Adresse : 2325 3rd Street, Suite 296, San Francisco, CA 94107, USA<br />
+    Contact :<br />
+    <a href="https://www.netlify.com" target="_blank">https://www.netlify.com</a
+    > <br />
+    Pour toute question relative à l'hébergement du site, vous pouvez contacter Netlify
+    via leur site officiel.
   </p>
   <h2>3 - Principe général</h2>
   <p>
