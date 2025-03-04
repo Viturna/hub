@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="House of United Brothers" />
   <meta
     property="og:url"
-    content="https://houseofunitedbrothers.fr/reglement"
+    content="https://houseofunitedbrothers.fr/gala/reglement"
   />
   <meta
     property="og:description"
@@ -39,7 +39,7 @@
   />
   <meta
     property="twitter:url"
-    content="https://houseofunitedbrothers.fr/reglement"
+    content="https://houseofunitedbrothers.fr/gala/reglement"
   />
 </svelte:head>
 <section class="header-page">
@@ -51,7 +51,7 @@
 <section class="reglements">
   <p class="filariane">
     <a href="/gala">Cérémonie des pépites</a> >
-    <a href="#" class="active">Règlement</a>
+    <a href="/gala/reglement" class="active">Règlement</a>
   </p>
 
   <h2>Article 1 – <span class="gold">Objet</span></h2>

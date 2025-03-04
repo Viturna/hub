@@ -61,7 +61,7 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
 </section>
 
 <div class="flex-main-button">
-  <MainButton path="/reglement" buttonType="gold">
+  <MainButton path="/gala/reglement" buttonType="gold">
     <span slot="text-1">Voir le</span>
     <span slot="text-2">Règlement</span>
   </MainButton>
@@ -168,7 +168,7 @@ Pour poursuivre la soirée on continue avec le Gala de fin d’Année ! Dernièr
       >
         <span slot="text">Déposer mes projets</span>
       </Button>
-      <Button path="/reglement" buttonType="dark">
+      <Button path="/gala/reglement" buttonType="dark">
         <span slot="text">Découvrir le règlement</span></Button
       >
     </div>
