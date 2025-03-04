@@ -126,14 +126,14 @@
     </li>
     <li>
       <button
-        class="nav-item {currentPath === '/contact' ? 'active' : ''}"
-        on:click={() => handleItemClick("/contact")}>Contact</button
+        class="nav-item {currentPath === '/avantages' ? 'active' : ''}"
+        on:click={() => handleItemClick("/avantages")}>Vos avantages</button
       >
     </li>
     <li>
       <button
-        class="nav-item {currentPath === '/avantages' ? 'active' : ''}"
-        on:click={() => handleItemClick("/avantages")}>Vos avantages</button
+        class="nav-item {currentPath === '/contact' ? 'active' : ''}"
+        on:click={() => handleItemClick("/contact")}>Contact</button
       >
     </li>
     <li>
