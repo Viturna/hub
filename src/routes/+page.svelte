@@ -351,6 +351,7 @@
   <div>
     <h2>Boîtes à idées</h2>
     <form name="idea" data-netlify="true" method="post">
+      <input type="hidden" name="form-name" value="idea" />
       <label for="name">Votre nom</label>
       <input
         type="text"
