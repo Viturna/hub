@@ -45,6 +45,7 @@
   </div>
   <div class="form-container">
     <form name="contact" data-netlify="true" method="post">
+      <input type="hidden" name="form-name" value="contact" />
       <label for="name">Votre nom</label>
       <input
         type="text"

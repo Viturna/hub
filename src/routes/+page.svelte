@@ -350,7 +350,7 @@
 <section class="boite" id="boite">
   <div>
     <h2>Boîtes à idées</h2>
-    <form action="sendIdea.php" method="POST">
+    <form name="idea" data-netlify="true" method="post">
       <label for="name">Votre nom</label>
       <input
         type="text"
